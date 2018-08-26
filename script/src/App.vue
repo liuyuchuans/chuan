@@ -2,7 +2,7 @@
   <div id="app">
     <div class="header">
       <header>
-        <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+        <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect"   active-text-color="#ffd04b">
           <el-menu-item index="1"><router-link to="/">JavaScript</router-link> </el-menu-item>
           <el-submenu index="2">
             <template slot="title">关于我的</template>
@@ -42,15 +42,18 @@
      margin: 0 auto;
 
      .header{
-       background: rgb(84, 92, 100);
+       border-bottom: solid 1px #e6e6e6;
        width: 100%;
+        background-color: #ffffff;
+        opacity: .8;
      }
      header{
       width: 1200px;
       margin: 0 auto;
+     
      }
    }
    a{
-     direction: none;
+     text-decoration: none;
    }
 </style>

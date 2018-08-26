@@ -1,0 +1,2 @@
+webpackJsonp([32],{"Z+3E":function(e,t){},vawY:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var i={render:function(){this.$createElement;this._self._c;return this._m(0)},staticRenderFns:[function(){var e=this.$createElement,t=this._self._c||e;return t("div",[t("p",[this._v("类型识别")])])}]};var r=n("vSla")({name:"typeRecognition"},i,!1,function(e){n("Z+3E")},"data-v-060d9e8e",null);t.default=r.exports}});
+//# sourceMappingURL=32.85f3103425caf002745a.js.map

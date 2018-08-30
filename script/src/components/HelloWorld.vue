@@ -8,7 +8,7 @@
               </template>
               <el-menu-item-group v-for="items in item.names" :key="items.index">
                 <router-link :to="items.url">
-                  <el-menu-item v-text="items.name" :index="items.index">选项1</el-menu-item>
+                  <el-menu-item v-text="items.name" :index="items.index"></el-menu-item>
                 </router-link>
               </el-menu-item-group>
             </el-submenu>
@@ -52,18 +52,13 @@ export default {
    .left-box{
       max-width: 190px;
       min-width: 140px;
-       background-color: #ffffff;
-        opacity: .5;
+      background-color: #ffffff;
+      opacity: .5;
+      color: rgba(0, 0, 0, 0);
    }
    .el-submenu .el-menu-item{
      min-width: 100px;
    }
-   .el-menu-item-group__title {
-      /* padding: 7px 0 7px 20px; */
-      line-height: normal;
-      font-size: 12px;
-      color: #fff;
-  }
    .el-menu {
       border-right: solid 1px #e6e6e6;
       border-bottom: solid 1px #e6e6e6;
@@ -72,4 +67,5 @@ export default {
       margin: 0;
       padding-left: 0;
   }
+
 </style>

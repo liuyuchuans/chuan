@@ -1,2 +1,0 @@
-webpackJsonp([1],{GCJA:function(e,t){},dNDY:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){this.$createElement;this._self._c;return this._m(0)},staticRenderFns:[function(){var e=this.$createElement,t=this._self._c||e;return t("div",[t("p",[this._v("\n    元素尺寸\n  ")])])}]};var i=n("vSla")({name:"elementFont"},r,!1,function(e){n("GCJA")},"data-v-e29c7ade",null);t.default=i.exports}});
-//# sourceMappingURL=1.99b20f4a6281c812a03b.js.map

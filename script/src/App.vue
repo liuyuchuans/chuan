@@ -6,9 +6,9 @@
           <el-menu-item index="1"><router-link to="/">JavaScript</router-link> </el-menu-item>
           <el-submenu index="2">
             <template slot="title">关于我的</template>
-            <el-menu-item index="2-1">我的工作</el-menu-item>
-            <el-menu-item index="2-2">我的经验</el-menu-item>
-            <el-menu-item index="2-3">我的简历</el-menu-item>
+            <el-menu-item index="2-1"><router-link to="/work">我的工作</router-link></el-menu-item>
+            <el-menu-item index="2-2"><router-link to="/experience">我的经验</router-link></el-menu-item>
+            <el-menu-item index="2-3"><router-link to="/resume">我的简历</router-link></el-menu-item>
           </el-submenu>
         </el-menu>
       </header>
@@ -55,5 +55,6 @@
    }
    a{
      text-decoration: none;
+     color: #303133;
    }
 </style>

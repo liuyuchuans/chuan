@@ -1,2 +1,0 @@
-webpackJsonp([6],{HXLk:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={render:function(){this.$createElement;this._self._c;return this._m(0)},staticRenderFns:[function(){var e=this.$createElement,t=this._self._c||e;return t("div",[t("p",[this._v("ajax基础")])])}]};var s=n("vSla")({name:"ajaxBasics"},a,!1,function(e){n("ugyG")},"data-v-7fedc6f1",null);t.default=s.exports},ugyG:function(e,t){}});
-//# sourceMappingURL=6.1de04e2ae79217750d71.js.map

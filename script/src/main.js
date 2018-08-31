@@ -6,7 +6,10 @@ import router from './router'
 //element ui框架
 import element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-Vue.use(element)
+// axios 
+import axios from 'axios'
+Vue.use(element,axios)
+Vue.prototype.axios = axios
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

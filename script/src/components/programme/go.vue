@@ -1,7 +1,10 @@
 <!-- 编程语言  走进编程 -->
 <template>
   <div class="hello">
-      <p>走进编程</p>
+     <div class="title">
+      <span class="size">走进编程</span>
+      <p class="lineHeight">没有编程基础JavaScript教程</p>
+    </div>
   </div>
 </template>
 
@@ -13,7 +16,7 @@ export default {
     }
   },
   methods:{
-   
+    
   }
 }
 </script>

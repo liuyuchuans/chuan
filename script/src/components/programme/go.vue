@@ -10,6 +10,11 @@
       <p>我想如果不是ShaZhi的话,都知道这个问题</p>
       <p>那你是不是也知道哪一步该先来，哪一步后干呀！是不是</p>
       <p>你是不是想问我这跟洗衣服有啥区别呀！那我告诉你就是他这个先后顺序就是编程语言的逻辑！</p>
+      <div>
+        <img src="https://github.com/aichuanz/text/blob/master/image/wenti.png?raw=true">
+      </div>
+      <p>就让JS做你的入门编程语言吧</p>
+      <router-link to="/grammarBasics" style="color: blue">让我们先看看最基础的吧</router-link>
     </div>
   </div>
 </template>

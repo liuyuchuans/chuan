@@ -19,3 +19,31 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+router.beforeEach((to, from, next) => {
+  /* 路由发生变化修改页面title */
+  if (to.meta.title) {
+    document.title = to.meta.title;
+  }else{
+    document.title = '刘予川的官方网站';
+  }
+  next()
+})
+//添加一个请求拦截器
+axios.interceptors.request.use(function(config){
+  alert(1);
+  //在请求发送之前做一些事
+  return config;
+},function(error){
+  //当出现请求错误是做一些事
+  return Promise.reject(error);
+});
+
+//添加一个返回拦截器
+axios.interceptors.response.use(function(response){
+  //对返回的数据进行一些处理
+  return response;
+},function(error){
+  //对返回的错误进行一些处理
+  return Promise.reject(error);
+});
+

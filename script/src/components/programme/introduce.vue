@@ -43,7 +43,8 @@ export default {
     width: 70%;
     height: 100%;
     padding: 50px 50px 100px 220px;
-    color: rgb(138, 138, 141);
+     font-size: 14px;
+    /* color: rgb(138, 138, 141); */
   }
   .title{
     border-bottom: solid 1px #ced2d4;

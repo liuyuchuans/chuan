@@ -48,7 +48,8 @@ export default {
       min-width: 140px;
       background-color: #ffffff;
       opacity: .5;
-      color: rgba(0, 0, 0, 0);
+      color: red;
+      /* color: rgba(0, 0, 0, 0); */
    }
    .el-submenu .el-menu-item{
      min-width: 100px;

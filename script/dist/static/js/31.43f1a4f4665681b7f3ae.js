@@ -1,2 +1,0 @@
-webpackJsonp([31],{PaxA:function(e,t){},lfAc:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={render:function(){this.$createElement;this._self._c;return this._m(0)},staticRenderFns:[function(){var e=this.$createElement,t=this._self._c||e;return t("div",[t("p",[this._v("对象")])])}]};var r=n("vSla")({name:"object"},a,!1,function(e){n("PaxA")},"data-v-169af7f7",null);t.default=r.exports}});
-//# sourceMappingURL=31.43f1a4f4665681b7f3ae.js.map

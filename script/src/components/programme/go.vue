@@ -2,7 +2,7 @@
 <template>
   <div class="hello">
      <div class="title">
-      <span class="size">走进编程</span>
+      <h4 class="size">走进编程</h4>
       <p class="lineHeight">没有编程基础JavaScript教程</p>
     </div>
     <div class="itemP">

@@ -2,7 +2,7 @@
 <template>
   <div class="hello">
     <div class="title">
-      <span class="size">编程语言介绍</span>
+      <h4 class="size">编程语言介绍</h4>
       <p class="lineHeight">没有编程基础JavaScript教程</p>
     </div>
     <div class="" v-for="(item,index) in mainTtex" :key="index" >

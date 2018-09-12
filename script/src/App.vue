@@ -28,7 +28,7 @@
         return {
           activeIndex: '1',
           activeIndex2: '1',
-          isLoading: true
+          isLoading: false
         };
       },
       beforeCreate(){
@@ -42,7 +42,7 @@
           return Promise.reject(error);
         });
         //添加一个返回拦截器
-        this.axios.interceptors.response.use((response)=>{
+        this.axios.interceptors.response.use((response) => {
           //对返回的数据进行一些处理
           this.isLoading = false;
           return response;
@@ -53,7 +53,7 @@
       },
       methods: {
         handleSelect(key, keyPath) {
-          console.log(key, keyPath);
+         
         }
       }
     }

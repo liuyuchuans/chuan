@@ -7,7 +7,7 @@
     </div>
     <div class="" v-for="(item,index) in mainTtex" :key="index" >
         <span class="size lineHeight" v-text="item.name"></span>
-        <p v-text="item.detail"></p>
+        <p class="text" v-html="item.detail"></p>
     </div>
     <div class="">
         <p style="line-height: 36px;"> 当然你肯定会想学了他你能做什么，其实不是说你能干什么你会一中编程语言的话你就有功底了，学什么编程语言都没有这么痛苦了 </p>
@@ -54,5 +54,10 @@ export default {
   }
   .lineHeight{
     line-height: 60px;
+  }
+  .text{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-left: 22px;
   }
 </style>

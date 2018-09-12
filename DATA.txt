@@ -1,0 +1,290 @@
+/grammarBasics          //基础语法-基础
+
+JSON:
+{
+  "data": [{
+      'title': '前言',
+      'text': ['  javascript是一门简单的语言，也是一门复杂的语言。说它简单，是因为学会使用它只需片刻功夫；而说它复杂，是因为要真正掌握它则需要数年时间。实际上，前端工程师很大程度上就是指javascript工程师。前端入门容易精通难，说的是前端，更指的是javascript。本文是javascript基础语法的第一篇——词法结构。词法结构是一套基础性规则，用来描述如何使用javascript来编写程序']
+    },
+    {
+      'title': '与java关系',
+      'text': ['  关于javascript有这样一个说法，java和javascript的关系是雷锋和雷锋塔的关系。那到底有没有关系呢', '  javascript最开始的名字是LiveScript，后来选择javascript作为其正式名称的原因，大概是想让它听起来有系出名门的感觉。除了语法看起来和java类似之外，javascript和java是完全不同的两种编程语言', '  程序设计语言分为解释型和编译型两大类。java或C++等语言需要一个编译器。编译器是一种程序，能够把用java等高级语言编写出来的源代码翻译为直接在计算机上执行的文件。解释型程序设计语言不需要编译器——它们仅需要解释器，浏览器中的javascript解释器将直接读入源代码并执行', ' java在理论上几乎可以部署在任何环境，但javascript却倾向于只应用在web浏览器。而且，在javascript语言中，函数是一种独立的数据类型，采用基于原型对象（prototype）的继承链，javascript语法要比Java自由得多']
+    },
+    {
+      'title': '定义',
+      'text': ['  javascript是一门动态的、弱类型的解释型编程语言，非常适合面向对象和函数式的编程风格。javascript的语法源自java，这句话的意思是  动态是指他可以动态添加代码增加，修改，删除，查询这就是所谓的动态现在说的话没有编程基础的人也听不懂，到后面说道变量的时候咱们在说，解释型语言的意思就是说计算机是不会认识我们写的代码的 所有的代码都会编译成计算机认识的语言，也就是我们常说的二进制数据，解释型语言和编译型语言的区别在于解释型会解释一句执行一句 而编译型语言是全部先解释然后在执行，面向对象 与  函数式编程到后面会讲到']
+    },
+    {
+      'title': '大小写敏感',
+      'text': ['关于javascript这门语言，再怎么强调都不为过的特性是大小写敏感。javascript中的关键字、变量、函数名和所有的标识符都必须采取一致的大小写形式', "'online'、'Online'、'OnLine'、'ONLINE'是四个不同的变量名  没关系有可能你不知道变量是啥^_^ 后面会说到"]
+    },
+    {
+      'title': '保留字',
+      'text': ['和其他任何编程语言一样，javascript保留了一些标识符为自己所用。这些保留字不能用做普通的标识符。由于好多参考书的误导，貌似保留字和关键字是分开的，其实并不是，关键字只是保留字的一部分。保留字包括关键字、未来保留字、空字面量和布尔值字面量', 'abstract boolean byte char class constdouble enum export extends final float goto implements import int interfacelong native package private protected public short  static super synchronized throw transient volatile ', '怎么去理解保留字呢  其实就是你自己定义的函数名，定义的变量名不要使用保留字就行了']
+    },
+    {
+      'title': '注释',
+      'text': ['不是所有语句都需要javascript解释器去解释并执行。有时需要在脚本中写一些仅供自己参考或提醒自己的信息，并希望javascript解释器能直接忽略掉这些信息，这类信息就是注释', '注释能有效帮助了解代码流程，在代码中它们扮演生活中便条的角色，可以帮助我们弄清楚脚本到底干了什么', '[注意]注释一定要精确地描述代码，没有用的注释比没有注释还要糟糕', '有多种方式可以在javascript脚本中插入注释，包括单行注释、多行注释和HTML风格的注释', '【1】单行注释以两个斜杠开头', '//单行注释', '【2】多行注释又叫块级注释，以一个斜杠和一个星号/*开头，以一个星号和一个斜杠*/结尾', '/*这是一个多行注释*/']
+    },
+    {
+      'title': '参考资料',
+      'text': ['【1】 ES5/词法<a href="https://www.w3.org/html/ig/zh/wiki/ES5/lexical">https://www.w3.org/html/ig/zh/wiki/ES5/lexical</a> ', '【2】 阮一峰Javascript标准参考教程——语法概述<a href="http://javascript.ruanyifeng.com/grammar/basic.html">http://javascript.ruanyifeng.com/grammar/basic.html</a> ', '【3】 W3School-Javascript高级教程——ECMAScript语法<a href="http://www.w3school.com.cn/js/pro_js_syntax.asp">http://www.w3school.com.cn/js/pro_js_syntax.asp</a> ']
+    }
+  ],
+  'title': '语言基础'
+}
+
+/listIntroduce          //语言介绍
+
+{
+  "data": [{
+      'name': 'Java',
+      'detail': '首先我们先说一下Java,相信只要了解过编程的人就会听过Java,其如今依然展现出强势的增长势头，说其是目前最流行的编程语言也不为过。其可以用于各种各样的领域，包括企业应用及基础设施，以及Web应用和移动开发,其实会Java的人很多，但是精益的也就那么几个！！！'
+    },
+    {
+      'name': 'C / C++',
+      'detail': 'C和C++都是基于C的语言,C常被用作系统以及应用程序的编程语言，如嵌入式系统的应用程序。。C++语言为C的增强，其在出现后迅速成为开发人员之间最流行的语言之一。它是用于开发系统软件，应用软件，设备驱动程序，嵌入式软件，高性能服务器和客户端应用及娱乐软件，如视频游戏。'
+    },
+    {
+      'name': 'C#',
+      'detail': 'C#是微软公司发布的一种面向对象的、运行于.NET Framework之上的高级程序设计语言。C#是微软公司用来替代Java而开发的一种语言，并借鉴了Java，C，C++和Delphi的一些特点，如今C#已经成为微软应用商店和开发成员非常欢迎的开发语言。'
+    },
+    {
+      'name': 'PHP',
+      'detail': 'PHP是一种通用开源脚本语言，特别适合于Web开发，可嵌入到HTML中，它最初是用来设计动态网页产生的。语法吸收了C语言、Java和Perl的特点，入门门槛较低，易于学习，使用广泛。'
+    },
+    {
+      'name': 'Python',
+      'detail': 'Python是应用于设计各种各样的应用程序的动态语言， 往往比Tcl，Perl，Ruby，Scheme和Java更容易编写。Python语法简洁而清晰，具有丰富和强大的类库。它常被昵称为胶水语言，它能够很轻松的把用其他语言制作的各种模块（尤其是C/C++）轻松地联结在一起。'
+    },
+    {
+      'name': 'Ruby',
+      'detail': 'Ruby是一种动态的，侧重于简单个高效的开源语言，他是一个优雅的语法，能够很自然的阅读和编写，适合于快速开发，一般开发效率是JAVA的5倍。'
+    },
+    {
+      'name': 'Objective-C',
+      'detail': '对于钟情于Apple设备的网友来说，Objective-C的流行就得益于苹果的成功，其是增加了Smalltalk风格的消息在C编程语言中的反射，面向对象的语言。主要使用于苹果系统和GNUstep这两个使用OpenStep的标准的系统。随着苹果平台的巨大人气，如今Objective-C语言被人们逐渐知道。'
+    },
+    {
+      'name': 'JavaScript',
+      'detail': '来了，今天的主题来了JavaScript你看看名字你会发现他前面的Java 你肯定会觉得它和Java会有关系，我一开始学的时候我也觉得他和Java关系不可分离\(^o^)/~ 但是他是真的没有一点关系一点点关系都没有，为什么推荐你们第一门编程语言要学习JavaScipt呢? 好了不和你们卖关子了,其实这是我的认为JS是基于用户端的语言，说这一句可能有些人不他了解但是没关系，其实就是说你写的代码是在为用户操作页面的语言，说白了就是你要点击一个按钮要删除一个页面的元素，这个就是最简单的用户端语言'
+    }
+  ]
+}
+
+	
+/list   //侧边导航栏数据
+
+{
+  "data": [{
+      'index': "1",
+      'title': '编程语言',
+      'names': [{
+        'url': '/introduce',
+        'name': '编程语言介绍',
+        'index': '1-1'
+      }, {
+        'url': '/go',
+        'name': '走进编程',
+        'index': '1-2'
+      }]
+    },
+    {
+      'index': "2",
+      'title': '基础语法',
+      'names': [{
+        'url': '/grammarBasics',
+        'name': '基础',
+        'index': '2-1'
+      }, {
+        'url': '/operator',
+        'name': '运算符',
+        'index': '2-2'
+      }, {
+        'url': '/statement',
+        'name': '语句',
+        'index': '2-3'
+      }, {
+        'url': '/standard',
+        'name': '规范',
+        'index': '2-4'
+      }]
+    },
+    {
+      'index': "3",
+      'title': '数据类型',
+      'names': [{
+        'url': '/dataBasics',
+        'name': '基础',
+        'index': '3-1'
+      }, {
+        'url': '/basicType',
+        'name': '基本类型',
+        'index': '3-2'
+      }, {
+        'url': '/constructorType',
+        'name': '构造器类型',
+        'index': '3-3'
+      }, {
+        'url': '/dateObject',
+        'name': '日期对象',
+        'index': '3-4'
+      }, {
+        'url': '/typeRecognition',
+        'name': '类型识别',
+        'index': '3-5'
+      }, {
+        'url': '/typeTransition',
+        'name': '类型转换',
+        'index': '3-6'
+      }, {
+        'url': '/function',
+        'name': '函数',
+        'index': '3-7'
+      }, {
+        'url': '/object',
+        'name': '对象',
+        'index': '3-8'
+      }]
+    },
+    {
+      'index': "4",
+      'title': '难点重点',
+      'names': [{
+        'url': '/effectScope',
+        'name': '作用域',
+        'index': '4-1'
+      }, {
+        'url': '/closure',
+        'name': '闭包',
+        'index': '4-2'
+      }, {
+        'url': '/this',
+        'name': 'this',
+        'index': '4-3'
+      }, {
+        'url': '/inheritRealize',
+        'name': '继承实现',
+        'index': '4-4'
+      }, {
+        'url': '/modularization',
+        'name': '模块化',
+        'index': '4-5'
+      }]
+    },
+    {
+      'index': "5",
+      'title': 'DOM',
+      'names': [{
+        'url': '/nodeType',
+        'name': '节点类型',
+        'index': '5-1'
+      }, {
+        'url': '/gainNode',
+        'name': '获取节点',
+        'index': '5-2'
+      }, {
+        'url': '/nodeOperation',
+        'name': '节点操作',
+        'index': '5-3'
+      }]
+    },
+    {
+      'index': "6",
+      'title': '脚本化CSS',
+      'names': [{
+        'url': '/scriptStyle',
+        'name': '脚本化样式',
+        'index': '6-1'
+      }]
+    },
+    {
+      'index': "7",
+      'title': '表单脚本',
+      'names': [{
+        'url': '/formScript',
+        'name': '表单脚本',
+        'index': '7-1'
+      }]
+    },
+    {
+      'index': "8",
+      'title': '元素尺寸',
+      'names': [{
+        'url': '/elementFont',
+        'name': '元素尺寸',
+        'index': '8-1'
+      }]
+    },
+    {
+      'index': "9",
+      'title': '事件',
+      'names': [{
+        'url': '/incidentMechanism',
+        'name': '事件机制',
+        'index': '9-1'
+      }, {
+        'url': '/incidentType',
+        'name': '事件类型',
+        'index': '9-2'
+      }]
+    },
+    {
+      'index': "10",
+      'title': '拖拽',
+      'names': [{
+        'url': '/protogenesisDrag',
+        'name': '原生拖拽',
+        'index': '10-1'
+      }]
+    },
+    {
+      'index': "11",
+      'title': '运动',
+      'names': [{
+        'url': '/exercise',
+        'name': '均速运动',
+        'index': '11-1'
+      }]
+    },
+    {
+      'index': "12",
+      'title': 'AJAX',
+      'names': [{
+        'url': '/ajaxBasics',
+        'name': '基础',
+        'index': '12-1'
+      }, {
+        'url': '/ajaxScope',
+        'name': '跨域',
+        'index': '12-2'
+      }]
+    },
+    {
+      'index': "13",
+      'title': '存储',
+      'names': [{
+        'url': '/localityStorage',
+        'name': '本地存储',
+        'index': '13-1'
+      }]
+    },
+    {
+      'index': "14",
+      'title': 'BOM',
+      'names': [{
+        'url': '/timer',
+        'name': '定时器',
+        'index': '14-1'
+      }, {
+        'url': '/window',
+        'name': 'window属性',
+        'index': '14-2'
+      }, {
+        'url': '/html5',
+        'name': 'HTML5',
+        'index': '14-3'
+      }]
+    }
+  ]
+}

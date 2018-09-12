@@ -6,7 +6,7 @@
         </div>
         <div class="itemP" v-for="(item,index) in list" :key="index">
             <h4 class="size" v-text="item.title"></h4>
-            <p v-for="(items , index) in item.text" :key="index" >{{ items }}</p>
+            <p v-for="(items , index) in item.text" :key="index" v-html="items"></p>
         </div>
         <router-link to="/grammarBasics" style="color: blue">让我们先看看最基础的吧</router-link>
     </div>

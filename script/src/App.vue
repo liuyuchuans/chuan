@@ -347,7 +347,7 @@
       max-height: 61px;
       height: 15%;
       // background: #dddddd;
-      position: absolute;
+      position: fixed;
       top: 0%;
       right: 20px;
       overflow: hidden;

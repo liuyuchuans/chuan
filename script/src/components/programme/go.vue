@@ -34,9 +34,9 @@ export default {
 
 <style scoped>
   .hello{
-    width: 70%;
+    width: 56%;
     height: 100%;
-    padding: 50px 50px 100px 220px;
+    padding: 5% 0% 6% 0%;
     /* color: rgb(138, 138, 141); */
   }
   .title{

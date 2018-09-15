@@ -15,6 +15,7 @@
           </el-menu>
         </el-col>
         <router-view> </router-view>
+        
   </div>
 </template>
 
@@ -27,6 +28,7 @@ export default {
     }
   },
   created(){
+
     this.axios.get('https://easy-mock.com/mock/5b88e17747255d4d3b51f042/example/list')
     .then( (response)=> {
       this.nav = response.data.data;
@@ -34,11 +36,12 @@ export default {
     .catch(function (error) {
       console.log(error);
     });
+    
   },
   methods:{
    
   }
-}
+}   
 </script>
 <style scoped>
    .left-box{
@@ -49,6 +52,7 @@ export default {
       color: red;
       /* color: rgba(0, 0, 0, 0); */
    }
+   
    .el-submenu .el-menu-item{
      min-width: 100px;
    }
@@ -60,5 +64,5 @@ export default {
       margin: 0;
       padding-left: 0;
   }
-
+  
 </style>

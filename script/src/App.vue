@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import { Loading } from 'element-ui';
   export default {
       data() {
         return {

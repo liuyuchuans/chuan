@@ -15,7 +15,6 @@
           </el-menu>
         </el-col>
         <router-view> </router-view>
-        
   </div>
 </template>
 
@@ -28,7 +27,6 @@ export default {
     }
   },
   created(){
-
     this.axios.get('https://easy-mock.com/mock/5b88e17747255d4d3b51f042/example/list')
     .then( (response)=> {
       this.nav = response.data.data;
@@ -50,7 +48,6 @@ export default {
       background-color: #ffffff;
       opacity: .5;
       color: red;
-      /* color: rgba(0, 0, 0, 0); */
    }
    
    .el-submenu .el-menu-item{

@@ -34,8 +34,8 @@
                     {'name': '词法结构','url': '/grammarBasics'},
                     {'name': '变量与标识符','url': '/var'},
                     {'name': '表达式','url': '/expre'},
-                    {'name': '严格模式','url': '/grammarBasics'},
-                    {'name': '内存管理与垃圾回收','url': '/grammarBasics'},
+                    {'name': '严格模式','url': '/strict'},
+                    {'name': '内存管理与垃圾回收','url': '/rubbish'},
                     {'name': '动态脚本','url': '/grammarBasics'},
                 ],
                 activeName: '词法结构'

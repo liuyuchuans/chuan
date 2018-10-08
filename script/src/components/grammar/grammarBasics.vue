@@ -19,6 +19,9 @@
                 <span v-if="items.texts" v-html="items.texts"></span>
             </p>
         </div>
+        <!-- <el-tabs v-model="activeName"  @tab-click="tabS">
+            <el-tab-pane v-for="(item,index) in dataList" :key="index" :label="item.name" @click="tabS(item.url)" :name="item.name" :url="item.url"></el-tab-pane>
+        </el-tabs> -->
         <!-- <router-link to="/grammarBasics" style="color: blue">让我们先看看最基础的吧</router-link> -->
     </div>
 </template>
@@ -31,18 +34,18 @@
                 list: null,
                 title: null,
                 dataList: [
+                    {'name': '写入脚本','url': '/write'},
                     {'name': '词法结构','url': '/grammarBasics'},
                     {'name': '变量与标识符','url': '/var'},
                     {'name': '表达式','url': '/expre'},
                     {'name': '严格模式','url': '/strict'},
-                    {'name': '内存管理与垃圾回收','url': '/rubbish'},
-                    {'name': '动态脚本','url': '/grammarBasics'},
+                    {'name': '内存管理与垃圾回收','url': '/rubbish'}
                 ],
-                activeName: '词法结构'
+                activeName: '写入脚本'
             }
         },
         created() {
-            this.axios.get('https://easy-mock.com/mock/5b88e17747255d4d3b51f042/example/grammarBasics')
+            this.axios.get('https://easy-mock.com/mock/5b88e17747255d4d3b51f042/example/write')
                 .then((data)=>{
                     // for 循环数据
                     this.list = data.data.data;

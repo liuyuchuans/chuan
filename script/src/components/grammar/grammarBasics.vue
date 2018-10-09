@@ -19,9 +19,6 @@
                 <span v-if="items.texts" v-html="items.texts"></span>
             </p>
         </div>
-        <!-- <el-tabs v-model="activeName"  @tab-click="tabS">
-            <el-tab-pane v-for="(item,index) in dataList" :key="index" :label="item.name" @click="tabS(item.url)" :name="item.name" :url="item.url"></el-tab-pane>
-        </el-tabs> -->
         <!-- <router-link to="/grammarBasics" style="color: blue">让我们先看看最基础的吧</router-link> -->
     </div>
 </template>

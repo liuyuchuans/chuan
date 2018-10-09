@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello" @scroll="scroll">
       <el-col :span="12" class="left-box" v-if="nav">
         <el-menu default-active="2" class="el-menu-vertical-demo"   active-text-color="#ffd04b">
             <el-submenu v-for="item in nav" :index="item.index" :key="item.index">
@@ -14,6 +14,9 @@
             </el-submenu>
           </el-menu>
         </el-col>
+        <el-tooltip class="item" effect="dark" content="返回顶部" placement="bottom-end">
+          <span class="el-icon-upload2 ding" v-show="flag" @click="toTop"></span>
+        </el-tooltip>
         <router-view> </router-view>
   </div>
 </template>
@@ -23,10 +26,13 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      nav: []
+      nav: null,
+      flag: false,
+      scrollTop: 0
     }
   },
   created(){
+    window.addEventListener('scroll', this.scroll);
     this.axios.get('https://easy-mock.com/mock/5b88e17747255d4d3b51f042/example/list')
     .then( (response)=> {
       this.nav = response.data.data;
@@ -37,7 +43,23 @@ export default {
     
   },
   methods:{
-   
+    scroll(){
+      this.scrollTop = document.documentElement.scrollTop||document.body.scrollTop; 
+      if(this.scrollTop > 100){
+        this.flag = true;
+      }else{
+        this.flag = false;
+      }
+    },
+    toTop(){
+       let setTime = setInterval(()=>{
+        this.scrollTop -= 20;
+        if(this.scrollTop <= 0){
+          window.clearInterval(setTime); 
+        }
+        document.documentElement.scrollTop = document.body.scrollTop = this.scrollTop
+      },10)
+    }
   }
 }   
 </script>
@@ -60,6 +82,12 @@ export default {
       position: relative;
       margin: 0;
       padding-left: 0;
+  }
+  .ding{
+    position: fixed;
+    right: 150px;
+    bottom: 100px;
+    font-size: 50px;
   }
   
 </style>

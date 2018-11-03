@@ -1,0 +1,95 @@
+{
+  "data": [{
+      'title': 'javascript严格模式下的规则',
+      'text': [{
+          'textt': '<b>【作用】：</b><br>[1]消除js语法的一些不合理、不严谨、不安全问题，减少怪异行为并保证代码运行安全'
+        },
+        {
+          'textt': '[2]提高编译器效率，增加运行速度'
+        },
+        {
+          'textt': '<b>【使用】：</b><br>[1]整个脚本启用严格模式，在顶部执行："use strict";'
+        },
+        {
+          'textt': '[2]在指定函数中执行严格模式，在函数体第一行："use strict"'
+        },
+        {
+          'textt': '[3]不支持strict模式的浏览器把"use strict"当做一个字符串语句执行，支持strict模式的浏览器将开启strict模式'
+        },
+        {
+          'textt': '[4]支持严格模式的浏览器包括IE10+、Firefox4+、safari12+、opera12+、chrome'
+        },
+        {
+          'textt': '<b>【规则】：</b><br>[1a]不允许意外创建全局变量',
+          'dataText': ['<span >"use strict"; </span>', '<span>message = "hello world!";</span>']
+        },
+        {
+          'textt': '[1b]不能对变量调用delete操作符',
+          'dataText': ['<span >"use strict"; </span>', '<span>var  color  =  "red"; </span>', '<span>delete  color; </span>']
+        },
+        {
+          'textt': '<b>【对象】：</b><br>[a]不能为只读属性赋值',
+          'dataText': ['<span >"use strict"; </span>', '<span>var  person  =  { </span>', '<span>       name:"cook"</span>', '<span> }; </span>', '<span>Object.defineProperty(person,"name",{</span>', '<span>      writable: false </span>', '<span>});</span>', '<span>person.name = "Nicholas";</span>']
+        },
+        {
+          'textt': '[b]不能为不可配置的属性使用delete操作',
+          'dataText': ['<span >"use strict"; </span>', '<span>var  person  =  { </span>', '<span>       name:"cook"</span>', '<span> }; </span>', '<span>Object.defineProperty(person,"name",{</span>', '<span>      configurable: false </span>', '<span>});</span>', '<span>delete person.name;</span>']
+        },
+        {
+          'textt': '<b>【函数】：</b><br>[a]参数必须唯一',
+          'dataText': ['<span >"use strict"; </span>', '<span>var  function sun(num,num){ </span>', '<span>       }</span>']
+        },
+        {
+          'textt': '[b]修改形参不会反映到arguments中',
+          'dataText': ['<span>var function showValue(value){ </span>', '<span>       value = "Foo";</span>', '<span> alert(arguments[0]);</span>', '<span>//非严格模式:"Foo"{</span>', '<span>//严格模式:"Hi"</span>', '<span>}</span>', '<span>showValue("Hi");</span>']
+        },
+        {
+          'textt': '[c]不允许使用arguments.callee和arguments.caller',
+          'dataText': ['<span>"use strict";</span>', '<span>function fn(num){</span>', '<span>       return arguments.callee(num);</span>', '<span>}</span>', '<span>fn(2);</span>']
+        },
+        {
+          'textt': ' ',
+          'dataText': ['<span>"use strict";</span>', '<span>function outer(){</span>', '<span>       inner();</span>', '<span>}</span>', '<span>function inner(){</span>', '<span>alert(inner.caller());</span>', '<span>}</span>', '<span>outer();</span>']
+        },
+        {
+          'textt': '<b>【不允许eval()在包含上下文中创建变量或函数】：</b>',
+          'dataText': ['<span >"use strict"; </span>', '<span>function fn(){</span>', '<span>       eval("var x=10");</span>', '<span>alert(x);</span>', '<span>}</span>', '<span>fn();</span>']
+        },
+        {
+          'textt': ' ',
+          'dataText': ['<span>//允许以下操作</span>', '<span>       var result = eval("var x = 10, y = 11; x+y");</span>', '<span> alert(result);    //21</span>']
+        },
+        {
+          'textt': '<b>【不允许使用eval和arguments作为标识符，也不允许读写他们的值】：</b>',
+          'dataText': ['<span >"use strict"; </span>', '<span>var eval = 10;</span>', '<span>       var arguments = 20;</span>']
+        },
+        {
+          'textt': '<b>【不允许this值为null或undefined】</b>',
+          'dataText': ['<span>复制代码"use strict";</span>', '<span>function fn(){</span>', '<span>     alert(this.color);</span>', '<span>}</span>', '<span>fn();</span>']
+        },
+        {
+          'textt': '<b>【不允许使用with语句】：</b>',
+          'dataText': ['<span >"use strict"; </span>', '<span>with(location){</span>', '<span>       alert(href);</span>', '<span>}</span>']
+        },
+        {
+          'textt': '<b>【不允许使用八进制字面量】：</b>',
+          'dataText': ['<span >"use strict"; </span>', '<span>var value = 010;</span>']
+        },
+      ]
+    },
+    {
+      'title': '参考资料',
+      'text': [{
+          'textt': '【1】 ES5/词法            <a style="color: blue" href="https://www.w3.org/html/ig/zh/wiki/ES5/lexical" target="view_window">https://www.w3.org/html/ig/zh/wiki/ES5/lexical</a> '
+        },
+        {
+          'textt': '【2】 阮一峰Javascript标准参考教程——语法概述            <a style="color: blue" href="http://javascript.ruanyifeng.com/grammar/basic.html"  target="view_window">http://javascript.ruanyifeng.com/grammar/basic.html</a> '
+        },
+        {
+          'textt': '【3】 W3School-Javascript高级教程——ECMAScript语法            <a style="color: blue" href="http://www.w3school.com.cn/js/pro_js_syntax.asp"  target="view_window">http://www.w3school.com.cn/js/pro_js_syntax.asp</a> '
+        }
+      ]
+    }
+  ],
+  'title': '严格模式'
+}

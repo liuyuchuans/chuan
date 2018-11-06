@@ -183,7 +183,7 @@
                 }
             }
         },
-        components: {
+        components: { 
             Schart
         },
         computed: {

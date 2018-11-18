@@ -1,0 +1,146 @@
+/* pages/package/package.wxss */
+
+page {
+  background-color: #f2f3f5;
+}
+
+.banner image {
+  width: 100%;
+  height: 350rpx;
+}
+
+.package-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20rpx;
+}
+
+.package_item {
+  position: relative;
+  margin-bottom: 28rpx;
+}
+
+.package_item .package-img {
+  width: 100%;
+  height: 426rpx;
+  display: block;
+}
+
+.package_item .package-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 426rpx;
+   /* border-bottom: 8rpx solid #ffc801; */
+ 
+}
+
+.package_item .package-content .package-name {
+  display: flex;
+  margin-top: 24rpx;
+}
+
+.package_item .package-content .package-name .arrow {
+  width: 0px;
+  height: 0px;
+  border-top: 22rpx solid rgba(0, 0, 0, 0);
+  border-right: 22rpx solid rgba(0, 0, 0, 0.15);
+  border-bottom: 22rpx solid rgba(0, 0, 0, 0);
+  border-left: 22rpx solid rgba(0, 0, 0, 0);
+}
+
+.package_item .package-content .package-name .arrowInfo {
+  padding: 0 10rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  font-size: 20rpx;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.package_item .package-content .package-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 144rpx;
+  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.70) 100%);
+}
+
+.package_item .package-content .package-bottom .name {
+  width: 262rpx;
+  height: 40rpx;
+  overflow-x: scroll;
+  margin-top: 28rpx;
+  margin-left: 18rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.package_item .package-content .package-bottom .bg {
+  width: 100%;
+  height: 70rpx;
+  margin-top: 8rpx;
+  display: flex;
+  
+}
+
+.package_item .package-content .package-bottom .bg .des {
+  width: 55%;
+  height: 70rpx;
+  overflow-y: scroll;
+  font-size: 16rpx;
+  padding-left: 18rpx;
+  color: #fff;
+}
+
+.package_item .package-content .package-bottom .bg .cont {
+  width: 45%;
+  height: 70rpx;
+  display: flex;
+}
+
+.package_item .package-content .package-bottom .bg .cont .triangle {
+  /* width: 0px;
+  height: 0px;
+  border-top: 35rpx solid rgba(0, 0, 0, 0);
+  
+  border-left: 35rpx solid rgba(0, 0, 0, 0); */
+}
+
+.package_item .package-content .package-bottom .bg .cont .detail {
+  width: 100%;
+  height: 68rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.package_item .package-content .package-bottom .bg .cont .detail .buy {
+  width: 170rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  white-space: nowrap;
+  overflow-x: scroll;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.package_item .package-content .package-bottom .bg .cont .detail .num {
+  width: 52rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+  line-height: 20rpx;
+  text-align: center;
+  background: #fff;
+  font-size: 10rpx;
+  color: #ffc801;
+}
+.package_item .package-content .package-bottom .bootom-border{
+  width:100%;
+  height:12rpx;
+  opacity:0.9;
+  margin-top:-6rpx;
+}

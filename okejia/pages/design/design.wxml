@@ -1,0 +1,87 @@
+<!--pages/design/design.wxml-->
+<view class='design'>
+  <image class='bcImg' src='https://www.okejia.com/wx-img/img/designImg.png' style='width:100%;height:578rpx;display:block;'></image>
+  <view class='info'>
+    <image src='../../img/designDes.png' style='width:624rpx;height:80.8rpx;display:block;margin-bottom:62rpx;'></image>
+    <view class='city noraml' bindtap='selectDistrict'>
+      <view class='title'>{{cityName}}</view>
+      <view class='arror'>
+        <image src='../../img/freeArrow.png' style='width:31rpx;height:18rpx;display:block;'></image>
+      </view>
+    </view>
+    <view class='noraml'>
+      <input placeholder='您的姓名' maxlength='10' type='text' bindblur='name'></input>
+    </view>
+    <view class='noraml'>
+      <input placeholder='您的手机号' maxlength='11' type='number' bindinput='phoneinput'></input>
+    </view>
+    <view class='areas'>
+      <view class='village '>
+        <input placeholder='小区' maxlength='30' type='text' bindblur='village'></input>
+      </view>
+      <view class='area'>
+        <input placeholder='面积' maxlength='7' type='digit' bindblur='area'></input>
+        <text>㎡</text>
+      </view>
+    </view>
+    <view class='city noraml' bindtap='homeshow'>
+      <view class='title type'>
+        <text>{{roomNum}}室</text>
+        <text>{{parlourNum}}厅</text>
+        <text>{{cookNum}}厨</text>
+        <text>{{toiletNum}}卫</text>
+      </view>
+      <view class='arror'>
+        <image src='../../img/freeArrow.png' style='width:31rpx;height:18rpx;display:block;'></image>
+      </view>
+    </view>
+    <view class='apply' bindtap='sendInfo'>立即申请</view>
+    <view class='concat'>请填写您的联系方式以方便为您安排设计师</view>
+  </view>
+  <image src='https://www.okejia.com/wx-img/img/designBottom.png' style='width:100%;height:419rpx;display:block;'></image>
+</view>
+<!-- 装修户型选择列表 -->
+<view class="home-modal" bindtap="canclehome" wx:if="{{houseShow}}"></view>
+<view class="home-style" animation="{{animationData}}" mask-style="color:#000" wx:if='{{houseShow}}'>
+  <view class='header'>
+    <view catchtap="canclehome" class='handle'>取消</view>
+    <view catchtap="homeSure" class='handle sure'>确定</view>
+  </view>
+  <picker-view style="width: 100%; height: 300px;" bindchange="houseSelect" value="{{houseVal}}" wx:key="house">
+    <picker-view-column>
+      <view wx:for="{{homeInfo[0]}}" class="home-style-item" wx:key="rooms">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{homeInfo[1]}}" class="home-style-item" wx:key="parlours">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{homeInfo[2]}}" class="home-style-item" wx:key="cooks">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{homeInfo[3]}}" class="home-style-item" wx:key="toilets">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<!--城市选择列表  -->
+<view class="city-modal" bindtap="cityCancel" wx:if="{{citySelect}}"></view>
+<view class="city-list" animation="{{animationData}}" mask-style="color:#000" wx:if='{{citySelect}}'>
+  <view class='header'>
+    <view catchtap="cityCancel" class='handle'>取消</view>
+    <view catchtap="citySure" class='handle sure'>确定</view>
+  </view>
+  <picker-view style="width: 100%; height: 600rpx;" bindchange="cityChange" value="{{value}}" wx:key="china">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" class="city-item" wx:key="province">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" class="city-item" wx:key="city">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys}}" class="city-item" wx:key="countys">
+        {{item.name}}
+      </view>
+    </picker-view-column>
+  </picker-view>
+</view>

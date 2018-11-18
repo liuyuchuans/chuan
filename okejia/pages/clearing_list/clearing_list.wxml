@@ -1,0 +1,23 @@
+<!--pages/clearing_list/clearing_list.wxml-->
+<view class='clearing-list'>
+  <view class='clearing-list-item'>
+    <view>基础装修</view>
+    <view bindtap='clearing' data-type='0'>查看详情</view>
+  </view>
+  <view class='clearing-list-item'>
+    <view>家具</view>
+    <view bindtap='clearing' data-type='5'>查看详情</view>
+  </view>
+  <view class='clearing-list-item'>
+    <view>电器</view>
+    <view bindtap='clearing' data-type='6'>查看详情</view>
+  </view>
+  <view class='clearing-list-item'>
+    <view>布艺饰品</view>
+    <view bindtap='clearing' data-type='7'>查看详情</view>
+  </view>
+  <view class='clearing-list-item'>
+    <view>智能环保</view>
+    <view bindtap='clearing' data-type='8'>查看详情</view>
+  </view>
+</view>

@@ -1,0 +1,102 @@
+/* pages/login/login.wxss */
+
+.logo-text {
+  position: absolute;
+  left: 203rpx;
+  top: 450rpx;
+}
+
+.logo-text image {
+  width: 330rpx;
+  height: 131rpx;
+  display: block;
+}
+
+.logo-img image {
+  width: 750rpx;
+  height: 600rpx;
+  display: block;
+}
+
+.logo-content {
+  padding: 30rpx 50rpx 30rpx;
+}
+
+.logo-resgiter {
+  width: 100%;
+  height: 56rpx;
+  font-size: 40rpx;
+  text-align: center;
+  color: #333;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+.logo-get {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-get input{
+  width: 100%;
+}
+.logo-get .getCode {
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 35rpx;
+  margin-right: 0;
+  border: 2rpx solid #666;
+  border-radius: 4rpx;
+  font-size: 24rpx;
+  color: #333;
+  letter-spacing: 0;
+  background:#c0c5d0;
+  text-align: center;
+
+}
+
+.logo-content input {
+  margin-top: 35rpx;
+}
+
+.logo-liner {
+  border: 2rpx solid #666;
+  margin-top: 40rpx;
+}
+
+.logo-sure {
+  margin-top: 38rpx;
+  font-size: 36rpx;
+  color: #fff;
+  letter-spacing: 0;
+  /* background: rgba(0,0,0,0.2); */
+  border-radius: 3rpx;
+}
+
+.logo-protocol {
+  display: flex;
+  align-items: center;
+  margin-top: 45rpx;
+  margin-left: 48rpx;
+}
+
+.logo-protocol image {
+  width: 38rpx;
+  height: 38rpx;
+}
+
+.logo-protocol text {
+  font-size: 28rpx;
+  color: #333;
+  letter-spacing: 0;
+  line-height: 48rpx;
+}
+
+.logo-protocol .text1 {
+  margin-left: 13rpx;
+}
+
+.logo-protocol .text2 {
+  color: #00d3ca;
+}

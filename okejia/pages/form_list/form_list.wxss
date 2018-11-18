@@ -1,0 +1,150 @@
+/* pages/form_list/form_list.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.form_list {
+  padding-bottom: 142rpx;
+}
+
+.form_list .info {
+  padding-left: 40rpx;
+  margin-bottom: 66rpx;
+}
+
+.form_list .info .normal {
+  display: flex;
+  align-items: center;
+  width: 710rpx;
+  height: 120rpx;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #c7c7cd;
+}
+
+.form_list .info .normal .title {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.form_list .info .normal input {
+  width: 482rpx;
+  margin-left: 70rpx;
+}
+
+.form_list .info .city .selectCity {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 70rpx;
+  width: 488rpx;
+}
+
+.form_list .info .city .selectCity .arror {
+  display: flex;
+  align-items: center;
+}
+
+.form_list .info .houseType .selectType {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 70rpx;
+  width: 488rpx;
+}
+
+.form_list .info .houseType .selectType .arror {
+  display: flex;
+  align-items: center;
+}
+
+.form_list .bootom {
+  padding: 0 20rpx;
+}
+
+.form_list .bootom .sendInfo {
+  width: 710rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #3c6ad1;
+  border-radius: 10rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+}
+
+/*预约成功状态*/
+
+.order-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.order-info {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  background: #fafafa;
+}
+
+.order-info .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120rpx;
+  border-bottom: 2rpx solid #e8e8ea;
+}
+
+.order-info .title text {
+  font-size: 36rpx;
+  color: #2e2e2e;
+  letter-spacing: 1.12rpx;
+  font-weight: bold;
+}
+
+.order-info .content {
+  height: 100%;
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+  margin: 55rpx 0 55rpx 60rpx;
+}
+
+.order-info .content view {
+  height: 60.6rpx;
+  line-height: 60.6rpx;
+  font-size: 32rpx;
+}
+
+.order-info .content view text {
+  font-size: 30rpx;
+  color: #666;
+  letter-spacing: 0;
+}
+
+.order-info .content view text:nth-child(2) {
+  margin-left: 10rpx;
+}
+
+.order-money {
+  display: flex;
+  z-index: 1001;
+  /* border-top: 2rpx solid #e5e5e5; */
+}
+
+.order-money .normal {
+  flex: 1;
+  text-align: center;
+  height: 133rpx;
+  line-height: 133rpx;
+  font-size: 32rpx;
+  letter-spacing: 1rpx;
+  color: #ffc801;
+  border: 2rpx solid #e5e5e5;
+}

@@ -1,0 +1,57 @@
+/* pages/look/gWatch/gWatch.wxss */
+.content .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  height: 116rpx;
+  font-size: 24rpx;
+  color: #ccc;
+  /* background: #f7f7f7; */
+}
+
+.title .name {
+  font-size: 36rpx;
+  color: #333;
+}
+.title .des {
+  margin-left: 14rpx;
+}
+.content{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.con .list{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  height: 200rpx
+}
+.con .list .img{
+   margin-right: 30rpx;
+  width: 40%;
+  height: 200rpx;
+}
+.con .list .img image{
+   background-image:url('https://www.okejia.com/wx-img/img/noImg.png');
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  width: 100%;
+  height: 100%;
+}
+.con .list .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 58%;
+}
+.con .list .right view{
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.con .list .right text{
+  color: #0355B4;
+  font-size: 26rpx;
+}

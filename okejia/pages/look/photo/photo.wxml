@@ -1,0 +1,18 @@
+<!--pages/look/photo/photo.wxml-->
+<view id='app'>
+  <view class='pos'>
+    <view class='nav'>
+      <view class='ul'>
+        <view class='li' wx:for='{{listAll}}' wx:key bindtap='openSelect' data-val="{{item.params}}"data-index="{{index}}">{{item.name}}<image src='{{item.navImg}}'></image></view>
+      </view>
+       <view class='ol' wx:if="{{selectShow}}">
+        <view class='li' wx:for='{{selectList}}' wx:key bindtap='choice' data-index="{{index}}" data-name="{{item.name}}" >{{item.name}}</view>
+      </view> 
+    </view>
+  </view>
+  <view class='content'>
+    <view class='con' wx:for="{{contentAll}}" wx:key><image src='{{item.imgPath[0]}}' mode='aspectFill' data-id="{{item.id}}" data-cate="{{item.category}}" bindtap='toGalleryDetail'></image>
+      <text>{{item.imageName}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/city_list/city_list.wxml-->
+<!--城市弹出框列表-->
+<view class="city_box" style="height: {{winHeight}}px;">
+  <view class='city_content'>
+    <scroll-view scroll-y="true" style="height: {{winHeight}}px;" scroll-into-view="{{scrollTopId}}" class="city_list">
+      <block wx:for="{{cityData}}" wx:for-index="idx" wx:for-item="cityName" wx:key=''>
+        <block wx:for="{{cityName}}" wx:key=''>
+          <view class="city_con" data-cityid='{{item.id}}' data-cityname='{{item.showName}}' bindtap='selectCity' id="{{idx}}">{{item.showName}}</view>
+        </block>
+      </block>
+    </scroll-view>
+  </view>
+
+  <!--城市字母选择列表-->
+  <view class="scroll_list" bindtouchstart="chStart" bindtouchend="chEnd" catchtouchmove="chMove">
+    <block wx:for="{{cityData}}" wx:for-index="idx" wx:for-item="cityName" wx:key=''>
+      <view id="{{idx}}" class="scroll_list_chi" style="line-height:{{lineHeight}}px ; height:{{lineHeight}}px;" bindtouchstart="getWords" bindtouchend="setWords">{{idx}}</view>
+    </block>
+  </view>
+  <!--选择显示-->
+  <view hidden="{{hidden}}" class="showwords">
+    {{showwords}}
+  </view>
+</view>

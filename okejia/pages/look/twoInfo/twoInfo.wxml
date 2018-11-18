@@ -1,0 +1,26 @@
+<!--pages/look/construction/twoInfo/twoInfo.wxml-->
+<view id='#app' bindtouchend='touchLeft' bindtouchstart='touchStart'>
+<view class='con'>
+<view class='header'>
+  <view class='left' bindtap='cliNew'>最新文章</view>
+  <view class='right' bindtap='cliMax'>最热文章</view>
+  <view class="div {{myClass?'active':''}} {{myClass2?'active2':''}}"></view>
+</view>
+ <navigator url="/pages/h5/h5?urls={{item.url}}"  wx:for="{{list}}" wx:key> 
+  <view class='list'>
+    <view class='img'>
+      <image src='{{item.imgPath[0]}}' mode='aspectFill'></image>
+    </view>
+    <view class='right'>
+      <view>{{item.title}}</view>
+      <text>阅读量：{{item.previewNum}}</text>
+    </view>
+  </view>
+ </navigator> 
+<view wx:if="{{list.length==0}}" class='no'>
+  <view>
+    <image src='/img/noData.png' mode="widthFix"></image>
+  </view>
+</view>
+</view>
+</view>

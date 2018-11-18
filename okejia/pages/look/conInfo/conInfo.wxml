@@ -1,0 +1,14 @@
+<!--pages/look/construction/conInfo/conInfo.wxml-->
+<view class='con'>
+ <navigator url="/pages/h5/h5?urls={{item.url}}" wx:for="{{list}}" wx:key> 
+  <view class='list'>
+    <view class='img'>
+      <image src='{{item.imgPath[0]}}' mode='aspectFill'></image>
+    </view>
+    <view class='right'>
+      <view>{{item.title}}</view>
+      <text>阅读量：{{item.previewNum}}</text>
+    </view>
+  </view>
+ </navigator>
+</view>

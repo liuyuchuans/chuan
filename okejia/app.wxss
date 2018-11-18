@@ -1,0 +1,358 @@
+/**app.wxss**/
+
+/*图片占位图  */
+
+.bcImg {
+  background-image: url('https://www.okejia.com/wx-img/img/noImg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/*表单列表样式  */
+
+.subInfo {
+  height: 100%;
+  padding: 0 40rpx;
+  background: white;
+}
+
+.subInfo .userNum {
+  display: flex;
+  align-items: center;
+  line-height: 84rpx;
+  font-size: 28rpx;
+  color: #333;
+  letter-spacing: 0;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.subInfo .userNum image {
+  width: 32rpx;
+  height: 40.2rpx;
+}
+
+.subInfo .userNum view {
+  margin-left: 20rpx;
+}
+
+.subInfo .userNum view text {
+  color: red;
+  letter-spacing: 0;
+  line-height: 40rpx;
+}
+
+.submit-content {
+  width: 100%;
+  height: 100%;
+}
+
+.submit-content .normal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72rpx;
+  font-size: 28rpx;
+  color: #333;
+  letter-spacing: 0;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.submit-content .normal .left {
+  width: 240rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.submit-content .normal .right {
+  width: 400rpx;
+  height: 72rpx;
+  text-align: right;
+  line-height: 72rpx;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.submit-content .normal .inputs {
+  text-align: right;
+}
+
+.submit-button {
+  padding: 40rpx;
+}
+
+.submit-button button {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background: #00d3ca;
+  border-radius: 4px;
+  font-size: 36rpx;
+  color: #fff;
+}
+
+/* 表单提交-装修户型样式 */
+
+.home-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.home-style {
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  display: flex;
+  z-index: 2000;
+  background-color: #fbf9fe;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+
+.home-style .header {
+  height: 80rpx;
+  width: 100%;
+  line-height: 80rpx;
+  background: #fff;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.home-style .header .handle {
+  width: 120rpx;
+  height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.home-style .header .sure {
+  color: #1aad19;
+}
+
+.home-style-item {
+  line-height: 70rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  text-align: center;
+}
+
+/*实物劵选择弹出框  */
+
+.ticket-info {
+  padding: 40rpx 20rpx;
+}
+
+.ticket-list {
+  width: 100%;
+  height: 100%;
+}
+
+.ticket-content {
+  width: 100%;
+  height: 340rpx;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+.ticket-content .header {
+  width: 100%;
+  height: 248rpx;
+  display: flex;
+  border-radius: 4rpx;
+  border-bottom: 2rpx dashed lightgray;
+}
+
+.ticket-content .header .matter-left {
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+  margin-bottom: 38rpx;
+}
+
+.ticket-content .header .matter-left image {
+  width: 100%;
+  height: 100%;
+}
+
+.ticket-content .header .matter-right {
+  margin-top: 50rpx;
+  margin-left: 46rpx;
+}
+
+.ticket-content .header .matter-right view {
+  width: 100%;
+  height: 48rpx;
+  line-height: 48rpx;
+  font-size: 26rpx;
+  letter-spacing: 0;
+  color: #333;
+  white-space: nowrap;
+}
+
+.ticket-content .header .matter-right view:nth-child(1) {
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.ticket-content .header .matter-right view:nth-child(2) {
+  margin-top: 13rpx;
+}
+
+.ticket-content .header .cash-left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+}
+
+.ticket-content .header .cash-left .price {
+  width: 160rpx;
+  height: 67rpx;
+  text-align: center;
+  line-height: 67rpx;
+  white-space: nowrap;
+  overflow-x: scroll;
+  font-size: 40rpx;
+  color: #f53a23;
+}
+
+.ticket-content .header .cash-left .type {
+  width: 160rpx;
+  height: 46rpx;
+  text-align: center;
+  line-height: 46rpx;
+  font-size: 24rpx;
+  color: #2a2a2a;
+}
+
+.ticket-content .header .cash-right {
+  width: 660rpx;
+  height: 160rpx;
+  margin-top: 50rpx;
+  margin-left: 46rpx;
+}
+
+.ticket-content .header .cash-right view {
+  width: 100%;
+  height: 48rpx;
+  line-height: 48rpx;
+  letter-spacing: 0;
+}
+
+.ticket-content .header .cash-right view:nth-child(1) {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: black;
+}
+
+.ticket-content .header .cash-right view:nth-child(2) {
+  margin-top: 26rpx;
+  font-size: 30rpx;
+  color: #333;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.ticket-content .footer {
+  height: 90rpx;
+  line-height: 90rpx;
+  padding-left: 50rpx;
+  white-space: nowrap;
+  overflow-x: scroll;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+}
+
+.ticket-content .selected {
+  width: 246rpx;
+  height: 139rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.ticket-content .selected image {
+  width: 246rpx;
+  height: 139rpx;
+}
+
+/* 城市选择列表样式 */
+
+.city-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.city-list {
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  z-index: 2000;
+  display: flex;
+  overflow: hidden;
+  background-color: #fbf9fe;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.city-list .header {
+  height: 80rpx;
+  width: 100%;
+  line-height: 80rpx;
+  background: #fff;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.city-list .header .handle {
+  width: 120rpx;
+  height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.city-list .header .sure {
+  color: #1aad19;
+}
+
+.city-item {
+  line-height: 70rpx;
+  text-align: center;
+}

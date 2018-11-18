@@ -1,0 +1,71 @@
+<!--pages/user/lists/info.wxml-->
+<view class='info-content'>
+  <view class='info-flow'>
+    <text>装修流程</text>
+    <view bindtap='showFlow'>
+      <text>展开流程</text>
+      <image src='{{change}}'></image>
+    </view>
+  </view>
+  <view class='flowContent' hidden="{{flow}}">
+    <image src='https://www.okejia.com/wx-img/img/liuchen.png'></image>
+  </view>
+  <view class='orderForm' wx:if='{{resData.order}}'>
+    <view class='time'>
+      <view class='info'>您的预约信息：</view>
+      <view class='date'>
+        <text>{{resData.order.createTime}}</text>
+      </view>
+    </view>
+    <view class='content'>
+      <view>
+        <text>省份：</text>
+        <text>{{resData.order.provinceName}}</text>
+      </view>
+      <view>
+        <text>城市：</text>
+        <text>{{resData.order.cityName}}</text>
+      </view>
+      <view>
+        <text>小区：</text>
+        <text>{{resData.order.village}}</text>
+      </view>
+      <view>
+        <text>面积：</text>
+        <text>{{resData.order.area}}㎡</text>
+      </view>
+      <view>
+        <text>户型：</text>
+        <text>{{resData.order.roomNum}}室{{resData.order.parlourNum}}厅{{resData.order.toiletNum}}卫</text>
+      </view>
+      <view wx:if='{{resData.order.decoType==0}}'>
+        <text>装修类型：</text>
+        <text>新房装修</text>
+      </view>
+      <view wx:if='{{resData.order.decoType==1}}'>
+        <text>装修类型：</text>
+        <text>旧房重装</text>
+      </view>
+      <view wx:if='{{resData.order.decoType==2}}'>
+        <text>装修类型：</text>
+        <text>局部装修</text>
+      </view>
+      <view>
+        <text>套餐选择：</text>
+        <text>{{resData.order.procombo.name}}</text>
+      </view>
+      <view>
+        <text>项目编号：</text>
+        <text>{{resData.order.num}}</text>
+      </view>
+      <view wx:if='{{resData.ticket !=null}}'>
+        <text>优惠项目：</text>
+        <text>{{resData.ticket.name}}</text>
+      </view>
+    </view>
+    <view class='state off' wx:if='{{state}}' bindtap='goPay'>待支付定金</view>
+    <navigator url='../../../down_load/down_load'>
+      <view class='state ok' wx:if='{{!state}}'>可在OKE家App端，查看详情</view>
+    </navigator>
+  </view>
+</view>

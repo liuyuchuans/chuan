@@ -1,0 +1,84 @@
+/* pages/look/construction/twoInfo/twoInfo.wxss */
+.header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 24rpx;
+  height: 100rpx;
+  background: #fff
+}
+.header::after{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/*动画  */
+.header .div{
+  position: absolute;
+  bottom: 10rpx;
+  left: 21%;
+  width: 50rpx;
+  height: 8rpx;
+  background: #0355B4;
+  border-radius: 4rpx;
+  transition: all .5s;
+}
+.header .active{
+  left: calc(79% - 50rpx);
+}
+.con{
+  padding: 0 20rpx;
+  padding-top: 100rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.con .list{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  height: 200rpx
+}
+.con .list .img{
+  margin-right: 30rpx;
+  width: 40%;
+  height: 200rpx;
+}
+.con .list .img image{
+   background-image:url('https://www.okejia.com/wx-img/img/noImg.png');
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  width: 100%;
+  height: 100%;
+}
+.con .list .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 58%;
+}
+.con .list .right view{
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.con .list .right text{
+  color: #0355B4;
+  font-size: 26rpx;
+}
+.no{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25%
+}
+.no view{
+  width: 50%;
+}
+.no view image{
+  width: 100%;
+}

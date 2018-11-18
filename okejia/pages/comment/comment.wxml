@@ -1,0 +1,220 @@
+<!--pages/comment/comment.wxml-->
+<view class='comment'>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/1.png'></image>
+      <text class='name'>默先生87</text>
+    </view>
+    <view class='content'>服务态度和工地质量36个赞！设计师设计能力和想法都达到了我和我家人的一致，效果挺满意的，不多说，实景来一波，马上就竣工了，准备家具进场。非常感谢杨大设计师，后期有亲戚朋友必定介绍给你！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/2.png'></image>
+      <text class='name'>风起长林</text>
+    </view>
+    <view class='content'>准备做婚房的，韩老师设计非常贴心，还详细给我介绍了工艺材料。个人比较看重环保这块，感觉做的不错，之前咨询也了解过品牌，看了下之前做的样板房，老婆也比较认可。</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/3.png'></image>
+      <text class='name'>sun2000</text>
+    </view>
+    <view class='content'>在市区工作不常在家，也比较了不少大大小小的装修公司 ，前面都是线上沟通，一直没有在实体店看过，趁周末带妈妈去店里看了，公司很正规，材料大致选好了，房子是装修好以后给爸妈住的，设计师跟我妈沟通的很好，预算确实很透明，整体比较满意，就定下来了，期待最终完工效果！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/4.png'></image>
+      <text class='name'>上善若水121</text>
+    </view>
+    <view class='content'>明年家里可能会有小宝，一家人商量着决定把房子翻新，在网上看了几家好评较多的公司做对比，也都去他们的实体门店看了看，最终满意OKE家的原因是他们的门店体验感给我留下了很好印象，还有就是他们的设计师上门量房的时候特别认真仔细，人很热情，更重要的事他们的材料很环保，适合有小孩的家庭装修，相信这点会是个不错的选择。目前水电快完工了，感觉还不错，期待后面的进展吧</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/5.png'></image>
+      <text class='name'>爱小宝真是太好了</text>
+    </view>
+    <view class='content'>讲真心话，房子在远郊，他们公司很热情，大老远量房，第二天赶出图纸，还带我们去看其他正在施工的工地，很贴心，服务很好有自己的施工团队，确实不错，现在自己的房子也差不多搞好了，中间没有增加费用，就等家具了，给大家看看。点个赞</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/6.png'></image>
+      <text class='name'>rain</text>
+    </view>
+    <view class='content'>房子面积虽然很大，但是户型结构并不是很好，OKE家给我推荐的设计老师给我做的设计方案我很满意，经过几次沟通最后定下了这家公司。现在已经做完泥工了，期待最终的效果！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/7.png'></image>
+      <text class='name'>祥仔</text>
+    </view>
+    <view class='content'>总体感觉还是很好的，客服美女很热情，设计师给人感觉很专业，做了好几套比较合心意的方案，没有犹豫的签了意向合同，不错不错必须好评</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/8.png'></image>
+      <text class='name'>MR达</text>
+    </view>
+    <view class='content'>之前听几个朋友说过这个平台，感觉他们品牌知度还挺高的，就去公司的门店看了看。服务态度很好，设计师在给我介绍设计的方面也很详细，细节方面处理的挺好。我提的一些想法，设计师也能和我磨合，材料这块很放心，都是一些一线的品牌。最后还看了正在施工的工地，就定下来了，感觉是我想要的</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/9.png'></image>
+      <text class='name'>春风吹又生</text>
+    </view>
+    <view class='content'>我家的房子装修得非常漂亮，感谢OKE家，从量房设计到每一步施工，都体现了你们团队专业又细致，亲朋好友来我家参观，好多人都问在哪装的呢！我都跟他们推荐了，愿你们团队越做越好！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/10.png'></image>
+      <text class='name'>Woody</text>
+    </view>
+    <view class='content'>材料都是牌子的，品牌的东西，我还是放心的，而且市场上，我自己也转了一下，价位没得比，还是这个材料性价比高一点，主要还省心</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/11.png'></image>
+      <text class='name'>孔先森BK</text>
+    </view>
+    <view class='content'>才交的房，想选装修公司，没有找到合适的，后来在网上看看，又去小区里面转了转，参观邻居房子的时候看到他们找的OKE家的工地，做工确实可以，材料也看过了，都还不错。现在已经开始装了，就等成果了！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/12.png'></image>
+      <text class='name'>ZXY</text>
+    </view>
+    <view class='content'>设计师给了三份设计，每种方案考虑的都很周全，上门量房是第一个到现场的，设计师准时态度也很好，有自己的想法，非常欣赏。自己去门店参观了主材，质量和价格都非常不错。个人比较喜欢北欧风，对设计师的效果图比较合我胃口。</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/13.png'></image>
+      <text class='name'>阿盖盖</text>
+    </view>
+    <view class='content'>之前朋友就在OKE家装修的，价格便宜效果还不错，关键服务也不错，有专人负责对接，还有售后，挺放心的，重点是对于我们这种工薪阶层很经济适用，满意满意</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/14.png'></image>
+      <text class='name'>青柚子</text>
+    </view>
+    <view class='content'>这个平台可以，很认真负责，设计师服务很好，能力超强，我特别喜欢设计师给我们设计的房子，布局特别好，给我们做了不少改动，最终定下来的方案特别贴合生活。公司施工方面把控的比较严格，过程中也都很顺利的，每一道施工程序都很认真，中途跟项目经理也聊的来，有些小活也都帮忙给做了，很开心！天冷了，该搬进去住了！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/15.png'></image>
+      <text class='name'>碎碎念</text>
+    </view>
+    <view class='content'>装修简单大气，是我要欧式风格，OKE家服务挺好的，比较经济实惠，我老公也比较满意，希望日后不会出现什么售后问题就最好了，目前为止还是挺喜欢的，赞一个</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/16.png'></image>
+      <text class='name'>屯屯屯里</text>
+    </view>
+    <view class='content'>装修房子对我来说是件人生中重大之一，一心想把房子装修的跟别人家的风格不一样，对比了几家装修公司后，最终选择了这家，价格，服务，设计都让我挺满意的！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/17.png'></image>
+      <text class='name'>南风123</text>
+    </view>
+    <view class='content'>满意的一次家装，从施工到主材，我比较看好的水电，都改造的很好，感谢OKE家给我们家的装修。第一次体验线上这种家装，没想到这么满意~！！谢谢</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/18.png'></image>
+      <text class='name'>西贝面</text>
+    </view>
+    <view class='content'>差不多完工了。设计师和工程经理都很负责，设计师每周都来，很负责，工程经理也很认真，工人师傅都很好，做工很细，感谢大家的付出，把我家当做自己家一样，期待完工后的效果！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/19.png'></image>
+      <text class='name'>864247451</text>
+    </view>
+    <view class='content'>朋友介绍过来的，碰上他们家搞优惠，优惠了不少，这边的人都很热情，下雨天还带我们观看他们的工地。为他们的这种敬业精神点赞，房子交给他们装修出来的我非常满意。</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/20.png'></image>
+      <text class='name'>亚超最帅</text>
+    </view>
+    <view class='content'>总的来说是不错的，监督和问题反映的渠道比较方便和有效，遇到问题各个方面都能尽力协助解决问题。感谢设计师和工人们的负责。</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/21.png'></image>
+      <text class='name'>陆大师兄</text>
+    </view>
+    <view class='content'>刚装完，自己做了环保检测，确实是严格按照环保标准走的。给你们点赞！直接入住！非常满意！杠杠滴！点赞！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/22.png'></image>
+      <text class='name'>eleven</text>
+    </view>
+    <view class='content'>这个装修公司给人的感觉就是很用心，很多细节我们因为不专业没有想到他们都替我们考虑到了，值得信赖的品牌。从他们的前期服务到施工开始，让我们很省心。</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/23.png'></image>
+      <text class='name'>小细毛</text>
+    </view>
+    <view class='content'>爸爸喜欢中式风格，我们又怕中式会很老气，设计师根据我们的需求打造了一个完美的新中式风格，设计师太用心啦，满足了我们一家的需求。价格也透明，后期不用加钱，包含的东西讲的很细，用的东西都是大品牌，让人放心！就喜欢这种方式装修</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/24.png'></image>
+      <text class='name'>疯狂豆腐干</text>
+    </view>
+    <view class='content'>完美！正规家装公司，服务一流！非常省心，而且经济实惠，质量过硬，非常满意，也很感谢家装管家的认真负责。大公司的设计就是不一样，很有个人风格，真的是为我量身打造，简直不要太满意！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/25.png'></image>
+      <text class='name'>Linna</text>
+    </view>
+    <view class='content'>工地已接近完成，无论是施工、主材还是家具都挺满意的，尤其是设计师从最开始跟踪到完成，很细心考虑的也很周到，工程人员也很专业，很庆幸选择你们！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/26.png'></image>
+      <text class='name'>祈祷幸福ing</text>
+    </view>
+    <view class='content'>一步步很清晰，钱花在哪也明确。不一样的模式带来不一样的体验，服务人员热情专业好评</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/27.png'></image>
+      <text class='name'>桂与聪</text>
+    </view>
+    <view class='content'>感谢OKE家团队给我带来了一个美好的家，我非常满意，从设计到施工再到竣工，比较省心省时省力，设计师也非常有能力，从设计图纸到一些细节都展现的非常完美，包括家装管家，施工人员都为我的爱家做出了很多工作，工程质量和细节都处理的非常不错！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/28.png'></image>
+      <text class='name'>W。</text>
+    </view>
+    <view class='content'>这种全屋整装一站解决形式的装修让人觉得很舒心，省时省力不说，展厅里面的材料随便选，而且还都是大牌子，上档次还不贵，最后还送了个冰箱，超值</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/29.png'></image>
+      <text class='name'>淡竹</text>
+    </view>
+    <view class='content'>从开工到完工，太省心了，每一步都很认真，每次去家里看，都是收拾的干干净净的，非常负责任，很满意！非常感谢OKE家，感谢设计师，项目经理，还有辛苦的师傅们！</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/30.png'></image>
+      <text class='name'>,</text>
+    </view>
+    <view class='content'>开始选择OKE家还有点犹豫，但是装修过程中师傅很认真，质检也很负责，我就放心了，出来的效果和之前设计做的效果图差不多，我很满意。</view>
+  </view>
+  <view class='commentList'>
+    <view class='userInfo'>
+      <image class='avator bcImg' src='https://www.okejia.com/wx-img/avator/31.png'></image>
+      <text class='name'>光焦</text>
+    </view>
+    <view class='content'>非常满意的家装设计，客服相当专业，答疑解惑。设计师也是不管多晚打电话 咨询问题都会帮忙解答，后期就连我家的软装 都是设计师陪着一一选择的，很用心的一家企业。</view>
+  </view>
+</view>

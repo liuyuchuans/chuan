@@ -1,0 +1,17 @@
+<!--pages/user/itemList/itemList.wxml-->
+<view class='itemList'>
+  <block wx:for="{{resData}}" wx:for-item='item' wx:key="">
+    <view class='list' bindtap='listDetail' data-orderid='{{item.id}}'>
+      <view class='list-name'>
+        <text>订单编号:</text>
+        <text>{{item.num}}</text>
+      </view>
+      <view class='list-content'>
+        <view class='contents'>
+          <text>{{item.orderDetail}}</text>
+        </view>
+        <view class='date'>{{item.createTime}}</view>
+      </view>
+    </view>
+  </block>
+</view>

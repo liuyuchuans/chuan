@@ -1,0 +1,32 @@
+<!--pages/ticket/ticket.wxml-->
+<!--现金抵扣卷列表  -->
+<view class='ticket-info'>
+  <scroll-view scroll-y="true" class='ticket-list'>
+    <block wx:for='{{couponData}}' wx:for-item='item' wx:index='index' wx:key='key'>
+      <view class='ticket-content' bindtap='selectCoupon' data-couponid='{{item.id}}' data-selectindex='{{index}}' data-couponname='{{item.name}}'>
+        <view class='header'>
+          <view class='matter-left' wx:if='{{item.getType==2}}'>
+            <image class='bcImg' src='{{item.imagePath}}'></image>
+          </view>
+          <view class='cash-left' wx:if='{{item.getType==0}}'>
+            <text class='price'>￥{{item.deduction}}</text>
+            <text class='type'>抵扣劵</text>
+          </view>
+          <view class='matter-right' wx:if='{{item.getType==2}}'>
+            <view>{{item.name}}</view>
+            <view>品格：{{item.brand}}</view>
+            <view>规格：{{item.specification}}</view>
+          </view>
+          <view class='cash-right' wx:if='{{item.getType==0}}'>
+            <view>{{item.name}}</view>
+            <view>使用地区：{{item.cityName}}</view>
+          </view>
+        </view>
+        <view class='footer'>支付{{item.price}}元可享受该优惠</view>
+        <view class='selected' wx:if='{{couponNum==index?true:false}}'>
+          <image src='../../img/yixuan.png'></image>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

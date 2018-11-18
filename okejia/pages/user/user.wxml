@@ -1,0 +1,60 @@
+<!--pages/user/user.wxml-->
+<view class='myUser'>
+  <view class='userBg'>
+    <image src='https://www.okejia.com/wx-img/img/userBg.png' class='userBgIcon bcImg'></image>
+    <view class='userInfoCon'>
+      <view class='userInfo'>
+        <image src='{{avatar}}' class='avator' wx:if='{{showAvatar}}' bindtap='avatarUpload'></image>
+        <image src='{{avatar}}' class='avator' wx:if='{{!showAvatar}}'></image>
+        <view class='userNum' wx:if='{{showNumber}}'>{{person}}</view>
+        <view class='loginState' bindtap='goLogin' wx:if='{{!showNumber}}'>登录/注册</view>
+      </view>
+    </view>
+  </view>
+  <view class='itemInfo normalInfo'>
+    <view class='leftIcon'>
+      <image src='../../img/itemIcon.png' class='itemIcon'></image>
+    </view>
+    <view class='rightDes' bindtap='itemList'>项目信息</view>
+  </view>
+  <view class='shareInfo normalInfo' bindtap='goShare'>
+    <view class='leftIcon'>
+      <image src='../../img/shareIcon.png' class='itemIcon'></image>
+    </view>
+    <view class='rightDes shareDes'>邀请客户</view>
+  </view>
+  <view class='discount normalInfo' bindtap='myDiscount'>
+    <view class='leftIcon'>
+      <image src='../../img/discountIcon.png' class='itemIcon'></image>
+    </view>
+    <view class='rightDes'>我的优惠</view>
+  </view>
+  <view class='service normalInfo'>
+    <view class='leftIcon'>
+      <image src='../../img/serviceIcon.png' class='itemIcon'></image>
+    </view>
+    <view class='rightDes serviceDes' bindtap="calling">
+      <text>服务热线</text>
+      <text class='serviceNum'>点击拨打: 400-993-1916</text>
+    </view>
+  </view>
+  <view class='feedback normalInfo'>
+    <view class='leftIcon'>
+      <image src='../../img/feedbackIcon.png' class='itemIcon'></image>
+    </view>
+    <view class='rightDes feedbackCon'>
+      意见反馈
+      <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn btnNormal'></contact-button>
+      <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn btnNormal'></contact-button>
+      <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn btnNormal'></contact-button>
+      <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn btnNormal'></contact-button>
+      <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn btnNormal'></contact-button>
+      <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn btnNormal'></contact-button>
+      <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn btnNormal'></contact-button>
+      <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn btnNormal'></contact-button>
+      <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn btnNormal'></contact-button>
+      <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn btnNormal'></contact-button>
+      <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn btnNormal'></contact-button>
+    </view>
+  </view>
+</view>

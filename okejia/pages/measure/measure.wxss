@@ -1,0 +1,68 @@
+/* pages/measure/measure.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.measure {
+  padding-bottom:142rpx;
+}
+
+.measure .info {
+  padding-left: 40rpx;
+  margin-bottom: 66rpx;
+}
+
+.measure .info .normal {
+  display: flex;
+  align-items: center;
+  width: 710rpx;
+  height: 120rpx;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #c7c7cd;
+}
+
+.measure .info .normal .title {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.measure .info .normal input {
+  width: 482rpx;
+  margin-left: 70rpx;
+}
+
+.measure .info .city .selectCity {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 70rpx;
+  width: 488rpx;
+}
+.measure .info .city .selectCity .arror{
+  display: flex;
+  align-items: center
+}
+.measure .info .houseType .selectType {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 70rpx;
+  width: 488rpx;
+}
+.measure .info .houseType .selectType .arror{
+  display: flex;
+  align-items: center
+}
+.measure .bootom {
+  padding: 0 20rpx;
+}
+
+.measure .bootom .sendInfo {
+  width: 710rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #3c6ad1;
+  border-radius: 10rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+}

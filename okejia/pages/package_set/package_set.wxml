@@ -1,0 +1,4 @@
+<!--pages/package_set.wxml-->
+<view>
+<image class='bcImg' style='width:100%;heigth:auto;' src='{{packageSet}}' mode="widthFix"></image>
+</view>

@@ -1,0 +1,123 @@
+/* pages/user/user.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.myUser {
+  width: 100%;
+  height: 100%;
+}
+
+.myUser .userBg {
+  position: relative;
+}
+
+.myUser .userBg .userBgIcon {
+  width: 100%;
+  height: 310rpx;
+  display: block;
+}
+
+.myUser .userInfoCon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 310rpx;
+  display: flex;
+  align-items: center;
+  z-index: 1111;
+}
+
+.myUser .userInfoCon .userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.myUser .userInfoCon .userInfo .avator {
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 40rpx;
+  border-radius: 50%;
+}
+
+.myUser .userInfoCon .userInfo .userNum {
+  margin-left: 26rpx;
+  font-size: 48rpx;
+  color: #fff;
+}
+
+.myUser .userInfoCon .userInfo .loginState {
+  margin-left: 26rpx;
+  font-size: 48rpx;
+  color: #fff;
+}
+
+.myUser .normalInfo {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.myUser .itemInfo {
+  margin-top: 20rpx;
+}
+
+.myUser .normalInfo .leftIcon {
+  width: 120rpx;
+  height: 98rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myUser .normalInfo .leftIcon .itemIcon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.myUser .normalInfo .rightDes {
+  width: 100%;
+  height: 98rpx;
+  display: flex;
+  align-items: center;
+}
+
+.myUser .shareInfo {
+  margin-top: 20rpx;
+}
+
+.myUser .shareInfo .shareDes {
+  border-bottom: 1px solid #d4d5d9;
+}
+
+.myUser .service {
+  margin-top: 20rpx;
+}
+
+.myUser .service .serviceDes {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d4d5d9; 
+}
+
+.myUser .service .serviceDes .serviceNum {
+  margin-right: 40rpx;
+}
+
+.myUser .feedback .feedbackCon {
+  /* border-bottom: 1px solid #D4D5D9; */
+}
+
+.myUser .feedback .feedbackCon .btnNormal {
+  opacity: 0;
+}
+
+/* .detail-bottom .consultation .contactBtn1{  
+  position: absolute;  
+  top: 0;  
+  left: 60rpx; 
+}  */

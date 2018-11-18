@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/look/twoInfo/twoInfo",
+    "pages/city_list/city_list",
+    "pages/measure/measure",
+    "pages/design/design",
+    "pages/gallery_detail/gallery_detail",
+    "pages/style/style",
+    "pages/package/package",
+    "pages/package_set/package_set",
+    "pages/package_detail/package_detail",
+    "pages/comment/comment",
+    "pages/clearing_list/clearing_list",
+    "pages/clearing_detail/clearing_detail",
+    "pages/offer/offer",
+    "pages/user/user",
+    "pages/user/itemList/itemList",
+    "pages/user/itemList/info/info",
+    "pages/share/share",
+    "pages/discount/discount",
+    "pages/ours/ours",
+    "pages/raiders/raiders",
+    "pages/form_list/form_list",
+    "pages/login/login",
+    "pages/h5/h5",
+    "pages/ticket/ticket",
+    "pages/down_load/down_load",
+    "pages/look/photo/photo",
+    "pages/look/conInfo/conInfo",
+    "pages/look/gWatch/gWatch"
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "OKE家",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/img/indexIcon1.png",
+        "selectedIconPath": "/img/indexIcon2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/raiders/raiders",
+        "iconPath": "/img/raidersIcon1.png",
+        "selectedIconPath": "/img/raidersIcon2.png",
+        "text": "攻略"
+      },
+      {
+        "pagePath": "pages/ours/ours",
+        "iconPath": "/img/ourIcon1.png",
+        "selectedIconPath": "/img/ourIcon2.png",
+        "text": "关于我们"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "/img/userIcon1.png",
+        "selectedIconPath": "/img/userIcon2.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

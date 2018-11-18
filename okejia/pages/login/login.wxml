@@ -1,0 +1,27 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+  <view class='logo-text'>
+    <image src='https://www.okejia.com/wx-img/img/logo.png'></image>
+  </view>
+  <view class='logo-img'>
+    <image class='bcImg' src='https://www.okejia.com/wx-img/img/bc.png'></image>
+  </view>
+  <view class='logo-content'>
+    <view class='logo-resgiter'>登录</view>
+    <input class='logo-phonenumber' placeholder='请输入手机号' type="number" bindinput="phoneinput" maxlength="11" />
+    <view class='logo-liner'></view>
+    <view class='logo-get'>
+      <input type="number" placeholder="验证码" bindinput="codeinput" maxlength="6" />
+      <view bindtap="changeCode" disabled="{{codeDis}}" style='border:none' class='getCode'>
+        {{phoneCode}}
+      </view>
+    </view>
+    <view class='logo-liner'></view>
+    <button class='logo-sure' bindtap='sureCode' style='background:{{sureBg}}'>确定</button>
+    <view class='logo-protocol'>
+      <image src='{{imgs}}' bindtap='agreen' data-agreen='{{agreen}}'></image>
+      <text class='text1'>我已阅读并接受</text>
+      <text class='text2' bindtap='content'>《OKE家用户使用协议》</text>
+    </view>
+  </view>
+</view>

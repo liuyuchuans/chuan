@@ -1,0 +1,168 @@
+/* pages/discount/discount.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.tab {
+  width: 100%;
+  height: 100%;
+}
+
+.tab .tab-nav {
+  width: 100%;
+  white-space: nowrap;
+  color: #333;
+  background: #fff;
+  border-bottom: 2rpx solid #e7e7e7;
+}
+
+.tab .tab-nav .tab-items {
+  display: flex;
+}
+
+.tab .tab-nav .tab-items .tab-item {
+  flex: 1;
+  height: 96rpx;
+  font-size: 32rpx;
+  line-height: 96rpx;
+  text-align: center;
+  color: #333;
+}
+
+.tab .tab-content {
+  width: 100%;
+  height: 1230rpx;
+}
+
+.tab .tab-nav .tab-items .tab-item.active {
+  color: #4675f9;
+  border-bottom: 4rpx solid #4675f9;
+}
+
+.discount {
+  padding: 20rpx;
+}
+
+.discount .picketItem {
+  background: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.discount .picketItem .top {
+  display: flex;
+  padding: 30rpx;
+  border-bottom: 2rpx dashed #e5e5e5;
+  border-radius: 16rpx;
+}
+
+.discount .picketItem .top .left .leftCon {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+}
+
+.discount .picketItem .top .left .leftCon .price {
+  font-size: 72rpx;
+  color: #f53a23;
+}
+
+.discount .picketItem .top .left .leftCon .sign {
+  font-size: 60rpx;
+  color: #f53a23;
+}
+
+.discount .picketItem .top .left .type {
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #2a2a2a;
+}
+
+.discount .picketItem .top .right {
+  padding: 4rpx 0;
+  margin-left: 44rpx;
+  color: #333;
+}
+
+.discount .picketItem .top .right .name {
+  width: 416rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.discount .picketItem .top .right .city {
+  width: 416rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 30rpx;
+}
+
+.discount .picketItem .top .right .order {
+  width: 416rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.discount .picketItem .top .right .order::-webkit-scrollbar {
+  display: none;
+}
+
+.discount .picketItem .bootom {
+  padding: 30rpx;
+  font-size: 30rpx;
+  color: #666;
+  border-radius: 16rpx;
+}
+
+.discount .picketItem .top .leftGoods {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.discount .picketItem .top .leftGoods .imgGoods {
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+}
+
+.discount .picketItem .top .rightGoods {
+  padding: 4rpx 0;
+  margin-left: 44rpx;
+  color: #333;
+}
+
+.discount .picketItem .top .rightGoods .name {
+  width: 416rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.discount .picketItem .top .rightGoods .brand {
+  width: 416rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 30rpx;
+}
+
+.discount .picketItem .top .rightGoods .order {
+  width: 416rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  word-break: keep-all;
+}

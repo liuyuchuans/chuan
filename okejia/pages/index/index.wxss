@@ -1,0 +1,190 @@
+/**index.wxss**/
+
+page {
+  background: #f7f7f7;
+}
+
+.index-banner {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.index-banner image {
+  width: 100%;
+  height: 560rpx;
+  display: block;
+}
+
+.index-actives {
+  width: 100%;
+  height: 100%;
+}
+
+.index-actives .line {
+  width: 100%;
+  height: 20rpx;
+  background: #f7f7f7;
+}
+
+.index-actives .items {
+  width: 100%;
+  display: flex;
+}
+
+.items .item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 248rpx;
+}
+
+.items .item image {
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.items .item text {
+  width: 112rpx;
+  height: 48rpx;
+  text-align: center;
+  line-height: 48rpx;
+  margin-top: 16rpx;
+  font-size: 28rpx;
+  color: #b4b4b4;
+}
+
+.index-exprence {
+}
+
+.index-exprence view image {
+  width: 100%;
+  height: 454rpx;
+  display: block;
+}
+
+.index-show {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.index-show view {
+  width: 375rpx;
+  height: 100%;
+}
+
+.index-show view image {
+  width: 375rpx;
+  height: 270rpx;
+  display: block;
+}
+
+/*活动页跳转点击样式  */
+
+.navigator-hover {
+  color: blue;
+}
+
+.free {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+
+.free .left image {
+  width: 335rpx;
+  height: 160rpx;
+  display: block;
+}
+
+.free .left .design {
+  margin-top: 20rpx;
+}
+
+.free .right {
+  margin-left: 20rpx;
+}
+
+.free .right .offer {
+  width: 355rpx;
+  height: 340rpx;
+  display: block;
+}
+
+.modern {
+  padding: 0 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.modern .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 94rpx;
+  font-size: 36rpx;
+  color: #333;
+}
+
+.modern .title .more {
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.package-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.package-info .package-img {
+  width: 100%;
+  height: 426rpx;
+  display: block;
+}
+
+.experience {
+  padding: 0 20rpx 40rpx 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.experience .title {
+  height: 106rpx;
+  line-height: 106rpx;
+  font-size: 36rpx;
+  color: #333;
+}
+
+.experience .title .des {
+  font-size: 24rpx;
+  color: #ccc;
+  margin-left: 14rpx;
+}
+
+.experience .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience .list image {
+  width: 158rpx;
+  height: 110rpx;
+}
+
+.renovation {
+  padding: 20rpx;
+  background: #fff;
+}
+
+.renovation image {
+  width: 710rpx;
+  height: 250rpx;
+  display: block;
+}

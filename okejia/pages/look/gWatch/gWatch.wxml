@@ -1,0 +1,49 @@
+<!--pages/look/gWatch/gWatch.wxml-->
+<view class='box'>
+<view class='content'>
+    <view class='title'>
+      <view>
+        <text class='name'>热门文章</text>
+      </view>
+      <navigator url="../conInfo/conInfo?id={{classId}}">
+        <view class='more'>查看更多 ></view>
+      </navigator>
+    </view>
+    <view class='con'>
+     <navigator url='/pages/h5/h5?urls={{item.url}}' wx:for="{{content.hortArticle}}" wx:key> 
+      <view class='list'>
+        <view class='img'>
+          <image src='{{item.imgPath[0]}}' mode='aspectFill'></image>
+        </view>
+        <view class='right'>
+          <view>{{item.title}}</view>
+          <text>阅读量：{{item.previewNum}}</text>
+        </view>
+      </view>
+     </navigator> 
+    </view>
+</view>
+<view class='content' wx:for="{{content.columnArticle}}" wx:for-item="items" wx:key>
+    <view class='title'>
+      <view>
+        <text class='name'>{{items.name}}</text>
+      </view>
+      <navigator url="../twoInfo/twoInfo?id={{items.id}}&name={{items.name}}">
+        <view class='more'>查看更多 ></view>
+      </navigator>
+    </view>
+    <view class='con'>
+     <navigator url='/pages/h5/h5?urls={{item.url}}'  wx:for="{{items.mobileArticle}}" wx:key> 
+      <view class='list'>
+        <view class='img'>
+          <image src='{{item.imgPath[0]}}' mode='aspectFill'></image>
+        </view>
+        <view class='right'>
+          <view>{{item.title}}</view>
+          <text>阅读量：{{item.previewNum}}</text>
+        </view>
+      </view>
+     </navigator> 
+    </view>
+</view>
+</view>

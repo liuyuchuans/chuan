@@ -1,0 +1,71 @@
+<!--pages/discount/discount.wxml-->
+<view wx:if='{{noData}}'>
+  <view class='tab'>
+    <scroll-view scroll-x="true" class="tab-nav" scroll-left="{{scrollLeft}}">
+      <view class='tab-items'>
+        <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">待使用</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">已使用</view>
+      </view>
+    </scroll-view>
+  </view>
+  <scroll-view scroll-y style="height: 1230rpx;">
+    <view class='discount' wx:if='{{currentTab==0}}' current="{{currentTab}}" bindchange="switchTab">
+      <block wx:for='{{ticketData}}' wx:for-item='item' wx:index='index' wx:key='key'>
+        <view class='picketItem'>
+          <view class='top'>
+            <block wx:if='{{item.getType==0 ||item.getType==3}}'>
+              <view class='left'>
+                <view class='leftCon'>
+                  <view class='sign'>￥</view>
+                  <view class='price'>{{item.deduction}}</view>
+                </view>
+                <view wx:if='{{item.getType==0}}' class='type'>抵扣劵</view>
+                <view wx:if='{{item.getType==3}}' class='type'>抵扣劵</view>
+              </view>
+            </block>
+            <block wx:if='{{item.getType==2}}'>
+              <view class='leftGoods'>
+                <image class='bcImg imgBg imgGoods' src='{{item.imagePath}}'></image>
+              </view>
+            </block>
+            <block wx:if='{{item.getType==0}}'>
+              <view class='right'>
+                <view class='name'>{{item.name}}</view>
+                <view class='city'>使用地区: {{item.cityName}}</view>
+                <view class='order'>绑定订单: {{item.orderNum}}</view>
+              </view>
+            </block>
+            <block wx:if='{{item.getType==2}}'>
+              <view class='rightGoods'>
+                <view class='name'>{{item.name}}</view>
+                <view class='brand'>品牌: {{item.brand}}</view>
+                <view class='order'>绑定订单: {{item.orderNum}}</view>
+              </view>
+            </block>
+            <block wx:if='{{item.getType==3}}'>
+              <view class='rightGoods'>
+                <view class='name'>{{item.name}}</view>
+                <view class='brand'>绑定手机号: {{mobile}}</view>
+                <view class='order'>使用地区: {{item.cityName}}</view>
+              </view>
+            </block>
+          </view>
+          <block wx:if='{{item.getType==0}}'>
+            <view class='bootom'>可在缴纳大定时使用</view>
+          </block>
+          <block wx:if='{{item.getType==2}}'>
+            <view class='bootom'>
+              <view>请联系在线客服或拨打客服电话</view>
+              <view>400-700-2577完成领取</view>
+            </view>
+          </block>
+          <block wx:if='{{item.getType==3}}'>
+            <view class='bootom'>可在支付首期款时使用</view>
+          </block>
+        </view>
+      </block>
+    </view>
+    <view class='discount' wx:if='{{currentTab==1}}' current="{{currentTab}}" bindchange="switchTab">
+    </view>
+  </scroll-view>
+</view>

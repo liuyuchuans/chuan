@@ -1,0 +1,19 @@
+/* pages/clearing_list/clearing_list.wxss */
+
+/* page {
+  background: #f7f7f7;
+} */
+
+.clearing-list{
+ padding: 0 40rpx;
+ background: #f4f5f7;
+ color:#2b323b;
+}
+.clearing-list .clearing-list-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  font-size: 30rpx;
+  border-bottom: 2rpx solid #ffffff;
+}

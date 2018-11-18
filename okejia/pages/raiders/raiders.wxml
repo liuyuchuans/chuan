@@ -1,0 +1,255 @@
+<!--pages/raiders/raiders.wxml-->
+<view class='raiders'>
+  <view class='case normal'>
+    <view class='title'>
+      <view>
+        <text class='name'>家装案列</text>
+        <text class='des'>真实案列一触即达</text>
+      </view>
+      <navigator url="../h5/h5?urls=https://www.okejia.com/temp/app2/temp-case/index.html&title=''">
+        <view class='more'>查看更多 ></view>
+      </navigator>
+    </view>
+    <view class='content'>
+      <view class='border'></view>
+      <view class='imgs'>
+        <scroll-view scroll-x style='width: auto;overflow:hidden;'>
+          <view class='imgInfo'>
+            <navigator url="../h5/h5?urls=https://www.okejia.com/temp/app2/temp-case/1.html&title=''">
+              <image class='bcImg img' src='https://www.okejia.com/wx-img/img/s-1.jpg'></image>
+            </navigator>
+            <view class='name'>
+              <view>孙先生家</view>
+              <view>两室一厅 103㎡</view>
+            </view>
+          </view>
+          <view class='imgInfo'>
+            <navigator url="../h5/h5?urls=https://www.okejia.com/temp/app2/temp-case/2.html&title=''">
+              <image class='bcImg img' src='https://www.okejia.com/wx-img/img/h-2.jpg'></image>
+            </navigator>
+            <view class='name'>
+              <view>胡先生家</view>
+              <view>两室一厅 118㎡</view>
+            </view>
+          </view>
+          <view class='imgInfo'>
+            <navigator url="../h5/h5?urls=https://www.okejia.com/temp/app2/temp-case/3.html&title=''">
+              <image class='bcImg img' src='https://www.okejia.com/wx-img/img/l-3.jpg'></image>
+            </navigator>
+            <view class='name'>
+              <view>李女士家</view>
+              <view>一室一厅 92㎡</view>
+            </view>
+          </view>
+          <view class='imgInfo'>
+            <navigator url="../h5/h5?urls=https://www.okejia.com/temp/app2/temp-case/4.html&title=''">
+              <image class='bcImg img' src='https://www.okejia.com/wx-img/img/z-4.jpg'></image>
+            </navigator>
+            <view class='name'>
+              <view>赵先生家</view>
+              <view>三室一厅 122㎡</view>
+            </view>
+          </view>
+          <view class='imgInfo'>
+            <navigator url="../h5/h5?urls=https://www.okejia.com/temp/app2/temp-case/5.html&title=''">
+              <image class='bcImg img' src='https://www.okejia.com/wx-img/img/z-5.jpg'></image>
+            </navigator>
+            <view class='name'>
+              <view>赵先生家</view>
+              <view>三室一厅 122㎡</view>
+            </view>
+          </view>
+          <view class='imgInfo'>
+            <navigator url="../h5/h5?urls=https://www.okejia.com/temp/app2/temp-case/6.html&title=''">
+              <image class='bcImg img' src='https://www.okejia.com/wx-img/img/z-6.jpg'></image>
+            </navigator>
+            <view class='name'>
+              <view>赵先生家</view>
+              <view>三室一厅 122㎡</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class='border'></view>
+    </view>
+  </view>
+  <view class='gallery normal'>
+    <view class='title'>
+      <view>
+        <text class='name'>装饰图库</text>
+        <text class='des'>海量图片</text>
+      </view>
+      <navigator url="/pages/look/photo/photo">
+        <view class='more'>查看更多 ></view>
+      </navigator>     
+    </view>
+    <view class='galleryImgs'>
+      <scroll-view scroll-x style='width: auto;overflow:hidden;'>
+        <block wx:for='{{image}}' wx:for-item='item' wx:key='key' wx:for-index='index'>
+          <image bindtap='galleryDetail' data-id='{{item.id}}' data-currindex='{{index}}' data-category='{{item.category}}' class="bcImg img {{currIndex==index?'active':''}}" src='{{item.imgPath[0]}}'></image>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class='items normal'>
+    <view class='title'>
+      <view>
+        <text class='name'>施工篇</text>
+      </view>
+      <navigator url="/pages/look/gWatch/gWatch?id=10&title=施工篇">
+        <view class='more'>查看更多 ></view>
+      </navigator>
+    </view>
+    <view class='list'>
+      <navigator url="../h5/h5?urls=https://www.okejia.com/h5/sg1.html&title=''">
+        <view class='left'>
+          <image class='leftImg bcImg' src='https://www.okejia.com/wx-img/img/sgBc1.png'></image>
+          <view class='leftDes'>小三居婚房这样装修太惊喜，温馨又时尚...</view>
+        </view>
+      </navigator>
+      <view class='right'>
+        <navigator url="../h5/h5?urls=https://www.okejia.com/h5/sg2.html&title=''">
+          <view class='rightTop'>
+            <image class='topImg bcImg' src='https://www.okejia.com/wx-img/img/sgBc2.png'></image>
+            <view class='topDes'>轻松驾驭北欧小户型，...</view>
+          </view>
+        </navigator>
+        <navigator url="../h5/h5?urls=https://www.okejia.com/h5/sg3.html&title=''">
+          <view class='rightTop rightBottom'>
+            <image class='topImg bcImg' src='https://www.okejia.com/wx-img/img/sgBc3.png'></image>
+            <view class='topDes'>晒晒我家的138㎡新房装...</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class='items normal'>
+    <view class='title'>
+      <view>
+        <text class='name'>装修风水</text>
+      </view>
+      <navigator url="/pages/look/gWatch/gWatch?id=22&title=装修风水">
+        <view class='more'>查看更多 ></view>
+      </navigator>
+    </view>
+    <view class='list'>
+      <navigator url="../h5/h5?urls=https://www.okejia.com/h5/fs1.html&title=''">
+        <view class='left'>
+          <image class='leftImg bcImg' src='https://www.okejia.com/wx-img/img/fsBc1.png'></image>
+          <view class='leftDes'>开工之前，这十项风水禁忌要小心!...</view>
+        </view>
+      </navigator>
+      <view class='right'>
+        <navigator url="../h5/h5?urls=https://www.okejia.com/h5/fs2.html&title=''">
+          <view class='rightTop'>
+            <image class='topImg bcImg' src='https://www.okejia.com/wx-img/img/fsBc2.png'></image>
+            <view class='topDes'>家具风水禁忌大全 植物...</view>
+          </view>
+        </navigator>
+        <navigator url="../h5/h5?urls=https://www.okejia.com/h5/fs3.html&title=''">
+          <view class='rightTop rightBottom'>
+            <image class='topImg bcImg' src='https://www.okejia.com/wx-img/img/fsBc3.png'></image>
+            <view class='topDes'>厨房装修风水十大禁忌需...</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class='items normal'>
+    <view class='title'>
+      <view>
+        <text class='name'>环保篇</text>
+      </view>
+      <navigator url="/pages/look/gWatch/gWatch?id=24&title=环保篇">
+        <view class='more'>查看更多 ></view>
+      </navigator>
+    </view>
+    <view class='list'>
+      <navigator url="../h5/h5?urls=https://www.okejia.com/h5/10033_index.html">
+        <view class='left'>
+          <image class='leftImg bcImg' src='http://admin.okejia.jtlhome.com/upload/banner/3/8/4483181256726374.jpg'></image>
+          <view class='leftDes'>夏天装修更划算？但千万不要忽视这个问题…</view>
+        </view>
+      </navigator>
+      <view class='right'>
+        <navigator url="../h5/h5?urls=https://www.okejia.com/h5/1138_index.html">
+          <view class='rightTop'>
+            <image class='topImg bcImg' src='http://admin.okejia.jtlhome.com/upload/banner/2/11/4501970930754465.jpg'></image>
+            <view class='topDes'>环保装修！这些家装小常识一定要知道.</view>
+          </view>
+        </navigator>
+        <navigator url="../h5/h5?urls=https://www.okejia.com/h5/1135_index.html">
+          <view class='rightTop rightBottom'>
+            <image class='topImg bcImg' src='http://admin.okejia.jtlhome.com/upload/banner/8/7/4427906833483001.jpg'></image>
+            <view class='topDes'>装修都用环保材料，为何还会甲醛超标？</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class='items normal'>
+    <view class='title'>
+      <view>
+        <text class='name'>智能家居</text>
+      </view>
+      <navigator url="/pages/look/gWatch/gWatch?id=25&title=智能家居">
+        <view class='more'>查看更多 ></view>
+      </navigator>
+    </view>
+    <view class='list'>
+      <navigator url="../h5/h5?urls=https://www.okejia.com/h5/1154_index.html">
+        <view class='left'>
+          <image class='leftImg bcImg' src='http://admin.okejia.jtlhome.com/upload/banner/2/8/4848704171420100.jpg'></image>
+          <view class='leftDes'>小心！智能家居产品选购要躲开这些硬伤…</view>
+        </view>
+      </navigator>
+      <view class='right'>
+        <navigator url="../h5/h5?urls=https://www.okejia.com/h5/1158_index.html">
+          <view class='rightTop'>
+            <image class='topImg bcImg' src='http://admin.okejia.jtlhome.com/upload/banner/1/10/4849753544565254.jpg'></image>
+            <view class='topDes'>家用智能摄像头可被远程窃取画面，你家安全吗？</view>
+          </view>
+        </navigator>
+        <navigator url="../h5/h5?urls=https://www.okejia.com/h5/1155_index.html">
+          <view class='rightTop rightBottom'>
+            <image class='topImg bcImg' src='http://admin.okejia.jtlhome.com/upload/banner/11/7/4848837565286639.jpg'></image>
+            <view class='topDes'>想要选到实用的智能家居？oke家为你支招！</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+   <view class='items normal'>
+    <view class='title'>
+      <view>
+        <text class='name'>装饰篇</text>
+      </view>
+      <navigator url="/pages/look/gWatch/gWatch?id=28&title=装饰篇">
+        <view class='more'>查看更多 ></view>
+      </navigator>
+    </view>
+    <view class='list'>
+      <navigator url="../h5/h5?urls=https://www.okejia.com/h5/10126_index.html">
+        <view class='left'>
+          <image class='leftImg bcImg' src='http://admin.okejia.jtlhome.com/upload/banner/15/15/22814393129005719.jpg'></image>
+          <view class='leftDes'>97㎡的美式超赞布局，小户型学起来！</view>
+        </view>
+      </navigator>
+      <view class='right'>
+        <navigator url="../h5/h5?urls=https://www.okejia.com/h5/10125_index.html">
+          <view class='rightTop'>
+            <image class='topImg bcImg' src='http://admin.okejia.jtlhome.com/upload/banner/13/13/22813994219966442.jpg'></image>
+            <view class='topDes'>原来新中式这样美，欧式美式根本没有可比性</view>
+          </view>
+        </navigator>
+        <navigator url="../h5/h5?urls=https://www.okejia.com/h5/10119_index.html">
+          <view class='rightTop rightBottom'>
+            <image class='topImg bcImg' src='http://admin.okejia.jtlhome.com/upload/banner/13/5/22811955017730886.jpg'></image>
+            <view class='topDes'>现代简约，原木优雅，让人一眼就爱上</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

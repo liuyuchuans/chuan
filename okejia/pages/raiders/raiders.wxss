@@ -1,0 +1,154 @@
+/* pages/raiders/raiders.wxss */
+
+page {
+  background: #fff;
+}
+
+.raiders .normal {
+  margin-bottom: 20rpx;
+}
+
+.raiders .normal .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  height: 116rpx;
+  font-size: 24rpx;
+  color: #ccc;
+  /* background: #f7f7f7; */
+}
+
+.raiders .normal .title .name {
+  font-size: 36rpx;
+  color: #333;
+}
+
+.raiders .normal .title .des {
+  margin-left: 14rpx;
+}
+
+.raiders .case .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.raiders .case .content .imgs {
+  height: 414rpx;
+  width: 710rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  /* background: #f7f7f7; */
+}
+
+.raiders .case .content .imgs .imgInfo {
+  display: inline-block;
+  position: relative;
+  border-radius: 10rpx;
+}
+
+.raiders .case .content .imgs .imgInfo .name {
+  position: absolute;
+  left: 20rpx;
+  bottom: 14rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.raiders .case .content .imgs .imgInfo .img {
+  height: 414rpx;
+  width: 710rpx;
+  display: block;
+  border-radius: 10rpx;
+}
+
+
+.raiders .case .content .border {
+  width: 10rpx;
+  height: 414rpx;
+  background: #654b4b;
+  box-shadow: 0 1rpx 10rpx 0 rgba(0, 0, 0, 0.10);
+  border-radius: 10rpx;
+}
+
+.raiders .case .content .caseImg {
+  width: 710rpx;
+  height: 414rpx;
+  display: block;
+}
+
+.raiders .gallery .galleryImgs {
+  height: 224rpx;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  /* background: #f7f7f7; */
+}
+
+.raiders .gallery .galleryImgs .img {
+  width: 260rpx;
+  height: 220rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+}
+.active {
+  border: 2rpx solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4rpx 4rpx 0 rgba(0, 0, 0, 0.5);
+}
+
+.raiders .items {
+  /* margin-top: 20rpx; */
+}
+
+.raiders .items .list {
+  display: flex;
+  padding: 0 20rpx;
+  height: 380rpx;
+}
+
+.raiders .items .list .left .leftImg {
+  width: 450rpx;
+  height: 304rpx;
+  display: block;
+}
+
+.raiders .items .list .left .leftDes {
+  width: 450rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* background: #f7f7f7; */
+}
+
+.raiders .items .list .right {
+  margin-left: 20rpx;
+}
+
+.raiders .items .list .right .rightTop .topImg {
+  width: 240rpx;
+  height: 130rpx;
+  display: block;
+}
+
+.raiders .items .list .right .rightTop .topDes {
+  width: 240rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 18rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* background: #f7f7f7; */
+}
+
+.raiders .items .list .right .rightBottom {
+  margin-top: 20rpx;
+}

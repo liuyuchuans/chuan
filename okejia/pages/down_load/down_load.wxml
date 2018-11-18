@@ -1,0 +1,27 @@
+<!--pages/down_load/down_load.wxml-->
+<view class='down_load'>
+  <image class='downBc' src='../../img/app_bc.png' mode="widthFix"></image>
+  <view class='handle'>
+    <view>
+      <view class='iphoneCon'>
+        <image class='iphone' bindtap='iphoneCode' src='../../img/iphone.png'></image>
+      </view>
+      <view class='abdriodCon'>
+        <image class='abdriod' bindtap='abdriodCode' src='../../img/android.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--预约成功弹出框  -->
+<view wx:if='{{orderSuccess}}'>
+  <view class='order-mask' bindtap='cancleMask'>
+    <view class='order-info'>
+      <!-- <view class='order-des'>装修折扣券，为您的爱家温馨助力</view> -->
+      <view class='codeCon'>
+        <image wx:if='{{codeShow}}' bindtap='previewIphone' data-src='https://www.okejia.com/wx-img/img/ios-qr-1.png' class='code' src='../../img/ios-qr-1.png'></image>
+        <image wx:if='{{!codeShow}}' bindtap='previewAbdriod' data-src='https://www.okejia.com/wx-img/img/android-qr-1.png' class='code' src='../../img/android-qr-1.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

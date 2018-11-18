@@ -1,0 +1,40 @@
+/* pages/comment/comment.wxss */
+
+.comment {
+  padding: 0 40rpx 24rpx 40rpx;
+  background: #fff;
+}
+
+.comment .commentList {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2rpx solid #d4d5d9;
+}
+
+.comment .commentList .userInfo {
+  display: flex;
+  align-items: center;
+  height: 102rpx;
+  font-size: 28rpx;
+  color: #2b323b;
+}
+
+.comment .commentList .userInfo .avator {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+
+.comment .commentList .userInfo .name {
+  margin-left: 20rpx;
+}
+
+.comment .commentList .content {
+  padding-left: 90rpx;
+  padding-bottom: 34rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-size: 28rpx;
+  color: #333;
+  letter-spacing: 0;
+}

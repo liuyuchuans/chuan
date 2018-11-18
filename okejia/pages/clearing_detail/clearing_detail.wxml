@@ -1,0 +1,82 @@
+<!--pages/clearing_detail/clearing_detail.wxml-->
+<!--基础清单详情  -->
+<view wx:if='{{condition==0}}'>
+  <view class='public base' wx:for='{{baseData}}' wx:for-item='item' wx:key='key'>
+    <view class='title'>
+      <text>{{item.name}}</text>
+    </view>
+    <view class='basic-content'>
+      <!--辅材  -->
+      <view class='auxiliary' wx:if='{{item.fc.length}}'>
+        <view class='auxiliary-title'>人工辅材项目</view>
+        <view>
+          <block wx:for='{{item.fc}}' wx:for-item='item1' wx:for-index='index0' wx:key='key'>
+            <view class='auxiliary-content' wx:for='{{item1.regong}}' wx:for-item='item3' wx:key='key'>
+              <view class='item'>
+                <view class='item-title'>{{item3.title}}</view>
+                <view class='item-sort'>
+                  <image src='../../img/qf.png'></image>
+                  <view>{{index0+1}}</view>
+                </view>
+              </view>
+              <view class='des'>工艺及材料说明: {{item3.description?item3.description:empty}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <!--主材  -->
+      <block wx:for='{{item.comboProManageList}}' wx:for-item='item1' wx:key='key'>
+        <view wx:if='{{item1.zhucai.length}}'>
+          <view class='main'>
+            <view class='main-title'>主材项目</view>
+            <view class='main-content' wx:for='{{item1.zhucai}}' wx:for-item='item2' wx:for-index='index2' wx:key='key'>
+              <view class='item'>
+                <view class='item-title'>{{item2.title}}</view>
+                <view class='item-sort'>
+                  <image src='../../img/qf.png'></image>
+                  <view>{{index2+1}}</view>
+                </view>
+              </view>
+              <view class='goods'>
+                <view class='left'>
+                  <image class='bcImg' src='{{baseUrl+item2.commodityAnnexs[0].url}}'></image>
+                </view>
+                <view class='right'>
+                  <view class='brand'>品牌: {{item2.brandName?item2.brandName:empty}}</view>
+                  <view class='model'>型号: {{item2.model?item2.model:empty}}</view>
+                  <view class='standard'>规格: {{item2.standard?item2.standard:empty}}</view>
+                </view>
+              </view>
+              <view class='des'>工艺及材料说明: {{item2.description?item2.description:empty}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<!--其他清单详情  -->
+<view wx:if='{{condition==1}}'>
+  <view class='public other' wx:for='{{otherData}}' wx:for-item='item' wx:key='key'>
+    <view class='title'>
+      <text>{{item.name}}</text>
+    </view>
+    <view class='content other-content' wx:for='{{item.commodityList}}' wx:for-item='item2' wx:key='key'>
+      <view class='name'>{{item2.title}}</view>
+      <view class='detail'>
+        <view class='left'>
+          <image class='bcImg' src="{{baseUrl+item2.commodityAnnexs[0].url}}"></image>
+        </view>
+        <view class='right'>
+          <view class='brand'>品牌: {{item2.brandName?item2.brandName:empty}}</view>
+          <view class='model'>型号: {{item2.commodityStandard.model?item2.commodityStandard.model:empty}}</view>
+          <view class='size'>尺寸: {{item2.commodityStandard.standard?item2.commodityStandard.standard:empty}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view style='width:100%;height:634rpx;display:flex;justify-content: center;align-items: center;' wx:if='{{noDataState}}'>
+  <image src='{{notData}}' style='width:248rpx;height:314rpx;'></image>
+</view>

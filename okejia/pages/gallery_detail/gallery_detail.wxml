@@ -1,0 +1,22 @@
+<!--pages/gallery_detail/gallery_detail.wxml-->
+<view class='gallery_detail'>
+  <swiper class="tab-content" current="{{currentTab}}" bindchange="switchTab">
+    <block wx:for='{{resData}}' wx:for-item='items' wx:key='key' wx:for-index='index'>
+      <swiper-item>
+        <view class='item'>
+          <image class='bcImg tabImg' src='{{items.imgPath[0]}}'></image>
+          <view class='imgName'>{{items.imageName}}</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='changeImg'>
+    <scroll-view scroll-x="true" class="tab-nav" scroll-left="{{scrollLeft}}" style='width: auto;overflow:hidden;'>
+      <block wx:for='{{resData}}' wx:for-item='items' wx:key='key' wx:for-index='index'>
+        <view data-current="{{index}}" bindtap="swichNav" class="tab-item {{currentTab==index?'active':''}}">
+          <image class='bcImg itemImg' src='{{items.imgPath[0]}}'></image>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

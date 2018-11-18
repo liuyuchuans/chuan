@@ -1,0 +1,119 @@
+<!--pages/share/share.wxml-->
+<view class='share'>
+  <image class='one' src='https://www.okejia.com/share/1.jpg'></image>
+  <image class='two' src='https://www.okejia.com/share/2.jpg'></image>
+  <image class='three' src='https://www.okejia.com/share/3.jpg'></image>
+  <view class='content' wx:if='{{!tabShow}}'>
+    <view class='title'>
+      <view class='border'></view>
+      <view class='titleText'>免费获取设计报价方案</view>
+      <view class='border'></view>
+    </view>
+    <view class='selectCity normal' bindtap='selectDistrict'>
+      {{cityName}}
+      <text class='arr'>></text>
+    </view>
+    <view class='telphone normal'>
+      <input placeholder='您的手机号' maxlength='11' type='number' bindinput='phoneinput'></input>
+    </view>
+    <view class='phoneCode normal'>
+      <input placeholder='手机验证码' maxlength='6' type='number' bindblur='codeinput'></input>
+      <view class='reqCode' bindtap='changeCode' disabled="{{codeDis}}">{{phoneCode}}</view>
+    </view>
+    <view class='area'>
+      <view class='areaNor area1'>
+        <input placeholder='小区' maxlength='30' type='text' bindblur='village'></input>
+      </view>
+      <view class='areaNor area2'>
+        <input placeholder='面积' maxlength='7' type='digit' bindblur='area'></input>
+        <text>㎡</text>
+      </view>
+    </view>
+    <view class='houseType normal' bindtap='homeshow'>
+      <view class='houseCon'>
+        <text>{{roomNum}}室</text>
+        <text>{{parlourNum}}厅</text>
+        <text>{{cookNum}}厨</text>
+        <text>{{toiletNum}}卫</text>
+      </view>
+      <view class='arr'>></view>
+    </view>
+    <view bindtap='sendInfo' class='sendInfo normal'>立即免费获取</view>
+  </view>
+  <view class='successState' wx:if='{{tabShow}}'>
+    <view class='title'>
+      <view class='border'></view>
+      <view class='titleText'>免费获取设计报价方案</view>
+      <view class='border'></view>
+    </view>
+    <view class='successDes'>因材料品牌及装修工程量不同，具体报价以量房实测为准； 稍候装修管家将回电您，免费提供装修咨询服务。
+    </view>
+  </view>
+
+  <image class='four' src='https://www.okejia.com/share/4.jpg'></image>
+  <image class='five' src='https://www.okejia.com/share/5.jpg'></image>
+  <image class='six' src='https://www.okejia.com/share/6.jpg'></image>
+  <image class='seven' src='https://www.okejia.com/share/7.jpg'></image>
+  <image class='eight' src='https://www.okejia.com/share/8.jpg'></image>
+  <image class='nine' src='https://www.okejia.com/share/9.jpg'></image>
+  <image class='ten' src='https://www.okejia.com/share/10.jpg'></image>
+  <image class='eleven' src='https://www.okejia.com/share/11.jpg'></image>
+  <image class='twelve' src='https://www.okejia.com/share/12.jpg'></image>
+  <image class='thirteen' src='https://www.okejia.com/share/13.jpg'></image>
+  <image class='fourteen' src='https://www.okejia.com/share/14.jpg'></image>
+  <image class='fifteen' src='https://www.okejia.com/share/15.jpg'></image>
+</view>
+
+<!-- 装修户型选择列表 -->
+<view class="home-modal" bindtap="canclehome" wx:if="{{houseShow}}"></view>
+<view class="home-style" animation="{{animationData}}" mask-style="color:#000" wx:if='{{houseShow}}'>
+  <view class='header'>
+    <view catchtap="canclehome" class='handle'>取消</view>
+    <view catchtap="homeSure" class='handle sure'>确定</view>
+  </view>
+  <picker-view style="width: 100%; height: 300px;" bindchange="houseSelect" value="{{houseVal}}" wx:key="house">
+    <picker-view-column>
+      <view wx:for="{{homeInfo[0]}}" class="home-style-item" wx:key="rooms">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{homeInfo[1]}}" class="home-style-item" wx:key="parlours">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{homeInfo[2]}}" class="home-style-item" wx:key="cooks">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{homeInfo[3]}}" class="home-style-item" wx:key="toilets">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<!--预约成功弹出框  -->
+<view wx:if='{{orderSuccess}}'>
+  <view class='order-mask' bindtap='cancleMask'>
+    <view class='order-info'>
+      <view class='picket'>{{deduction}} 元</view>
+      <image src='../../img/pic.png' class='giftIcon'></image>
+      <view class='order-des'>OKE家平台诚意为您奉上</view>
+      <view class='order-des'>装修折扣券，为您的爱家温馨助力</view>
+    </view>
+  </view>
+</view>
+
+<!--城市选择列表  -->
+<view class="city-modal" bindtap="cityCancel" wx:if="{{citySelect}}"></view>
+<view class="city-list" animation="{{animationData}}" mask-style="color:#000" wx:if='{{citySelect}}'>
+  <view class='header'>
+    <view catchtap="cityCancel" class='handle'>取消</view>
+    <view catchtap="citySure" class='handle sure'>确定</view>
+  </view>
+  <picker-view style="width: 100%; height: 600rpx;" bindchange="cityChange" value="{{value}}" wx:key="china">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" class="city-item" wx:key="province">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" class="city-item" wx:key="city">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

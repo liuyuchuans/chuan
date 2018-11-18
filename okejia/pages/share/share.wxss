@@ -1,0 +1,278 @@
+/* pages/share/share.wxss */
+
+.share {
+  width: 100%;
+  height: 100%;
+  color: #333333;
+}
+
+.share .one {
+  width: 100%;
+  height: 450rpx;
+  display: block;
+}
+
+.share .two {
+  width: 100%;
+  height: 953rpx;
+  display: block;
+}
+
+.share .three {
+  width: 100%;
+  height: 751rpx;
+  display: block;
+}
+
+.share .four {
+  width: 100%;
+  height: 738rpx;
+  display: block;
+}
+
+.share .five {
+  width: 100%;
+  height: 547rpx;
+  display: block;
+}
+
+.share .six {
+  width: 100%;
+  height: 555rpx;
+  display: block;
+}
+
+.share .seven {
+  width: 100%;
+  height: 818rpx;
+  display: block;
+}
+.share .eight {
+  width: 100%;
+  height: 556rpx;
+  display: block;
+}
+.share .nine {
+  width: 100%;
+  height: 458rpx;
+  display: block;
+}
+.share .ten {
+  width: 100%;
+  height: 505rpx;
+  display: block;
+}
+.share .eleven {
+  width: 100%;
+  height: 552rpx;
+  display: block;
+}
+.share .twelve {
+  width: 100%;
+  height: 814rpx;
+  display: block;
+}
+.share .thirteen {
+  width: 100%;
+  height: 800rpx;
+  display: block;
+}
+.share .fourteen {
+  width: 100%;
+  height: 480rpx;
+  display: block;
+}
+.share .fifteen {
+  width: 100%;
+  height: 1070rpx;
+  display: block;
+}
+
+.share .content {
+  padding: 30rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.share .successState {
+  padding: 30rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.share .content .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eb8e53;
+  margin-bottom: 40rpx;
+}
+
+.share .content .title .titleText {
+  padding: 0 20rpx;
+}
+
+.share .content .title .border {
+  width: 160rpx;
+  height: 2rpx;
+  background: #eb8e53;
+}
+
+.share .successState .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eb8e53;
+  margin-bottom: 40rpx;
+}
+
+.share .successState .title .titleText {
+  padding: 0 20rpx;
+}
+
+.share .successState .title .border {
+  width: 160rpx;
+  height: 2rpx;
+  background: #eb8e53;
+}
+.share .successState .successDes{
+  padding: 40rpx;
+  background: #f9f9f9;
+}
+
+.share .content .normal {
+  display: flex;
+  align-items: center;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  height: 80rpx;
+  border: 2rpx solid #eb8e53;
+  margin: 20rpx 0;
+}
+
+.share .content .selectCity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.share .content .selectCity .arr {
+  font-size: 50rpx;
+}
+
+.share .content .telphone input {
+  width: 100%;
+}
+
+.share .content .phoneCode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 20rpx;
+}
+
+.share .content .phoneCode input {
+  width: 100%;
+}
+
+.share .content .phoneCode .reqCode {
+  width: 180rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #fff;
+  background: #eb8e53;
+}
+
+.share .content .area {
+  display: flex;
+}
+
+.share .content .area .areaNor {
+  display: flex;
+  align-items: center;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  height: 80rpx;
+  border: 2rpx solid #eb8e53;
+}
+
+.share .content .area .area1 {
+  flex: 1;
+}
+
+.share .content .area .area2 {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.share .content .houseType {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.share .content .houseType .houseCon text {
+  margin: 0 4rpx;
+}
+
+.share .content .houseType .arr {
+  font-size: 50rpx;
+}
+
+.share .content .sendInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #eb8e53;
+  letter-spacing: 4rpx;
+}
+
+/*预约成功折扣弹窗*/
+
+.order-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99998;
+}
+
+.order-mask .order-info {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 560rpx;
+  margin: -320rpx 0 0 -280rpx;
+}
+
+.order-mask .order-info .giftIcon {
+  width: 599rpx;
+  height: 442rpx;
+  display: block;
+}
+
+.order-mask .order-des {
+  width: 599rpx;
+  text-align: center;
+  color: #fcc707;
+  font-size: 28rpx;
+}
+
+.order-mask .order-info .picket {
+  position: absolute;
+  top: 120rpx;
+  width: 599rpx;
+  color: #ec4d35;
+  font-weight: bold;
+  font-size: 44rpx;
+  text-align: center;
+  letter-spacing: 4rpx;
+}
+

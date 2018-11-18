@@ -1,0 +1,199 @@
+<!--pages/package_detail/package_detail.wxml-->
+<view class='package-detail'>
+  <view class='tab'>
+    <scroll-view scroll-x="true" class="tab-nav" scroll-left="{{scrollLeft}}">
+      <view class="tab-item">
+        <text data-current="0" bindtap="swichNav" class="{{currentTab==0?'active':''}}">客厅</text>
+      </view>
+      <view class="tab-item">
+        <text data-current="1" bindtap="swichNav" class="{{currentTab==1?'active':''}}">餐厅</text>
+      </view>
+      <view class="tab-item">
+        <text data-current="2" bindtap="swichNav" class="{{currentTab==2?'active':''}}">主卧</text>
+      </view>
+      <view class="tab-item">
+        <text data-current="3" bindtap="swichNav" class="{{currentTab==3?'active':''}}">次卧</text>
+      </view>
+      <view class="tab-item">
+        <text data-current="4" bindtap="swichNav" class="{{currentTab==4?'active':''}}">卫生间</text>
+      </view>
+      <view class="tab-item">
+        <text data-current="5" bindtap="swichNav" class="{{currentTab==5?'active':''}}">厨房</text>
+      </view>
+    </scroll-view>
+    <view class='residue'>
+      <view class='content'>
+        <image class='icon' src='../../img/homeNum.png'></image>
+        <view class='num'>仅剩{{residue}}套</view>
+      </view>
+    </view>
+    <swiper class="tab-content" current="{{currentTab}}" autoplay='true' interval='3000' duration="300" bindchange="switchTab">
+      <swiper-item>
+        <image class='bcImg tabImg' src='{{kt}}'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='bcImg tabImg' src='{{ct}}'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='bcImg tabImg' src='{{zw}}'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='bcImg tabImg' src='{{cw}}'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='bcImg tabImg' src='{{wsj}}'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='bcImg tabImg' src='{{cf}}'></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class='info'>
+    <view class='title'>
+      <view class='brand'>{{title?title:empty}}</view>
+      <view class='home'>全屋整装，个性定制</view>
+    </view>
+    <view class='price'>
+      <text class='sale'>特惠价: {{price}}万</text>
+      <text class='limt'>起</text>
+      <view class='set' bindtap='packageSet'>
+        <image class='link' src='../../img/link.png'></image>
+      </view>
+    </view>
+    <view class='old'>
+      <view class='orign'>
+        <text class='originPrice'>原价: {{originalPrice}}万</text>
+        <text class='save'>立省{{savePrice}}万</text>
+      </view>
+      <view class='user'>
+        <text class='num'>133位</text>
+        <text class='select'>业主的选择</text>
+      </view>
+    </view>
+    <!-- <view class='vr'>
+      <image class='vrImg' src='../../img/vr.png'></image>
+    </view> -->
+  </view>
+  <view class='fourItem'>
+    <image class='bcImg fourItemImg' src='https://www.okejia.com/wx-img/img/fourItem.png'></image>
+  </view>
+  <view class='selectInfo'>
+    <view class='house'>
+      <view class='normal'>户型选择</view>
+      <view class='homeSelect' bindtap='homeshow'>
+        <view class='room'>
+          <view class='roomBorder'>
+            <text>{{roomNum}}</text>
+            <image src='../../img/homeSelect.png'></image>
+          </view>
+          <view class='roomText'>室</view>
+        </view>
+        <view class='room hall'>
+          <view class='roomBorder'>
+            <text>{{parlourNum}}</text>
+            <image src='../../img/homeSelect.png'></image>
+          </view>
+          <view class='roomText'>厅</view>
+        </view>
+        <view class='room toilet'>
+          <view class='roomBorder'>
+            <text>{{toiletNum}}</text>
+            <image src='../../img/homeSelect.png'></image>
+          </view>
+          <view class='roomText'>卫</view>
+        </view>
+      </view>
+    </view>
+    <view class='type'>
+      <view class='normal'>装修类型</view>
+      <view class='houseType'>
+        <view class='new' bindtap='homeSelect' data-decotype='0'>
+          <image src='{{checked?newHome:oldHome}}'></image>
+          <text> 新房装修</text>
+        </view>
+        <view class='old new' bindtap='homeSelect' data-decotype='1'>
+          <image src='{{checked?oldHome:newHome}}'></image>
+          <text> 旧房装修</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='activity'>
+    <image class='bcImg' src='https://www.okejia.com/wx-img/img/active.png'></image>
+  </view>
+  <view class='comment'>
+    <view class='userComment'>
+      <view class='total'>业主评论 (31)</view>
+      <!--查看全部评价  -->
+      <view class='all'>
+        <navigator url="../comment/comment" hover-class="navigator-hover">查看全部评价</navigator>
+      </view>
+    </view>
+    <view class='commentList'>
+      <view class='userInfo'>
+        <image class='bcImg avator' src='https://www.okejia.com/wx-img/avator/1.png'></image>
+        <text class='name'>风起长林</text>
+      </view>
+      <view class='content'>准备做婚房的，韩老师设计非常贴心，还详细给我介绍了工艺材料。个人比较看重环保这块，感觉做的不错，之前咨询也了解过品牌，看了下之前做的样板房，老婆也比较认可。</view>
+    </view>
+    <view class='commentList'>
+      <view class='userInfo'>
+        <image class='bcImg avator' src='https://www.okejia.com/wx-img/avator/2.png'></image>
+        <text class='name'>小细毛</text>
+      </view>
+      <view class='content'>爸爸喜欢中式风格，我们又怕中式会很老气，设计师根据我们的需求打造了一个完美的新中式风格，设计师太用心啦，满足了我们一家的需求。价格也透明，后期不用加钱，包含的东西讲的很细，用的东西都是大品牌，让人放心！就喜欢这种方式装修</view>
+    </view>
+  </view>
+  <view class='all-set'>
+    <view class='all-set-title'>套餐配置全览</view>
+    <!-- 查看全部评价 -->
+    <view class='all-set-detail'>
+      <navigator url="../clearing_list/clearing_list?packageId={{packageId}}" hover-class="navigator-hover">查看全部清单</navigator>
+    </view>
+  </view>
+</view>
+
+<view class='detail-bottom'>
+  <view class='consultation'>
+    <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn1'></contact-button>
+    <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn2'></contact-button>
+    <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn3'></contact-button>
+    <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn4'></contact-button>
+    <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn5'></contact-button>
+    <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn6'></contact-button>
+    <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn7'></contact-button>
+    <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn8'></contact-button>
+    <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn9'></contact-button>
+    <contact-button type="default-dark" size="20" session-from="weapp" class='contactBtn10'></contact-button>
+
+
+    <image src='../../img/contact.png' class='contactIcon'></image>
+    <view class='contactText'>在线咨询</view>
+  </view>
+  <view class='appointment' bindtap='goSub' data-id='{{fromId}}' disabled='{{onlyOne}}' data-stylename='{{styleName}}'>保存方案，立即预约</view>
+</view>
+
+<!-- 装修户型选择列表 -->
+<view class="home-modal" bindtap="canclehome" wx:if="{{houseShow}}"></view>
+<view class="home-style" animation="{{animationData}}" mask-style="color:#000" wx:if='{{houseShow}}'>
+  <view class='header'>
+    <view catchtap="canclehome" class='handle'>取消</view>
+    <view catchtap="homeSure" class='handle sure'>确定</view>
+  </view>
+  <picker-view style="width: 100%; height: 300px;" bindchange="houseSelect" value="{{houseVal}}" wx:key="house">
+    <picker-view-column>
+      <view wx:for="{{homeInfo[0]}}" class="home-style-item" wx:key="rooms">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{homeInfo[1]}}" class="home-style-item" wx:key="parlours">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{homeInfo[2]}}" class="home-style-item" wx:key="toilets">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<!--暂无风格详情数据  -->
+<!-- <view style='width:100%;height:634rpx;display:flex;justify-content: center;align-items: center;' wx:if='{{noDataState}}'>
+  <image src='{{notData}}' style='width:248rpx;height:314rpx;'></image>
+</view> -->

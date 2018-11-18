@@ -1,0 +1,125 @@
+/* pages/user/lists/info.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.info-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-flow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 670rpx;
+  height: 68rpx;
+  padding: 10rpx 40rpx;
+}
+
+.info-flow text {
+  height: 48rpx;
+  line-height: 48rpx;
+  font-size: 34rpx;
+  color: #333;
+  letter-spacing: 0;
+}
+
+.info-flow view {
+  display: flex;
+  align-items: center;
+}
+
+.info-flow view image {
+  width: 24rpx;
+  height: 13rpx;
+  margin-left: 28.5rpx;
+}
+
+.flowContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+
+.flowContent image {
+  width: 625rpx;
+  height: 1024rpx;
+}
+
+.orderForm {
+  width: 710rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20rpx 20rpx 40rpx 20rpx;
+}
+
+.orderForm .time {
+  display: flex;
+  justify-content: space-between;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 2rpx dashed #e5e5e5;
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 0 30rpx;
+}
+
+.time .info {
+  font-size: 30rpx;
+  color: #3c6ad1;
+  letter-spacing: 0;
+}
+
+.time .date {
+  font-size: 24rpx;
+  color: #666;
+  letter-spacing: 0;
+}
+
+.time .date text:nth-child(2) {
+  margin-left: 16rpx;
+}
+
+.orderForm .content {
+  padding: 20rpx 30rpx;
+  border-radius: 10rpx;
+  background: #fff;
+}
+
+.orderForm .content view {
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.content view text {
+  font-size: 30rpx;
+  color: #666;
+  letter-spacing: 0;
+}
+
+.content view text:nth-child(2) {
+  margin-left: 10rpx;
+}
+
+.orderForm .state {
+  width: 710rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  margin-top: 40rpx;
+  background: #3c6ad1;
+  border-radius: 4rpx;
+  font-size: 32rpx;
+  color: #fff;
+  letter-spacing: 0;
+}
+
+.orderForm .on {
+  color: green;
+}

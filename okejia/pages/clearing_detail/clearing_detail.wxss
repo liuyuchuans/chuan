@@ -1,0 +1,271 @@
+/* pages/clearing_detail/clearing_detail.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.public {
+  padding: 20rpx;
+}
+
+.public .title {
+  width: 710rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  background: #fff;
+  border-bottom: 2rpx dashed #e5e5e5;
+}
+
+.public .title text {
+  font-size: 36rpx;
+  color: #3c6ad1;
+  letter-spacing: 0;
+}
+
+/*基础清单样式  */
+
+.base .basic-content {
+  border-radius: 10rpx;
+  background: #fff;
+}
+
+.base .base-content .name {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #333;
+  letter-spacing: 0;
+}
+
+.base .base-content .detail {
+  width: 100%;
+  margin-top: 24rpx;
+  font-size: 24rpx;
+  color: #666;
+  letter-spacing: 0;
+}
+
+.base .basic-content .auxiliary {
+  padding: 0 20rpx;
+}
+
+.base .basic-content .auxiliary .auxiliary-title {
+  width: 100%;
+  height: 92rpx;
+  line-height: 92rpx;
+  font-size: 32rpx;
+  color: #333;
+  border-bottom: 1rpx solid #e5e5e5;
+  font-weight: bold;
+}
+
+.basic-content .auxiliary .auxiliary-content {
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.basic-content .auxiliary .auxiliary-content .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 84rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.basic-content .auxiliary .auxiliary-content .item .item-title {
+  width: 600rpx;
+  line-height: 40rpx;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.basic-content .auxiliary .auxiliary-content .des {
+  width: 100%;
+  overflow-y: scroll;
+  padding: 4rpx 0;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.basic-content .auxiliary .auxiliary-content .item .item-sort {
+  position: relative;
+  width: 38rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: white;
+}
+
+.basic-content .auxiliary .auxiliary-content .item .item-sort image {
+  width: 38rpx;
+  height: 40rpx;
+}
+
+.basic-content .auxiliary .auxiliary-content .item .item-sort view {
+  position: absolute;
+  right: 0rpx;
+  top: 0;
+  width: 38rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.base .basic-content .main {
+  padding: 0 20rpx;
+}
+
+.base .basic-content .main .main-title {
+  width: 100%;
+  height: 92rpx;
+  line-height: 92rpx;
+  font-size: 32rpx;
+  color: #333;
+  border-bottom: 1rpx solid #e5e5e5;
+  font-weight: bold;
+}
+
+.base .basic-content .main .main-content {
+  padding-left: 20rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.base .basic-content .main .main-content .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 84rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.base .basic-content .main .main-content .item .item-title {
+  width: 578rpx;
+  line-height: 40rpx;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.base .basic-content .main .main-content .item .item-sort {
+  position: relative;
+  width: 38rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: white;
+}
+
+.base .basic-content .main .main-content .item .item-sort image {
+  width: 38rpx;
+  height: 40rpx;
+}
+
+.base .basic-content .main .main-content .item .item-sort view {
+  position: absolute;
+  right: 0rpx;
+  top: 0;
+  width: 38rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.main .main-content .goods {
+  display: flex;
+  width: 100;
+  height: 150rpx;
+  margin-bottom: 10rpx;
+}
+
+.main .main-content .goods .left {
+  width: 224rpx;
+  height: 150rpx;
+}
+
+.main .main-content .goods .left image {
+  width: 224rpx;
+  height: 150rpx;
+}
+
+.main .main-content .goods .right {
+  width: 100%;
+  height: 150rpx;
+  padding-left: 20rpx;
+  overflow: hidden;
+}
+
+.main .main-content .goods .right view {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  overflow-x: scroll;
+  white-space: nowrap;
+  color: #666;
+}
+
+.main .main-content .des {
+  width: 100%;
+  height: 100rpx;
+  padding: 10rpx 0;
+  font-size: 24rpx;
+  overflow-y: scroll;
+  color: #666;
+  letter-spacing: 0;
+}
+
+/*其他清单样式  */
+
+.other .other-content {
+  background: #fff;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.other .other-content .name {
+  width: 100%;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  overflow-x: scroll;
+  white-space: nowrap;
+  color: #333;
+  letter-spacing: 0;
+  margin-bottom: 20rpx;
+}
+
+.other .other-content .detail {
+  display: flex;
+}
+
+.other .other-content .detail .left {
+  width: 224rpx;
+  height: 150rpx;
+}
+
+.other .other-content .detail .left image {
+  width: 224rpx;
+  height: 150rpx;
+}
+
+.other .other-content .detail .right {
+  width: 100%;
+  height: 100%;
+  margin-left: 36rpx;
+  overflow: hidden;
+}
+
+.other .other-content .detail .right view {
+  line-height: 50rpx;
+  font-size: 24rpx;
+  overflow-x: scroll;
+  white-space: nowrap;
+  color: #666;
+  letter-spacing: 0;
+}

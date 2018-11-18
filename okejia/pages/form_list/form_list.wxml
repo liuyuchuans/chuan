@@ -1,0 +1,131 @@
+<!--pages/form_list/form_list.wxml-->
+<!--预约信息表单  -->
+<view class='form_list'>
+  <image class='bcImg' src='https://www.okejia.com/wx-img/img/th.jpg' style='width:100%;height:350rpx;display:block;'></image>
+  <view class='info'>
+    <view class='city normal'>
+      <view class='title'>所在城市:</view>
+      <view class='selectCity'>
+        <view>{{cityName}}</view>
+      </view>
+    </view>
+    <view class='city normal'>
+      <view class='title'>您已选择:</view>
+      <view class='selectCity'>
+        <view>{{packageName}} 套餐</view>
+      </view>
+    </view>
+    <view class='village normal'>
+      <view class='title'>所属小区:</view>
+      <input placeholder='请输入' maxlength='30' type='text' bindblur='village'></input>
+    </view>
+    <view class='area normal'>
+      <view class='title'>房屋面积:</view>
+      <input placeholder='请输入' maxlength='7' type='digit' bindblur='area'></input>
+    </view>
+    <view class='houseType normal'>
+      <view class='title'>你的户型:</view>
+      <view class='selectType' bindtap='homeshow'>
+        <view>
+          <text>{{roomNum}}室</text>
+          <text>{{parlourNum}}厅</text>
+          <text>{{toiletNum}}卫</text>
+        </view>
+        <view class='arror'>
+          <image src='../../img/freeArrow.png' style='width:31rpx;height:18rpx;display:block;'></image>
+        </view>
+      </view>
+    </view>
+    <view class='city normal'>
+      <view class='title'>开工日期:</view>
+      <view class='selectCity' >
+        <view>
+          <picker mode="date" bindchange="dateChange" start="{{nowDate}}" end="2050-01-01">
+            {{prestartTime}}
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class='city normal' wx:if='{{couponState}}'>
+      <view class='title'>使用优惠:</view>
+      <view class='selectCity' bindtap='ticketList'>
+        <view>{{coupon}}</view>
+        <view class='arror'>
+          <image src='../../img/freeArrow.png' style='width:31rpx;height:18rpx;display:block;'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='bootom'>
+    <view class='sendInfo' bindtap='orderForm' hover-class>提交装修信息</view>
+  </view>
+</view>
+
+<!-- 装修户型选择列表 -->
+<view class="home-modal" bindtap="canclehome" wx:if="{{houseShow}}"></view>
+<view class="home-style" animation="{{animationData}}" mask-style="color:#000" wx:if='{{houseShow}}'>
+  <view class='header'>
+    <view catchtap="canclehome" class='handle'>取消</view>
+    <view catchtap="homeSure" class='handle sure'>确定</view>
+  </view>
+  <picker-view style="width: 100%; height: 300px;" bindchange="houseSelect" value="{{houseVal}}" wx:key="house">
+    <picker-view-column>
+      <view wx:for="{{homeInfo[0]}}" class="home-style-item" wx:key="rooms">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{homeInfo[1]}}" class="home-style-item" wx:key="parlours">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{homeInfo[2]}}" class="home-style-item" wx:key="toilets">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<!--预约成功弹出框  -->
+<view wx:if='{{orderSuccess}}'>
+  <view class='order-mask'></view>
+  <view class='order-info'>
+    <view class='title'>
+      <text>预约成功</text>
+    </view>
+    <view class='content'>
+      <view>
+        <text>省份：</text>
+        <text>{{orderData.order.provinceName}}</text>
+      </view>
+      <view>
+        <text>城市：</text>
+        <text>{{orderData.order.cityName}}</text>
+      </view>
+      <view>
+        <text>小区：</text>
+        <text>{{orderData.order.village}}</text>
+      </view>
+      <view>
+        <text>面积：</text>
+        <text>{{orderData.order.area}} ㎡</text>
+      </view>
+      <view>
+        <text>户型：</text>
+        <text>{{orderData.order.roomNum}}室{{orderData.order.parlourNum}}厅{{orderData.order.toiletNum}}卫</text>
+      </view>
+      <view>
+        <text>装修类型：</text>
+        <text wx:if='{{orderData.order.decoType==0}}'>新房装修</text>
+        <text wx:if='{{orderData.order.decoType!=0}}'>旧房重装</text>
+      </view>
+      <view>
+        <text>套餐选择：</text>
+        <text>{{orderData.order.procombo.name}}</text>
+      </view>
+      <view>
+        <text>项目编号：</text>
+        <text>{{orderData.order.num}}</text>
+      </view>
+    </view>
+    <view class='order-money' >
+      <view  class='goUser normal' bindtap='goUser'>暂不缴纳</view>
+       <view class='orderPay normal' bindtap='orderPay'>交付定金</view>
+    </view>
+  </view>
+</view>

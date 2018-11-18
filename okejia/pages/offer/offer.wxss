@@ -1,0 +1,73 @@
+/* pages/offer/offer.wxss */
+page{
+  background: #f7f7f7;
+}
+.offer{
+  padding-bottom:142rpx;
+}
+.offer .info {
+  padding-left: 40rpx;
+  margin-bottom: 66rpx;
+}
+
+.offer .info .normal {
+  display: flex;
+  align-items: center;
+  width: 710rpx;
+  height: 120rpx;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #c7c7cd;
+  position: relative;
+}
+.offer .info .normal .dan{
+  position: absolute;
+  right: 10rpx;
+}
+.offer .info .normal .title {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.offer .info .normal input {
+  width: 482rpx;
+  margin-left: 70rpx;
+}
+
+.offer .info .city .selectCity {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 70rpx;
+  width: 488rpx;
+}
+ .offer .info .city .selectCity .arror{
+  display: flex;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.offer .info .houseType .selectType {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 70rpx;
+  width: 488rpx;
+}
+.offer .info .houseType .selectType .arror{
+  display: flex;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.offer .bootom {
+  padding: 0 20rpx;
+}
+
+.offer .bootom .sendInfo {
+  width: 710rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #3c6ad1;
+  border-radius: 10rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+}

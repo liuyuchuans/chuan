@@ -1,0 +1,5 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <text>作者 刘予川</text>
+  <text>hello 朋友</text>
+</view>

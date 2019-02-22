@@ -1,0 +1,10 @@
+@function rem($px){
+    @return $px / 46.875 +rem;
+}
+@mixin name($width,$height){
+    width: $width;
+    height: $height;
+    // border: $border;
+}
+$width: 100%;
+$height: 100%;

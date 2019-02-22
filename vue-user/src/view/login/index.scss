@@ -1,0 +1,14 @@
+.login-container-main{
+    background-image: url("../../assets/login/login2.jpg");
+    background-size:100% 100%;  
+    width: $width;
+    height: $height;
+    .login-main{
+        background-image: none;
+        @include name(30%,40%);
+        padding: 50px;
+        margin: 0px auto;
+        background-color: rgba(147,115,62,.3);
+    }
+}
+

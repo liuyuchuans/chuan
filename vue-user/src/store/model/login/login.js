@@ -1,6 +1,6 @@
 export default{
     state:{
-        userMailbox: 'chuanmouren@sina.com',
-        userPass: '521521'
+        userMailbox: 'admin',
+        userPass: '520'
     }
 }

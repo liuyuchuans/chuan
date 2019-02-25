@@ -31,7 +31,7 @@
     "pages/look/gWatch/gWatch"
   ],
   "window": {
-    "backgroundTextStyle": "black",
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "OKE家",
     "navigationBarTextStyle": "black",

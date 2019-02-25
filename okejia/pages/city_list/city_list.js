@@ -111,7 +111,7 @@ Page({
       scrollTopId: this.endWords
     })
   },
-  //获取文字信息
+  //获取文字信息--------------------------------------
   getWords: function (e) {
     var id = e.target.id;
     this.endWords = id;

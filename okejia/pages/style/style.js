@@ -200,6 +200,7 @@ Page({
             }, 2000)
           }
         }
+        console.log(111)
       },
       fail: function () {
         wx.showToast({

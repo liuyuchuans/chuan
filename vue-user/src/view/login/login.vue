@@ -70,6 +70,6 @@ export default {
   },
 }
 </script>
-<style scoped lang="scss">
+<style scoped > 
     @import './index.scss'
 </style>

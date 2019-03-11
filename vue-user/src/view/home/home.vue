@@ -53,7 +53,7 @@ import Axios from 'axios'
         }
     }
 </script>
-<style scoped lang="scss">
+<style scoped >
     .el-container{
         min-height: 100%;
     }

@@ -1,2 +1,0 @@
-webpackJsonp([6],{RoHL:function(e,n){},SC2e:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var a={render:function(){var e=this.$createElement;return(this._self._c||e)("el-container",[this._v("\n    admin2\n")])},staticRenderFns:[]};var r=t("C7Lr")({name:"admin2",created:function(){},methods:{}},a,!1,function(e){t("RoHL")},"data-v-393c076a",null);n.default=r.exports}});
-//# sourceMappingURL=6.4b4cbd9fa4b4cf815a1a.js.map

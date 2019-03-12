@@ -1,2 +1,0 @@
-webpackJsonp([3],{HxLo:function(e,n){},iy3x:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var a={render:function(){var e=this.$createElement;return(this._self._c||e)("el-container",[this._v("\n    admin1\n")])},staticRenderFns:[]};var r=t("C7Lr")({name:"admin1",created:function(){},methods:{}},a,!1,function(e){t("HxLo")},"data-v-82bacdee",null);n.default=r.exports}});
-//# sourceMappingURL=3.eaee4d5eba19fb897d20.js.map

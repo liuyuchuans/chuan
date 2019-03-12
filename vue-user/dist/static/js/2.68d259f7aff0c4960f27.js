@@ -1,0 +1,2 @@
+webpackJsonp([2],{"iq++":function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement;return(this._self._c||e)("el-container",[this._v("\n    通用页面2\n")])},staticRenderFns:[]};var a=t("C7Lr")({name:"tongyong2",created:function(){},methods:{}},r,!1,function(e){t("rsQI")},"data-v-91a9287c",null);n.default=a.exports},rsQI:function(e,n){}});
+//# sourceMappingURL=2.68d259f7aff0c4960f27.js.map

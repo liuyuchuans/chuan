@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import loginData from './model/login/login.js' // 登陆数据
+import loginData from './model/login/login' // 登陆数据
+import home from './model/home/HomeList'
 Vue.use(Vuex)
 export default new Vuex.Store({
-    state:{
-        //alert 弹出框提示 
-
-    },
     modules:{
-        loginData:loginData
+        loginData,
+        home
+    },
+    mutations:{
+       
     }
 })

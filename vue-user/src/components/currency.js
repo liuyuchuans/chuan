@@ -19,7 +19,7 @@ const cookieOperation = {
 
         //删除 cookie
         clearCookie : function(name) {
-            setCookie(name, "", -1);
+            cookieOperation.setCookie(name, "", -1);
         },
         // 判断是否登陆
         judgelogin : function(name) {
@@ -28,6 +28,8 @@ const cookieOperation = {
             }else {
                 return "none";
             }
-        }
+        },
+        // 全局API接口
+        $httpUrl: "https://easy-mock.com/mock/5c85fb4784f979343a5f7293/admin"
 }
 export default cookieOperation;

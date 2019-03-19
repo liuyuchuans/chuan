@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import cookieOperation from '../components/currency.js'
+import cookieOperation from '../api/currency.js'
 Vue.use(Router)
 
  const router = new Router({
@@ -17,14 +17,14 @@ Vue.use(Router)
       component:  (resolve) => require(['@/view/home/home.vue'], resolve),
       children: [
         {
-          path: "tongyong1",
-          name: "tongyong1",
-          component:  (resolve) => require(['@/view/tongyong/tongyong1'], resolve)
+          path: "riliOne",
+          name: "riliOne",
+          component:  (resolve) => require(['@/view/rili/riliOne'], resolve)
         },
         {
-          path: "tongyong2",
-          name: "tongyong2",
-          component:  (resolve) => require(['@/view/tongyong/tongyong2'], resolve)
+          path: "riliTwo",
+          name: "riliTwo",
+          component:  (resolve) => require(['@/view/rili/riliTwo'], resolve)
         },
         {
           path: "admin1",

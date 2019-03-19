@@ -1,11 +1,11 @@
 <template>
     <el-container>
-        通用页面1
+        2
     </el-container>
 </template>
 <script>
 export default {
-    name: 'tongyong1',
+    name: 'riliTwo',
     created(){
            
     },

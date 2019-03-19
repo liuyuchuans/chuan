@@ -5,7 +5,7 @@ import axios from 'axios'
 import element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import store from './store'
-import cookieOperation from './components/currency.js'
+import cookieOperation from './api/currency.js'
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
 Vue.prototype.cookieOperation = cookieOperation

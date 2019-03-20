@@ -21,8 +21,8 @@
                     background-color="#f2f2f2"
                     text-color="black"
                     :default-active="$route.path"
-                    active-text-color="#75B118">
-                    <el-submenu v-for="item in list" :key="item.id" :index="item.id + ''">
+                    active-text-color="#409EFF">
+                    <el-submenu v-for="item in listArr.optionSelct" :key="item.id" :index="item.id + ''">
                         <template slot="title">
                             <i :class="item.class"></i>
                             <span>{{ item.text }}</span>
@@ -33,38 +33,88 @@
                             </router-link>
                         </el-menu-item-group>
                     </el-submenu>
+                    <router-link v-for="item in listArr.selects" :key="item.id" :to="item.url">
+                        <el-menu-item  :index="('/' + item.url)">
+                            <i :class="item.class"></i>
+                            <span slot="title">{{ item.text }}</span>
+                        </el-menu-item>
+                     </router-link>
                 </el-menu>
             </el-aside>
             <el-main>
-                <router-view />
+                <tab>
+                    <router-view />
+                </tab>
             </el-main>
         </el-container>
     </el-container>
 </template>
 <script>
+    import tab from "./tab/tab"
     export default {
         name: '',
         data () {
             return {
                 isCollapse : false,
                 text: "全屏",
-                isCollapse: false    
+                isCollapse: false  
             }           
         },
+        components:{
+            tab
+        },
         created(){
+            if(this.$route.fullPath !== "/"){
+                this.$store.commit("addTap",this.$route)
+            }
             if(!this.list.length){
                 // 刷新之后没有数据
-                var HomeList = JSON.parse(window.localStorage.getItem('HomeList'));
-                this.$store.commit("HomeDataChange",HomeList);
+                var HomeList = JSON.parse(window.localStorage.getItem('HomeList'))
+                this.$store.commit("HomeDataChange",HomeList)
             } 
             window.onresize = () =>{
-               this.toggleText();
+               this.toggleText()
             }
-            document.onkeydown = this.Fkeydown;
+            document.onkeydown = this.Fkeydown
+        },
+        watch :{
+             $route(){
+                var tabList = this.$store.state.tab.list
+                let flag = true
+                for(var i = 0; i < tabList.length; i++){
+                   var item = tabList[i]
+                   if(this.$route.fullPath == item.url){
+                       flag = false
+                       break
+                   }
+                }
+                if(flag){
+                    this.$store.commit("addTap",this.$route)
+                }
+                return ""
+            },
         },
         computed:{
+            // 左侧列表
             list(){
-                return this.$store.state.home.list;
+                return this.$store.state.home.list
+            },
+           
+            listArr(){
+                var optionSelct = new Array();
+                var selects = new Array()
+                for(var i = 0; i < this.list.length; i++){
+                    var item = this.list[i]
+                    if(item.listChar){
+                        optionSelct.push(item)
+                    }else{
+                        selects.push(item)
+                    }
+                }
+                return {
+                    optionSelct,
+                    selects
+                }
             }
         },
         methods: {
@@ -85,43 +135,43 @@
             fullScreen(){
                 if(this.changeDivHeight()){
                     if (document.exitFullscreen) {  
-                        document.exitFullscreen();  
+                        document.exitFullscreen()
                     }  
                     else if (document.mozCancelFullScreen) {  
-                        document.mozCancelFullScreen();  
+                        document.mozCancelFullScreen()  
                     }  
                     else if (document.webkitCancelFullScreen) {  
-                        document.webkitCancelFullScreen();  
+                        document.webkitCancelFullScreen()  
                     }  
                     else if (document.msExitFullscreen) {  
-                        document.msExitFullscreen();  
+                        document.msExitFullscreen()
                     } 
                     if(typeof cfs != "undefined" && cfs) {
-                        cfs.call(el);
+                        cfs.call(el)
                     }
                     return
                 }
                 var el = document.documentElement;
-                var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;      
+                var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen   
                 if(typeof rfs != "undefined" && rfs) {
-                    rfs.call(el);
+                    rfs.call(el)
                 };
-                return;
+                return
             },
             // 阻止键盘  f11
             Fkeydown(e){
                 e = e || window.event;  
                 if(e.keyCode && e.keyCode === 122){  
-                    return false;
+                    return false
                 }
             },
             // 全屏 || 取消全屏事件切换
             toggleText(){
                 var height = this.changeDivHeight();
                 if(height){
-                   this.text = "退出全屏" ;
+                   this.text = "退出全屏" 
                 }else{
-                   this.text = "全屏" ;
+                   this.text = "全屏" 
                 }
             }
         }
@@ -168,6 +218,8 @@
     .el-main {
         color: #333;
         text-align: center;
+        margin: 0;
+        padding: 0;
     }
     body > .el-container {
         margin-bottom: 40px;

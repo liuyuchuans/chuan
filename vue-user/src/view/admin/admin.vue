@@ -1,11 +1,11 @@
 <template>
     <el-container>
-        admin2
+        admin
     </el-container>
 </template>
 <script>
 export default {
-    name: 'admin2',
+    name: 'admin1',
     created(){
            
     },

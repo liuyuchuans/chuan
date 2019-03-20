@@ -14,40 +14,47 @@ Vue.use(Router)
     {
       path: '/',
       name: 'home',
+      // redirect: '/riliOne',
       component:  (resolve) => require(['@/view/home/home.vue'], resolve),
+      
       children: [
         {
           path: "riliOne",
           name: "riliOne",
-          component:  (resolve) => require(['@/view/rili/riliOne'], resolve)
+          component:  (resolve) => require(['@/view/rili/riliOne'], resolve),
+          meta:{
+            "title": "日历One"
+          }
         },
         {
           path: "riliTwo",
           name: "riliTwo",
-          component:  (resolve) => require(['@/view/rili/riliTwo'], resolve)
-        },
-        {
-          path: "admin1",
-          name: "admin1",
-          component:  (resolve) => require(['@/view/admin/admin1'], resolve),
-          beforeEnter: (to, from, next) => {
-            if(cookieOperation.getCookie("token") === "admin"){
-              next();
-            }else{
-              next("/403");
-            }
+          component:  (resolve) => require(['@/view/rili/riliTwo'], resolve),
+          meta:{
+            "title": "日历Two"
           }
         },
         {
-          path: "admin2",
-          name: "admin2",
-          component:  (resolve) => require(['@/view/admin/admin2'], resolve),
+          path: "map",
+          name: "map",
+          component:  (resolve) => require(['@/view/map/map'], resolve),
+          meta:{
+            "title": "地图"
+          }
+        },
+        {
+          path: "admin",
+          name: "admin",
+          component:  (resolve) => require(['@/view/admin/admin'], resolve),
           beforeEnter: (to, from, next) => {
             if(cookieOperation.getCookie("token") === "admin"){
               next();
             }else{
               next("/403");
             }
+          },
+          meta:{
+            "title": "权限"
           }
         },
         {
@@ -76,7 +83,7 @@ router.beforeEach((to, from, next) => {
   if(cookieOperation.judgelogin("token") === "next"){
     // 已登陆
     if (to.path === '/login') { //这就是跳出循环的关键
-      next("/")
+      next("/riliOne")
     } else{
       next()
     }

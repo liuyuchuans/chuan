@@ -12,6 +12,9 @@ function resolve (dir) {
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
+  // externals: {
+  //   "BMap": "BMap"
+  // },
   entry: {
     app: './src/main.js'
   },

@@ -106,6 +106,4 @@ export default {
         opacity: .9;
         margin-top: 20;
     }
-
-
 </style>

@@ -50,6 +50,7 @@ export default{
 }
 .el-tabs{
     width: 100%;
+    margin-left: 10px;
 }
 .el-tabs >>> .comp-full-calendar {
     max-width: none;
@@ -61,4 +62,5 @@ export default{
     -ms-user-select: none;
     user-select: none;
 }
+
 </style>

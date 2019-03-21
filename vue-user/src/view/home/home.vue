@@ -8,10 +8,21 @@
             <router-link to="/">
                 <h3>后台管理系统</h3>
             </router-link>
-            <span @click="logOut">注销</span>
-            <el-tooltip class="item" effect="dark" :content="text" placement="top-start">
-                <span class="el-icon-rank" @click="fullScreen"></span>
-            </el-tooltip>
+            <!-- <span @click="logOut">注销</span>
+             -->
+             <div class="dropdown">
+                 <el-tooltip class="item" effect="dark" :content="text" placement="top-start">
+                    <span class="el-icon-rank" @click="fullScreen"></span>
+                </el-tooltip>
+                 <el-dropdown size="mini" split-button type="primary"  @command="handleCommand">
+                    {{ city }}
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item command="logOut">注销/重新登录</el-dropdown-item>
+                    </el-dropdown-menu>
+                </el-dropdown>
+                <div id="remap"></div>
+             </div>
+            
         </el-header>
         <el-container>
             <el-aside style=" width: auto;">
@@ -57,7 +68,8 @@
             return {
                 isCollapse : false,
                 text: "全屏",
-                isCollapse: false  
+                isCollapse: false,
+                city: null
             }           
         },
         components:{
@@ -67,15 +79,27 @@
             if(this.$route.fullPath !== "/"){
                 this.$store.commit("addTap",this.$route)
             }
-            if(!this.list.length){
+            if(!this.list.length){  
                 // 刷新之后没有数据
                 var HomeList = JSON.parse(window.localStorage.getItem('HomeList'))
                 this.$store.commit("HomeDataChange",HomeList)
             } 
             window.onresize = () =>{
                this.toggleText()
-            }
+            } 
             document.onkeydown = this.Fkeydown
+            
+        },
+        mounted(){
+            let _this = this
+            let map = new window.BMap.Map("remap")
+            function myFun(result){
+                var cityName = result.name
+                map.setCenter(cityName)
+                _this.city = cityName
+            }
+            var myCity = new BMap.LocalCity();
+            myCity.get(myFun);
         },
         watch :{
              $route(){
@@ -118,6 +142,11 @@
             }
         },
         methods: {
+            handleCommand(command) {
+                if(command === "logOut"){
+                    this.logOut();
+                }
+            },
             // 退出登录
             logOut(){
                 this.cookieOperation.clearCookie("token")
@@ -167,7 +196,7 @@
             },
             // 全屏 || 取消全屏事件切换
             toggleText(){
-                var height = this.changeDivHeight();
+                var height = this.changeDivHeight()
                 if(height){
                    this.text = "退出全屏" 
                 }else{
@@ -197,11 +226,11 @@
         cursor: pointer;
         color: #fff;
     }
-    .el-header > span{
+    .el-header > .dropdown{
         float: right;
         line-height: 60px;
-        cursor: pointer;
         margin-right: 10px;
+        /* background-color: #f4f4f4; */
     }
     .el-header span:nth-child(3){
         float: right;

@@ -6,7 +6,13 @@ export default{
     },
     mutations:{
         addTap(state,data){
-            if(data.fullPath !== "/")
+            // 保持页面上的Tab 没有重复
+            state.list.forEach((item,index) => {
+                if(item.url === data.fullPath)
+                    return;
+            });
+
+            if(data.fullPath !== "/" && data.fullPath !== "/403" && data.fullPath !== "/404" && data.fullPath !== "/login")
                 state.list.push({
                     title: data.meta.title,
                     name: (state.list.length + ""),
@@ -17,11 +23,9 @@ export default{
                 }
         },
         removeTab(state,path){
-            let i = null;
             state.list.forEach((item,index) => {
                 if(item.url === path)
                     state.list.splice(index,1)
-                    i = index
                     return;
             });  
         }

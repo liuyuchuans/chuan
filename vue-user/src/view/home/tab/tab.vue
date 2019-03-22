@@ -2,7 +2,7 @@
     <el-container >
         <el-tabs v-model="editableTabsValue2" type="card" closable @tab-remove="removeTab" v-if="tabList">
             <el-tab-pane v-for="item in tabList" :key="item.name" :label="item.title" :name="(item.url)" >
-                <slot></slot>
+                <slot ></slot>
             </el-tab-pane>
         </el-tabs>
     </el-container>

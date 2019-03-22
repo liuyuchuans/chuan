@@ -67,7 +67,10 @@ Vue.use(Router)
         },
         {
           path: "/403",
-          component:  (resolve) => require(['@/view/403/403'], resolve)
+          component:  (resolve) => require(['@/view/403/403'], resolve),
+          meta:{
+            title: "权限错误"
+          }
         }
       ]
     },

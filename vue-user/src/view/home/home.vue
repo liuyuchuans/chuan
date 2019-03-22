@@ -49,7 +49,7 @@
                             <i :class="item.class"></i>
                             <span slot="title">{{ item.text }}</span>
                         </el-menu-item>
-                     </router-link>
+                     </router-link >
                 </el-menu>
             </el-aside>
             <el-main>
@@ -228,7 +228,7 @@
     }
     .el-header > .dropdown{
         float: right;
-        line-height: 60px;
+        margin-top: 15px;
         margin-right: 10px;
         /* background-color: #f4f4f4; */
     }

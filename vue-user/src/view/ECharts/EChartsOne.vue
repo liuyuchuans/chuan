@@ -1,28 +1,10 @@
 <template>
-<v-chart :options="polar"/>
+  <el-container>
+    <v-chart :options="option"/>
+  </el-container>
 </template>
-
-<style>
-/**
- * The default size is 600px×400px, for responsive charts
- * you may need to set percentage values as follows (also
- * don't forget to provide a size for the container).
- */
-.echarts {
-  width: 100%;
-  height: 100%;
-}
-</style>
-
 <script>
-import ECharts from 'vue-echarts'
-import 'echarts/lib/chart/line'
-import 'echarts/lib/component/polar'
-
 export default {
-  components: {
-    'v-chart': ECharts
-  },
   data () {
     let data = []
 
@@ -33,41 +15,34 @@ export default {
     }
 
     return {
-      polar: {
+      option: {
         title: {
-          text: '极坐标双数值轴'
-        },
-        legend: {
-          data: ['line']
-        },
-        polar: {
-          center: ['50%', '54%']
-        },
-        tooltip: {
-          trigger: 'axis',
-          axisPointer: {
-            type: 'cross'
-          }
-        },
-        angleAxis: {
-          type: 'value',
-          startAngle: 0
-        },
-        radiusAxis: {
-          min: 0
-        },
-        series: [
-          {
-            coordinateSystem: 'polar',
-            name: 'line',
-            type: 'line',
-            showSymbol: false,
-            data: data
-          }
-        ],
-        animationDuration: 2000
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
       }
     }
+  },
+  mounted(){
+    
   }
 }
 </script>
+<style>
+.echarts {
+  width: 100px;
+  height: 100px;
+}
+</style>

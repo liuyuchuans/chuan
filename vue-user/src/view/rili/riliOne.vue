@@ -44,15 +44,15 @@ export default {
     methods: {
         // 选择月份
         changeMonth (start, end, current) {
-        console.log('yue')
+        // console.log('yue')
         },
         // 点击事件
         eventClick (event, jsEvent, pos) {
-            console.log("点击",)
+            // console.log("点击",)
         },
         // 点击当天
         dayClick (day, jsEvent) {
-            console.log('当天' ,day)
+            // console.log('当天' ,day)
         }
     }
 }

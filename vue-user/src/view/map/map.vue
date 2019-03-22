@@ -19,7 +19,7 @@
                 <el-button @click="goLocation">查询</el-button>
             </el-col>
         </div>
-        <div id="map"></div>
+        <div id="map" ></div>
     </div>
 </template>
 <script>
@@ -32,7 +32,8 @@ export default {
       restaurants: [],
       title: '请输入内容',
       isShow: false,
-      type: "error"
+      type: "error",
+      time: new Date().getTime()
     }
   },
   methods: {
@@ -81,44 +82,39 @@ export default {
             { "value": "五棵松", "address": "北京市" },
             { "value": "内黄县", "address": "河南省" }
         ];
-    }
-  },
-  mounted(){
-    //   var script = document.createElement("script")
-    //   script.src = "http://api.map.baidu.com/api?v=3.0&ak=6R38PW6mntG2cYsCKyYxPVc8Dv081guj"
-    //   document.head.appendChild(script)
-  },
-  created() {
-      const that = this
-      this.$nextTick().then(() => {
-      that.map = new window.BMap.Map('map')
-      // 创建地图实例
-      var point = new window.BMap.Point(116.395645, 39.929986)
-      // 创建点坐标
-      that.map.centerAndZoom(point, 15)
-      var geoc = new window.BMap.Geocoder()
-      // 初始化地图，设置中心点坐标和地图级别
-      that.map.enableScrollWheelZoom() // 启用滚轮放大缩小，默认禁用
-      that.map.enableContinuousZoom() // 启用地图惯性拖拽，默认禁用
-      var opts = {type: BMAP_NAVIGATION_CONTROL_ZOOM}  // 
-      that.map.addControl(new BMap.NavigationControl(opts))
-        var driving = new BMap.DrivingRoute(that.map, { 
-            renderOptions: { 
-                map: that.map, 
-                autoViewport: true 
-        } 
-        });
-      function myFun(result){
-            var cityName = result.name;
-            that.map.setCenter(cityName);
         }
-        var myCity = new BMap.LocalCity()
-        myCity.get(myFun)
-    })
-  },
-  mounted(){
+    },
+    created() {
+        const that = this
+        this.$nextTick().then(() => {
+            that.map = new window.BMap.Map('map')
+            // 创建地图实例
+            var point = new window.BMap.Point(116.395645, 39.929986)
+            // 创建点坐标
+            that.map.centerAndZoom(point, 15)
+            var geoc = new window.BMap.Geocoder()
+            // 初始化地图，设置中心点坐标和地图级别
+            that.map.enableScrollWheelZoom() // 启用滚轮放大缩小，默认禁用
+            that.map.enableContinuousZoom() // 启用地图惯性拖拽，默认禁用
+            var opts = {type: BMAP_NAVIGATION_CONTROL_ZOOM}  // 
+            that.map.addControl(new BMap.NavigationControl(opts))
+                var driving = new BMap.DrivingRoute(that.map, {
+                    renderOptions: { 
+                        map: that.map, 
+                        autoViewport: true 
+                    } 
+                });
+            function myFun(result){
+                var cityName = result.name;
+                that.map.setCenter(cityName);
+            }
+            var myCity = new BMap.LocalCity()
+            myCity.get(myFun)
+        })
+    },
+    mounted(){
       this.restaurants = this.loadAll()
-  }
+    }
 }
 </script>
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-    <el-container>
+    <el-container class="main-container">
         <el-header>
             <el-radio-group v-model="isCollapse" style="margin-top: 10px;">
                 <el-radio-button :label="false">展开</el-radio-button>
@@ -24,7 +24,7 @@
              </div>
             
         </el-header>
-        <el-container>
+        <el-container >
             <el-aside style=" width: auto;">
                 <el-menu 
                     :collapse="isCollapse"
@@ -54,8 +54,9 @@
             </el-aside>
             <el-main>
                 <tab>
-                    <router-view />
+                    
                 </tab>
+                <router-view />
             </el-main>
         </el-container>
     </el-container>
@@ -207,8 +208,9 @@
     }
 </script>
 <style scoped>
-    .el-container{
+    .main-container{
         min-height: 100%;
+        
     }
 
     .el-header {
@@ -249,6 +251,8 @@
         text-align: center;
         margin: 0;
         padding: 0;
+        margin-left: 10px;
+        
     }
     body > .el-container {
         margin-bottom: 40px;
@@ -266,4 +270,15 @@
     .el-radio-group{
         float: left;
     }
+    .el-main >>> .comp-full-calendar {
+        max-width: none;
+        width: 70%;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
 </style>

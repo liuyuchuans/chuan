@@ -72,7 +72,10 @@ Vue.use(Router)
             title: "权限错误"
           }
         }
-      ]
+      ],
+      meta:{
+        title: "首页"
+      }
     },
     {
       path: "/*",

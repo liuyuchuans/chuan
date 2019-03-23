@@ -1,9 +1,7 @@
 <template>
     <el-container >
         <el-tabs v-model="editableTabsValue2" type="card" closable @tab-remove="removeTab" v-if="tabList">
-            <el-tab-pane v-for="item in tabList" :key="item.name" :label="item.title" :name="(item.url)" >
-                <slot ></slot>
-            </el-tab-pane>
+            <el-tab-pane v-for="item in tabList" :key="item.name" :label="item.title" :name="(item.url)" ></el-tab-pane>
         </el-tabs>
     </el-container>
 </template>
@@ -46,21 +44,6 @@ export default{
 <style scoped>
 .el-container{
     width: 100%;
-    min-width: 60px;
-}
-.el-tabs{
-    width: 100%;
-    margin-left: 10px;
-}
-.el-tabs >>> .comp-full-calendar {
-    max-width: none;
-    width: 70%;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 </style>

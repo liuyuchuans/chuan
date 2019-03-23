@@ -84,6 +84,11 @@ export default {
         ];
         }
     },
+    watch:{
+        $route(){
+            console.log("router") 
+        }
+    },
     created() {
         const that = this
         this.$nextTick().then(() => {

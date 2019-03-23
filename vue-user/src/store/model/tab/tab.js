@@ -12,21 +12,12 @@ export default{
                     return;
             });
 
-            if(data.fullPath !== "/" && data.fullPath !== "/404" && data.fullPath !== "/login")
-                if(data.fullPath === "/map"){
-                    state.list.unshift({
-                        title: data.meta.title,
-                        name: (new Date().getTime()),
-                        url: data.fullPath
-                    })
-                }else{
-                    state.list.push({
-                        title: data.meta.title,
-                        name: (new Date().getTime()),
-                        url: data.fullPath
-                    })
-                }
-               
+            if(data.fullPath !== "/404" && data.fullPath !== "/login")
+                state.list.push({
+                    title: data.meta.title,
+                    name: (new Date().getTime()),
+                    url: data.fullPath
+                })
                 
                 if(state.list.length >= 8){
                     state.list.splice(0,1)

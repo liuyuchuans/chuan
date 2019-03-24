@@ -12,7 +12,7 @@ export default{
                     return;
             });
 
-            if(data.fullPath !== "/404" && data.fullPath !== "/login")
+            if(data.fullPath !== "/" && data.fullPath !== "/404" && data.fullPath !== "/login")
                 state.list.push({
                     title: data.meta.title,
                     name: (new Date().getTime()),

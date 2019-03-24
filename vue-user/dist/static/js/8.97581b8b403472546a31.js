@@ -1,0 +1,2 @@
+webpackJsonp([8],{"+LtM":function(e,n){},s0wI:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement;return(this._self._c||e)("el-container",[this._v("\n    admin\n")])},staticRenderFns:[]};var a=t("C7Lr")({name:"admin1",created:function(){},methods:{}},r,!1,function(e){t("+LtM")},"data-v-24330050",null);n.default=a.exports}});
+//# sourceMappingURL=8.97581b8b403472546a31.js.map

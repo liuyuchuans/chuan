@@ -6,16 +6,8 @@
 <script>
 export default {
   data () {
-    let data = []
-
-    for (let i = 0; i <= 360; i++) {
-        let t = i / 180 * Math.PI
-        let r = Math.sin(2 * t) * Math.cos(2 * t)
-        data.push([r, i])
-    }
-
     return {
-      option: {
+      option:  {
         title: {
                 text: 'ECharts 入门示例'
             },
@@ -30,19 +22,12 @@ export default {
             series: [{
                 name: '销量',
                 type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
+                data: [5, 20, 34, 10, 10, 20,]
             }]
       }
     }
-  },
-  mounted(){
-    
   }
 }
 </script>
 <style>
-.echarts {
-  width: 100px;
-  height: 100px;
-}
 </style>

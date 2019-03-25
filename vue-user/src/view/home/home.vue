@@ -53,10 +53,10 @@
                 </el-menu>
             </el-aside>
             <el-main>
-                <tab>
-                    
-                </tab>
-                <router-view />
+                <tab></tab>
+                <!-- <keep-alive> -->
+                    <router-view />
+                <!-- </keep-alive> -->
             </el-main>
         </el-container>
     </el-container>

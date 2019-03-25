@@ -43,6 +43,14 @@ Vue.use(Router)
           }
         },
         {
+          path: "EChartsTwo",
+          name: "EChartsTwo",
+          component:  (resolve) => require(['@/view/ECharts/EChartsTwo'], resolve),
+          meta:{
+            "title": "EChartsTwo"
+          }
+        },
+        {
           path: "map",
           name: "map",
           component:  (resolve) => require(['@/view/map/map'], resolve),

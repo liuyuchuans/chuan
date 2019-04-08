@@ -17,6 +17,7 @@
                 width="180">
             </el-table-column>
             <el-table-column
+                
                 prop="address"
                 label="地址">
             </el-table-column>
@@ -73,14 +74,19 @@
     methods: {
       tableRowClassName({row, rowIndex}) {
         if (rowIndex === 1) {
-          return 'warning-row';
+          return 'warning-row'
         } else if (rowIndex === 3) {
-          return 'success-row';
+          return 'success-row'
         }
-        return '';
+        return ''
       },
       handleDelete(index){
-          this.tableData.splice(index,1)
+        this.tableData.splice(index,1)
+        this.$notify({
+          title: '删除成功',
+          message: '',
+          type: 'success'
+        })
       }
     },
   }

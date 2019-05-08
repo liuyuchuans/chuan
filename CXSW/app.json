@@ -1,8 +1,7 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/news/news"
+    "pages/user/user"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -20,15 +19,9 @@
         "text": "首页"
       },
       {
-        "selectedIconPath": "./img/iconIMG/xiaoxiS.png",
-        "iconPath": "./img/iconIMG/xiaoxi.png",
-        "pagePath": "pages/news/news",
-        "text": "消息"
-      },
-      {
         "selectedIconPath": "./img/iconIMG/wodeS.png",
         "iconPath": "./img/iconIMG/wode.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/user/user",
         "text": "关于我们"
       }
     ]

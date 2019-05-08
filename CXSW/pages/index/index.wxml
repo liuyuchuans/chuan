@@ -1,4 +1,4 @@
 <!--index.wxml-->
-<view class="container">
-  <view>hello 首页</view>
+<view>
+  
 </view>

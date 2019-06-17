@@ -47,7 +47,13 @@ export default {
       }
   },
   created(){
-      
+      let _this = this;
+      document.onkeydown=function(event){
+          var e = event || window.event || arguments.callee.caller.arguments[0];
+          if(e && e.keyCode==13){
+              _this.login();
+          }
+      };
   },
   
   // 事件处理函数
@@ -56,7 +62,7 @@ export default {
           var _this = this;
           if(this.form.userMailbox == "admin" && this.form.userPass === "520"){
               // 超级管理员 权限
-                
+              _this.$router.replace("/");
                 this.$http.get(this.cookieOperation.$httpUrl + "/adminJurisdiction")
                     .then(function(data){
                        var datas = data.data.data.list;

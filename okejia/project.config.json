@@ -11,6 +11,8 @@
 	"libVersion": "1.9.1",
 	"appid": "wxc4779136586ede21",
 	"projectname": "oke",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

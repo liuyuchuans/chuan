@@ -1,7 +1,4 @@
 const cookieOperation = {
-        //cname 名字
-        //cvalue 值
-        //exdays 时间            0.01大概25分钟
         setCookie : function (cname, cvalue) {
             document.cookie = cname + "=" + cvalue + ";";
         },

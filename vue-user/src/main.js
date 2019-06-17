@@ -9,7 +9,10 @@ import cookieOperation from './api/currency.js'
 import fullCalendar from 'vue-fullcalendar' 
 import echarts from 'echarts'   
 import ECharts from 'vue-echarts'
+// import marble from './api/zzsc'
+import './api/zzsc.css'
 Vue.config.productionTip = false
+// console.log(marble)
 // Vue.config.silent = true
 // Vue.config.devtools = false
 Vue.prototype.$http = axios

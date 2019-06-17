@@ -11,15 +11,19 @@
             <!-- <span @click="logOut">注销</span>
              -->
              <div class="dropdown">
-                 <el-tooltip class="item" effect="dark" :content="text" placement="top-start">
+                 <!-- <el-tooltip class="item" effect="dark" :content="text" placement="top-start">
                     <span class="el-icon-rank" @click="fullScreen"></span>
-                </el-tooltip>
+                </el-tooltip> -->
+                <div id="screen" ref="screen"></div>
                  <el-dropdown size="mini" split-button type="primary"  @command="handleCommand">
                     {{ city }}
                     <el-dropdown-menu slot="dropdown">
                         <el-dropdown-item command="logOut">注销/重新登录</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>
+                <div class="avatar-parent">
+                    <img :src="avatarUrl">
+                </div>
                 <div id="remap"></div>
              </div>
             
@@ -63,6 +67,7 @@
 </template>
 <script>
     import tab from "./tab/tab"
+    
     export default {
         name: '',
         data () {
@@ -70,13 +75,28 @@
                 isCollapse : false,
                 text: "全屏",
                 isCollapse: false,
-                city: null
+                city: null,
+                avatarUrl: ""
             }           
         },
         components:{
             tab
         },
         created(){
+            
+            this.$nextTick(()=>{
+                import ('../../api/zzsc.js').then(function(data){
+                    eval(data.default)
+                })
+            })
+            
+            // 头像显示
+            let token = this.cookieOperation.getCookie("token")
+            if(token === "admin"){
+                this.avatarUrl = require("../../assets/avatar/admin.jpg");
+            }else if(token === "liuyuchuan"){
+                this.avatarUrl = require("../../assets/avatar/chuan.jpg");
+            }
             if(this.$route.fullPath !== "/"){
                 this.$store.commit("addTap",this.$route)
             }
@@ -124,7 +144,6 @@
             list(){
                 return this.$store.state.home.list
             },
-           
             listArr(){
                 var optionSelct = new Array();
                 var selects = new Array()
@@ -208,11 +227,23 @@
     }
 </script>
 <style scoped>
+    /* @import '../../api/zzsc.css'; */
     .main-container{
         min-height: 100%;
         
     }
-
+    .avatar-parent {
+        float: right;
+        margin-left: 5px;
+        
+    }
+    .avatar-parent img{
+        float: right;
+        width: 40px;
+        height: 40px;
+        margin-top: -5px;
+        border-radius: 50%;
+    }
     .el-header {
         background-color: #409EFF;
         color: #ffffff;
@@ -230,9 +261,18 @@
     }
     .el-header > .dropdown{
         float: right;
+        display: -webkit-box;
+        display: -ms-flexbox;
         margin-top: 15px;
-        margin-right: 10px;
-        /* background-color: #f4f4f4; */
+        margin-right: 20px;
+        width: 466px;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    .el-header > .dropdown .el-dropdown {
+        height: 28px;
     }
     .el-header span:nth-child(3){
         float: right;
@@ -270,6 +310,8 @@
     .el-radio-group{
         float: left;
     }
+    
+    
     .el-main >>> .comp-full-calendar {
         max-width: none;
         width: 70%;
@@ -280,6 +322,8 @@
         -ms-user-select: none;
         user-select: none;
     }
+    /* html,body {margin:0; padding:0; position:absolute; width:100%; height:100%; overflow: hidden} */
+    
     /* .el-main >>>.el-radio-button__orig-radio:checked+.el-radio-button__inner {
         color: black;
         background-color: #fff;

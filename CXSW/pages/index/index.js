@@ -7,6 +7,7 @@ Page({
     
   },
   onLoad: function () {
-    
+    // debugger;
+    console.log("开始了")
   }
 })

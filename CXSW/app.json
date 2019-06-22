@@ -1,15 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/user/user"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-  "tabBar":{
+  "tabBar": {
     "selectedColor": "#1afa29",
     "list": [
       {
@@ -25,5 +25,6 @@
         "text": "关于我们"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

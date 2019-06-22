@@ -1,0 +1,12 @@
+点击延迟300毫秒 解决方案
+
+下载包  fastclick ;
+入口文件配置
+导入 fastclick 包
+fastclicl.attach(document.body);
+
+一像素问题     解决方案
+border.js  
+
+样式还原 移动端样式基本一样
+Reset.js 

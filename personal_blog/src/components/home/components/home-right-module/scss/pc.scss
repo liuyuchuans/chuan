@@ -1,0 +1,98 @@
+@import '@/assets/scss/variable.scss';
+.home-main-box-right{
+    width: 325px;
+    height: 300px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    // padding: 30px 20px 20px;
+    // align-items: center;
+    text-align: center;
+    >ul>li{
+        // width: 830px;
+        box-shadow: 0px 0px 8px 6px rgba(0,0,0,0.04);
+        padding: 15px;
+        background: #fff;
+        margin: 10px 0;
+          
+        .home-img-box{
+            // margin: 15px 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: solid 1px #f4f4f4;
+            margin: 0 auto;
+            img{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+            }
+        }
+        .home-personal-introduction{
+            font-weight: normal;
+            font-size: 12px;
+            color: #ccc;
+        }
+        .home-text-box{
+            margin: 15px auto;
+        }
+        .home-list-li{
+            text-align: left;
+            margin: 8px 0;
+            color: #ccc;
+            font-size: 14px;
+            cursor:pointer;
+            .home-span-box{
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                background: #ccc;
+                margin: 0 8px 0 0;
+                text-align: center;
+                color: #fff;
+            }
+            .home-box-span{
+                background: $active_router_color;
+            }
+        }
+        .home-title-p{
+            // color: #ccc;
+            font-weight: normal;
+            font-size: 16px;
+            text-align: left;
+        }
+        .home-title-price{
+            // color: #ccc;
+            font-weight: normal;
+            font-size: 14px;
+            text-align: left;
+        }
+        .home-zhifubao-weixin-price-img{
+            img{
+                width: 140px;
+            }
+        }
+        .home-hr{
+            border: dotted 1px #ccc;
+        }
+        
+    }
+    ul>li:hover{
+        box-shadow: 0px 0px 8px 6px rgba(0,0,0,.1)
+    }
+    .search{
+        .home-input-search{
+            width: 177px;
+            height: 34px;
+            vertical-align: 9.4px;
+            
+        }
+        button,input{
+            outline: none;
+        }
+        .home-active-button{
+            background: darkseagreen;
+            
+        }
+    }
+}

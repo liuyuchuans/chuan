@@ -1,0 +1,32 @@
+@import '@/assets/scss/variable.scss';
+.home-main-box-left{
+    ul{
+        >li{
+            width: 830px;
+            // height: 100px;
+            box-shadow: 0px 0px 8px 6px rgba(0,0,0,0.04);
+            padding: 15px;
+            background: #fff;
+            margin: 10px 0;
+            strong{
+                color: $active_router_color; 
+                margin-right: 10px;
+            }
+            .box-litop{
+                .top-text{
+                    font-size: 17px;
+                    font-weight: normal;
+                }
+            } 
+            .box-libottom{
+                margin: 20px 0 0 0;
+                font-weight: normal;
+                font-size: 12px;
+                color: #ccc;
+            }
+        }
+        >li:hover{
+            box-shadow: 0px 0px 8px 6px rgba(0,0,0,.1)
+        }
+    }
+}

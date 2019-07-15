@@ -6,16 +6,33 @@ const Route = new VueRouter({
     routes: [
         { 
             path: '/', 
-            component: resolve => require(['@/components/home/home.vue'], resolve),
+            name: '',
+            redirect: '/home',
+            component: resolve => require(['@/components/home/home.vue'], resolve)
         },
         { 
             path: '/home', 
+            name: '',
             component: resolve => require(['@/components/home/home.vue'], resolve),
+            children:[
+                { 
+                    path: '', 
+                    // name: 'detail',
+                    component: resolve => require(['@/components/home/components/home-left-module/home-left-module.vue'], resolve),
+                },
+                { 
+                    path: '/detail', 
+                    name: 'detail',
+                    component: resolve => require(['@/components/home/components/home-detail-module/home-detail-module'], resolve),
+                }
+            ]
         },
         { 
             path: '/classification', 
+            name: 'classification',
             component: resolve => require(['@/components/classification/classification.vue'], resolve),
         }
+        
     ]
 })
 

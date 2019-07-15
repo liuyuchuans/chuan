@@ -1,30 +1,29 @@
 <template>
     <div class="home-content">
         <div class="home-main">
-            <div class="home-main-box-left">
-                <ul>
-                    <li></li>
-                </ul>
-                <ol>
-                    <li>
-                        
-                    </li>
-                </ol>
-            </div>
-            <div class="home-main-box-right">
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
+            <router-view :data="HomeDataSlot"></router-view>
+            <homeright :data="HomeDataSlot"></homeright>
         </div>
     </div>
 </template>
 <script>
+
+    import homeright from './components/home-right-module/home-right-module'
     export default{
         data(){
             return {
 
             }
+        },
+        computed: {
+            HomeDataSlot(){
+                return this.$store.state.homeState.listData.sort((a,b)=>{
+                    return a.top - b.top;
+                });
+            }
+        },
+        components:{
+            homeright
         }
     }
 </script>

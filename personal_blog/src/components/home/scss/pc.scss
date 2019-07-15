@@ -1,1 +1,13 @@
 /*pc 样式表*/
+@import '@/assets/scss/variable.scss';
+.home-content{
+    // width: 100vw;
+    // height: 100vh;
+    // background: #f4f4f4;
+    .home-main{
+        width: 1200px;
+        margin: 32px auto 0;
+        display: flex;
+        
+    }
+}

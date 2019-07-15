@@ -6,7 +6,7 @@
             </div>
             <div class="home-head-nav">
                 <ul>
-                    <router-link :class="{'router-link-active':$route.fullPath == '/' && item.id == 1}" tag="li" v-for="item in homestate.nav" :key="item.id" :to="item.url">
+                    <router-link :class="{'router-link-active':$route.fullPath == '/' && item.id == 1}" tag="li" v-for="item in HeaderState.nav" :key="item.id" :to="item.url">
                         {{ item.name }}
                     </router-link>
                 </ul>
@@ -26,10 +26,7 @@
             }
         },
         props:{
-            homestate: Object
-        },
-        created(){
-            console.log(this)
+            HeaderState: Object
         }
     }
 </script>

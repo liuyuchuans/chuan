@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <Hoader :homestate="HomeHoaderData.HeaderState"></Hoader>
+      <Hoader :HeaderState="HeaderState.HeaderState"></Hoader>
       <router-view></router-view>
   </div>
 </template>
@@ -17,7 +17,7 @@
             Hoader
         },
         computed:{
-            HomeHoaderData(){
+            HeaderState(){
                 return this.$store.state;
             }
         },

@@ -30,7 +30,8 @@ const Route = new VueRouter({
         { 
             path: '/classification', 
             name: 'classification',
-            component: resolve => require(['@/components/classification/classification.vue'], resolve),
+            // redirect: '/home',
+            component: resolve => require(['@/components/home/home.vue'], resolve),
         }
         
     ]

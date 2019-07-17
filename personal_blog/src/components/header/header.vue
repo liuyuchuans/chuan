@@ -2,7 +2,7 @@
     <div class="home-head">
         <div class="home-head-container">
             <div class="home-head-title">
-                <p class="h2">刘予川个人博客</p>
+                <p class="h2">C&nbsp;个人博客</p>
             </div>
             <div class="home-head-nav">
                 <ul>

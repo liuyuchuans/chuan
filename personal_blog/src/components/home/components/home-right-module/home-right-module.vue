@@ -14,7 +14,7 @@
                 </div>
                 <div class="home-personal-introduction">
                     <span class="home--personal-introduction-text">
-                        刘予川个人博客，主要记录、总结与分享我在工作、学习之中的经验、写的不对的地方，欢迎大家指出。
+                        C&nbsp;的个人博客，主要记录、总结与分享我在工作、学习之中的经验、写的不对的地方，欢迎大家指出。
                     </span>
                 </div>
             </li>
@@ -62,7 +62,7 @@
     export default{
         data(){
             return { 
-                user_img: require('../../../../assets/img/user.png'),
+                user_img: require('@/assets/img/user.png'),
                 search_img: require('../../../../assets/img/search.png'),
                 weixin_img: require('../../../../assets/img/weixin.jpeg'),
                 zhifubao_img: require('../../../../assets/img/zhifubao.jpeg'),

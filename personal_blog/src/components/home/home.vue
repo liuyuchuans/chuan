@@ -1,7 +1,7 @@
 <template>
     <div class="home-content">
         <div class="home-main">
-            <router-view :data="HomeDataSlot"></router-view>
+            <router-view :data="HomeDataSlot" :homeDetailState="homeDetailState"></router-view>
             <homeright :data="HomeDataSlot"></homeright>
         </div>
     </div>
@@ -20,6 +20,9 @@
                 return this.$store.state.homeState.listData.sort((a,b)=>{
                     return a.top - b.top;
                 });
+            },
+            homeDetailState(){
+                return this.$store.state.homeDetailState.detailData
             }
         },
         components:{

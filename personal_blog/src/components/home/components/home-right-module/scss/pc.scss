@@ -1,6 +1,6 @@
 @import '@/assets/scss/variable.scss';
 .home-main-box-right{
-    width: 325px;
+    width: 354px;
     height: 300px;
     margin-left: 15px;
     display: flex;
@@ -46,6 +46,7 @@
                 display: inline-block;
                 width: 25px;
                 height: 25px;
+                line-height: 25px;
                 background: #ccc;
                 margin: 0 8px 0 0;
                 text-align: center;
@@ -75,7 +76,9 @@
         .home-hr{
             border: dotted 1px #ccc;
         }
-        
+        ol>li:hover{
+            color: $active_router_color;
+        }
     }
     ul>li:hover{
         box-shadow: 0px 0px 8px 6px rgba(0,0,0,.1)

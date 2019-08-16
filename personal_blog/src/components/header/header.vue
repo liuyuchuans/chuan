@@ -11,10 +11,13 @@
                     </router-link>
                 </ul>
             </div>
-            <!-- <div>
-                111
-            </div> -->
+            <div class="header_login_box">
+                <span @click="drawer=true">login</span>
+            </div>
         </div>
+        <Drawer title="登陆" width="500px" :closable="false" v-model="drawer">
+            
+        </Drawer>
     </div>
 </template>
 <script>
@@ -22,7 +25,7 @@
         name: 'home-header',
         data(){
             return {
-                
+               drawer: false 
             }
         },
         props:{

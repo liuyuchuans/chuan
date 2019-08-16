@@ -26,25 +26,25 @@
             <li>
                 <p class="home-title-p">点击量排行</p>
                 <hr class="home-hr"/>
-                <ul>
+                <ol>
                     <router-link v-for="(item,index) in data" :key="item.id" class="home-list-li" tag="li" :to="'/detail?id=' + item.id">
                         <p>
                             <span class="home-span-box" :class="{'home-box-span': index+1 == 1 || index+1 == 2 || index+1 == 3}">{{ index+1 }}</span>
                             <span v-text="item.title"></span>
                         </p>
                     </router-link>
-                </ul>
+                </ol>
             </li>
             <li>
                 <p class="home-title-p">最近编写</p>
                 <hr class="home-hr"/>
-                <ul>
+                <ol>
                     <router-link v-for="item in data" :key="item.id" class="home-list-li" tag="li" :to="'/detail?id=' + item.id">
                         <p>
                             <span v-text="item.title"></span>
                         </p>
                     </router-link>
-                </ul>
+                </ol>
             </li>
             <li>
                 <p class="home-title-p">给小编加点饭</p>

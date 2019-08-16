@@ -10,22 +10,26 @@
         width: 1200px;
         margin: 0 auto;
         line-height: 56px;
-        display: flex;
+        // display: flex;
         // justify-content: space-between;
         .home-head-title{
-            width: 300px;
+            width: 200px;
+            float: left;
             .h2{
                 font-size: 22px;
                 font-weight: normal;
                 color: $fontColor;
-                cursor:pointer;
+                cursor: pointer;
             }
         }
         .home-head-nav{
+            float: left;
             ul{
                 display: flex;
                 color: $fontColor;
+                font-size: 16px;
                 li{
+                    text-align: center;
                     cursor:pointer;
                     width: 100px;
                 }
@@ -33,6 +37,15 @@
                     color: $active_router_color;
                 }
             }
+        }
+        .header_login_box{
+            float: right;
+            font-size: 16px;
+            cursor:pointer;
+            // width: 100px;
+        }
+        .header_login_box:hover{
+            color: $active_router_color;
         }
     }
 }

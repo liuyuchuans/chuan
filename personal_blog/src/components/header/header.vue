@@ -16,7 +16,10 @@
             </div>
         </div>
         <Drawer title="登陆" width="500px" :closable="false" v-model="drawer">
-            
+            <div class="drawer_login_box">
+                <Input v-model="form.name"  placeholder="用户名" style="width: 200px" @keyup.enter.native="login" />
+                <Input v-model="form.password" type="password" placeholder="密码" style="width: 200px"  @keyup.enter.native="login" />
+            </div>
         </Drawer>
     </div>
 </template>
@@ -25,11 +28,51 @@
         name: 'home-header',
         data(){
             return {
-               drawer: false 
+               drawer: false,
+               form:{
+                   name: null,
+                   password: null
+               }
             }
         },
         props:{
             HeaderState: Object
+        },
+        methods:{
+            login(){
+                let name = this.form.name;
+                let password = this.form.password;
+                if(!name){
+                    this.$Message.error('请输入用户名');
+                    return false;
+                }else if(String(name).length < 3){
+                    this.$Message.warning('用户名必须大于三位');
+                    return false;
+                }else if(!password){
+                    this.$Message.error('请输入密码');
+                    return false;
+                }else if(String(password).length < 6){
+                    this.$Message.warning('密码必须大于六位');
+                    return false;
+                }
+                var _this = this;
+                this.$http.get('/api/login',{
+                    params:{
+                        name,
+                        password
+                    }
+                }).then((data)=>{
+                    var data = data.data;
+                    if(data.success){
+                        _this.drawer = false;
+                        _this.$Message.success('登陆成功');
+                    }else{
+                        _this.$Message.warning(data.errorMessage);
+                    }
+                },(err)=>{
+                    this.$Message.error(err);
+                })
+            }
         }
     }
 </script>

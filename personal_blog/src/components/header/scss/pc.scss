@@ -44,6 +44,9 @@
             cursor:pointer;
             // width: 100px;
         }
+        .drawer_login_box{
+            display: flex;
+        }
         .header_login_box:hover{
             color: $active_router_color;
         }

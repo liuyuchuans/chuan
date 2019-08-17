@@ -12,7 +12,8 @@
                 </ul>
             </div>
             <div class="header_login_box">
-                <span @click="drawer=true">login</span>
+                <span @click="drawer=true" v-if="!is_login">login</span>
+                <Avatar v-if="is_login" size="large" :src="img_src" />
             </div>
         </div>
         <Drawer title="登陆" width="500px" :closable="false" v-model="drawer">
@@ -29,14 +30,24 @@
         data(){
             return {
                drawer: false,
+               is_login: false,
+               img_src: '',
                form:{
                    name: null,
                    password: null
+                   
                }
             }
         },
         props:{
             HeaderState: Object
+        },
+        created(){
+            var is_login = this.public.is_login();
+            if(is_login.success){
+                this.is_login = true;
+                this.img_src = is_login.img_src;
+            }
         },
         methods:{
             login(){
@@ -57,15 +68,17 @@
                 }
                 var _this = this;
                 this.$http.get('/api/login',{
-                    params:{
-                        name,
-                        password
-                    }
+                    params:{ name, password }
                 }).then((data)=>{
                     var data = data.data;
                     if(data.success){
                         _this.drawer = false;
                         _this.$Message.success('登陆成功');
+                        window.sessionStorage.setItem('token',data.token);
+                        window.sessionStorage.setItem('img_src',data.data[0].img);
+                        _this.is_login = true;
+                        _this.img_src = data.data[0].img;
+
                     }else{
                         _this.$Message.warning(data.errorMessage);
                     }

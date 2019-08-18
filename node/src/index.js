@@ -3,17 +3,17 @@ const cors = require("cors");
 const app = express();
 const mysql = require("mysql");
 const options = {
-    host: "localhost",
+    host: "cdb-llaqosat.gz.tencentcdb.com",
     user : "root",
-    password: "521521",
-    port: 3306,
+    password: "521521chuan",
+    port: 10117,
     database: "blog",
     connectTimeout: 3000,
     multipleStatements: true
 }
 const conn = mysql.createConnection(options)
 app.use(cors()); // 解决跨域
-app.listen(8888,function(){
+app.listen(9595,function(){
     console.log("服务启动成功");
 })
 

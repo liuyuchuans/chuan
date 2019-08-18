@@ -67,7 +67,7 @@
                     return false;
                 }
                 var _this = this;
-                this.$http.get('/api/login',{
+                this.$http.get(this.public.GLOBAL_PATH + '/login',{
                     params:{ name, password }
                 }).then((data)=>{
                     var data = data.data;

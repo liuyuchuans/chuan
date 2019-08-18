@@ -13,3 +13,13 @@ export var is_login = function(){
     }
    
 }
+let query = window.location.hostname;
+let GLOBAL_PATH;
+if(query.indexOf('liuyuchuan') !== -1){
+    GLOBAL_PATH = "http://www.liuyuchuan.cn:9595";
+}else{
+    GLOBAL_PATH = "/api";
+}
+export {
+    GLOBAL_PATH
+}

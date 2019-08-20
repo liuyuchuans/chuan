@@ -16,12 +16,22 @@
             homeDetailState: Array
         },
         created(){
-            let id = this.$route.query.id
-            for(var i = 0; i < this.homeDetailState.length; i++){
-                let item = this.homeDetailState[i];
-                if(item.id == id){
-                    this.detailObj = item;
-                    break;
+            this.rejoin();
+        },
+        watch:{
+            '$route'(){
+                this.rejoin();
+            }
+        },
+        methods:{
+            rejoin(){
+                let id = this.$route.query.id
+                for(var i = 0; i < this.homeDetailState.length; i++){
+                    let item = this.homeDetailState[i];
+                    if(item.id == id){
+                        this.detailObj = item;
+                        break;
+                    }
                 }
             }
         }

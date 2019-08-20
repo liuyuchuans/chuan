@@ -10,6 +10,11 @@ const state = {
                 id: 2,
                 name: '分类',
                 url: '/classification'
+            },
+            {
+                id: 3,
+                name: '个人中心',
+                url: '/PersonalCenter'
             }
         ]
     }

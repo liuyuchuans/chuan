@@ -20,7 +20,8 @@
             </li>
             <li>
                 <div class="search">
-                    <input type="text" class="home-input-search" v-model="val" placeholder="搜索你的问题"/><button :class="{'home-active-button': val.length != 0}" :disabled="val.length == 0"><img :src="search_img"/></button>
+                    <!-- <input type="text" class="home-input-search" v-model="val" placeholder="搜索你的问题"/><button :class="{'home-active-button': val.length != 0}" :disabled="val.length == 0"><img :src="search_img"/></button> -->
+                    <Input search placeholder="搜索你的问题" />
                 </div>
             </li>
             <li>

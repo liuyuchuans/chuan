@@ -1,5 +1,5 @@
 <template>
-    <div class="home-head">
+    <div class="home-head" ref="home_header">
         <div class="home-head-container">
             <div class="home-head-title">
                 <p class="h2">C&nbsp;个人博客</p>
@@ -41,6 +41,23 @@
         },
         props:{
             HeaderState: Object
+        },
+        watch:{
+            $route(to,from){
+                var home_header = this.$refs.home_header.style;
+                var _this = this;
+                if(to.path === '/PersonalCenter'){     
+                    home_header.opacity = '0';
+                    home_header.position = 'fixed';
+                    home_header.top = '0px';
+                    home_header.left = '0px';
+                    window.addEventListener('scroll',_this.SCROLL,false)
+                }else{
+                    home_header.opacity = '1';
+                    home_header.position = '';
+                    window.removeEventListener('scroll',_this.SCROLL,false)
+                }
+            }
         },
         created(){
             var is_login = this.public.is_login();
@@ -85,6 +102,17 @@
                 },(err)=>{
                     this.$Message.error(err);
                 })
+            },
+            SCROLL(){
+               //事件节流
+                var home_header = this.$refs.home_header.style;
+                this.public.throttle(function(){
+                    if(document.documentElement.scrollTop > 0){
+                        home_header.opacity = '0';
+                    }else{
+                        home_header.opacity = '0.1';
+                    }
+                },window) 
             }
         }
     }

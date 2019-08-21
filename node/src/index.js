@@ -30,7 +30,7 @@ app.all('/login',function(req,res){
     })
 })
 app.all('/',function(req,res){
-    return res.json({
+    return res.json({ 
         success: true
     });
 })

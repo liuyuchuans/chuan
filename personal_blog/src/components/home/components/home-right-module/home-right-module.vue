@@ -48,7 +48,7 @@
                 </ol>
             </li>
             <li>
-                <p class="home-title-p">给小编加点饭</p>
+                <p class="home-title-p">我也很穷呀</p>
                 <hr class="home-hr"/>
                 <p class="home-title-price">左边微信，右边支付宝</p>
                 <div class="home-zhifubao-weixin-price-img">

@@ -12,7 +12,6 @@ export var is_login = function(){
             success: false
         };
     }
-   
 }
 //全局请求接口
 let query = window.location.hostname;
@@ -22,9 +21,6 @@ if(query.indexOf('liuyuchuan') !== -1){
 }else{
     GLOBAL_PATH = "/api";
 }
-
-
-
 // 事件节流
 function throttle(fn, obj) { 
     clearTimeout(fn.t);
@@ -32,7 +28,6 @@ function throttle(fn, obj) {
         fn.call(obj);
     }, 50); 
 }
-
 // 导出对象
 export {
     GLOBAL_PATH,

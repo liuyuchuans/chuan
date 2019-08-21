@@ -13,11 +13,17 @@ Vue.prototype.public = {
   is_login,
   GLOBAL_PATH,
   throttle
-} // 公用方法与数据都在这个上面
-console.log(Vue.prototype.public.GLOBAL_PATH)
+} // 公用方法与数据都在这个上面 实例方法
+Vue.public = {
+  is_login,
+  GLOBAL_PATH,
+  throttle
+} // 公用方法与数据挂在vue 静态方法
+
 Vue.use(iView)
-new Vue({
+let vm = new Vue({
   render: h => h(App),
   router:Router,
   store
 }).$mount('#app')
+Vue.$__VUE = vm;

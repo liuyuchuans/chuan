@@ -36,6 +36,17 @@ const Route = new VueRouter({
             path: '/PersonalCenter', 
             name: 'PersonalCenter',
             component: resolve => require(['@/components/PersonalCenter/PersonalCenter.vue'], resolve),
+            beforeEnter: (to, from, next) => {
+                if(Vue.public.is_login().success){
+                    next()
+                }else{
+                    // 事件节流 相当与setTimeout
+                    Vue.public.throttle(()=>{
+                        Vue.$__VUE.$Message.info('未登陆');
+                        Vue.$__VUE.$router.push(from.fullPath)
+                    },window)
+                }
+            }
         }
         
     ]

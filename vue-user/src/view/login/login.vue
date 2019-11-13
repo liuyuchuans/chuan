@@ -1,6 +1,8 @@
 <template>
     <div class="login-container-main" @keyup.enter="login">
-        <el-alert
+        <spreadtable :options="option"></spreadtable>
+        <!-- <grid ></grid> -->
+        <!-- <el-alert
             v-if="successLogin"
             title="登陆成功,请稍后..."
             center
@@ -27,19 +29,27 @@
                     <el-button type="primary" style="width:100%;" @click="login">登录</el-button>
                 </el-form-item>
             </el-form>
-        </div>
+        </div> -->
+
     </div>
 </template>
  
 <script>
 import {mapMutations} from 'vuex'
+import Spreadtable from '../spreadtable'
 export default {
   name: 'login',
   data () {
     return  {
        successLogin: false,
-       errorLogin: false
+       errorLogin: false,
+       option: {
+                fullscreen: true,
+            },
     }
+  },
+  components:{
+      Spreadtable
   },
   computed:{
       form(){
@@ -95,7 +105,7 @@ export default {
 </script>
 <style scoped > 
     .login-container-main{
-        background-image: url("../../assets/login/login2.jpg");
+        /* background-image: url("../../assets/login/login2.jpg"); */
         background-size:100% 100%;  
         width: 100%;
         height: 100%;

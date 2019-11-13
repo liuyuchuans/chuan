@@ -9,6 +9,9 @@ import cookieOperation from './api/currency.js'
 import fullCalendar from 'vue-fullcalendar' 
 import echarts from 'echarts'   
 import ECharts from 'vue-echarts'
+import Grid from 'vue-canvas-grid'
+
+Vue.component('grid', Grid)
 // import marble from './api/zzsc'
 import './api/zzsc.css'
 Vue.config.productionTip = false

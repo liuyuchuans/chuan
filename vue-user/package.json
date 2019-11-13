@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "echarts": "^4.1.0",
+    "hot-formula-parser": "^3.0.1",
     "vue": "^2.5.2",
+    "vue-canvas-grid": "^0.0.1",
     "vue-echarts": "^4.0.1",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-worker": "^1.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

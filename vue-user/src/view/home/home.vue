@@ -100,11 +100,11 @@
             if(this.$route.fullPath !== "/"){
                 this.$store.commit("addTap",this.$route)
             }
-            if(!this.list.length){  
+            // if(!this.list.length){  
                 // 刷新之后没有数据
-                var HomeList = JSON.parse(window.localStorage.getItem('HomeList'))
-                this.$store.commit("HomeDataChange",HomeList)
-            } 
+                // var HomeList = JSON.parse(window.localStorage.getItem('HomeList'))
+                // this.$store.commit("HomeDataChange",HomeList)
+            // } 
             window.onresize = () =>{
                this.toggleText()
             } 

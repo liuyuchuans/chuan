@@ -75,7 +75,7 @@
         }
     }
 </script>
-<style lang="scss">
+<style lang="scss" scope>
     @media screen and (max-width: 960px){
         @import './scss/MobilePhone.scss';
     }

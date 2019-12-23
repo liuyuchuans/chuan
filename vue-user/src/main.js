@@ -15,6 +15,13 @@ Vue.component('grid', Grid)
 // import marble from './api/zzsc'
 import './api/zzsc.css'
 Vue.config.productionTip = false
+
+import VideoPlayer from 'vue-video-player'
+require('vue-video-player/node_modules/video.js/dist/video-js.css')
+require('vue-video-player/src/custom-theme.css')
+Vue.use(VideoPlayer)
+
+
 // console.log(marble)
 // Vue.config.silent = true
 // Vue.config.devtools = false

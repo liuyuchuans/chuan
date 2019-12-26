@@ -2,7 +2,7 @@
     <div class="home-head" ref="home_header">
         <div class="home-head-container">
             <div class="home-head-title">
-                <p class="h2">C&nbsp;个人博客</p>
+                <p class="h2">C&nbsp;个人网站</p>
             </div>
             <div class="home-head-nav">
                 <ul>
@@ -16,10 +16,11 @@
                 <Avatar v-if="is_login" size="large" :src="img_src" />
             </div>
         </div>
-        <Drawer title="登陆" width="500px" :closable="false" v-model="drawer">
+        <Drawer title="登陆" width="300px" :closable="false" v-model="drawer">
             <div class="drawer_login_box">
-                <Input v-model="form.name"  placeholder="用户名" style="width: 200px" @keyup.enter.native="login" />
-                <Input v-model="form.password" type="password" placeholder="密码" style="width: 200px"  @keyup.enter.native="login" />
+                <Input v-model="form.name"  placeholder="用户名" style="width: 270px;" @keyup.enter.native="login" /><br />
+                <Input v-model="form.password" type="password" placeholder="密码" style="width: 270px;margin-top: 12px;"  @keyup.enter.native="login" /></br />
+                <i-button @click="login" type="info" style="width: 270px;margin-top: 12px;">登陆</i-button>
             </div>
         </Drawer>
     </div>

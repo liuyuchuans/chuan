@@ -31,6 +31,17 @@ const Route = new VueRouter({
             path: '/classification', 
             name: 'classification',
             component: resolve => require(['@/components/classification/classification.vue'], resolve),
+            beforeEnter: (to, from, next) => {
+                if(Vue.public.is_login().success){
+                    next()
+                }else{
+                    // 事件节流 相当与setTimeout
+                    Vue.public.throttle(()=>{
+                        Vue.$__VUE.$Message.info('未登陆');
+                        Vue.$__VUE.$router.push(from.fullPath)
+                    },window)
+                }
+            }
         },
         { 
             path: '/PersonalCenter', 

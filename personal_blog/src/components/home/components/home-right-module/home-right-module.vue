@@ -14,7 +14,7 @@
                 </div>
                 <div class="home-personal-introduction">
                     <span class="home--personal-introduction-text">
-                        C&nbsp;的个人博客，主要记录、总结与分享我在工作、学习之中的经验、写的不对的地方，欢迎大家指出。
+                        C&nbsp;的个人网站，主要记录、总结与分享我在工作、学习之中的经验、写的不对的地方，欢迎大家指出。
                     </span>
                 </div>
             </li>
@@ -48,13 +48,14 @@
                 </ol>
             </li>
             <li>
-                <p class="home-title-p">我也很穷呀</p>
+                <!-- <p class="home-title-p">我也很穷呀</p>
                 <hr class="home-hr"/>
                 <p class="home-title-price">左边微信，右边支付宝</p>
                 <div class="home-zhifubao-weixin-price-img">
                     <img :src="weixin_img" />
                     <img :src="zhifubao_img" />
-                </div>
+                </div> -->
+                <div class="bah">备案号：京ICP备19035519号 | 100008622390</div>
             </li>
         </ul>
     </div>

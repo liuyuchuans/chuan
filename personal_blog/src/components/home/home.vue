@@ -4,6 +4,7 @@
             <router-view :data="HomeDataSlot" :homeDetailState="homeDetailState"></router-view>
             <homeright :data="HomeDataSlot"></homeright>
         </div>
+        
     </div>
 </template>
 <script>
@@ -38,3 +39,12 @@
         @import './scss/pc.scss';
     }
 </style>>
+<style scoped>
+.bah{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    padding: 0 40px;
+    line-height: 40px;
+}
+</style>

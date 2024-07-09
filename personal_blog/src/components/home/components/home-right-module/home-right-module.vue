@@ -55,7 +55,7 @@
                     <img :src="weixin_img" />
                     <img :src="zhifubao_img" />
                 </div> -->
-                <div class="bah">备案号：京ICP备19035519号 | 100008622390</div>
+                <div class="bah">备案号：京ICP备2024075415号-1</div>
             </li>
         </ul>
     </div>
